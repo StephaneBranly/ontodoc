@@ -1,0 +1,24 @@
+[project]
+name = "ontomdoc"
+version = "0.0.0"
+description = "Generate easily your markdown documentation for any ontology"
+authors = [
+    {name = "StephaneBranly",email = "stephanebranly.pro@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8.1"
+
+[tool.poetry]
+packages = [{include = "ontomdoc", from = "./"}]
+
+[tool.poetry.scripts]
+ontomdoc = "ontomdoc.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+jinja2 = ">=3.1.6,<4.0.0"
+rdflib = ">=7.1.3,<8.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
