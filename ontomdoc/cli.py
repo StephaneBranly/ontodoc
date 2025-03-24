@@ -2,7 +2,6 @@ import argparse
 from jinja2 import Environment, FileSystemLoader, Template
 from ontomdoc import __version__
 import pathlib
-import os
 from rdflib import Graph
 import rdflib
 
@@ -20,9 +19,25 @@ def get_object(g, subject, predicate):
 
 def render_class(g: Graph, onto, class_object, template: Template):
     class_label = class_object.n3(namespace_manager=g.namespace_manager).split(':')[-1]
+    # print(f"""
+    #     SELECT ?predicate ?range
+    #     WHERE {{
+    #         ?predicate rdf:type owl:DatatypeProperty ;
+    #         rdfs:domain {class_object.n3()} ;
+    #         rdfs:range ?range ;     
+    #     }}""")
+    results = g.query(f"""
+        SELECT ?predicate ?range
+        WHERE {{
+            ?predicate rdf:type owl:DatatypeProperty ;
+            rdfs:domain {class_object.n3()} ;
+            rdfs:range ?range ;     
+        }}""")
+
     class_md = template.render(
         onto=onto,
-        classe={'label':class_label}
+        classe={'label':class_label},
+        triples=[{'id': index, 'predicate': row.predicate.n3(g.namespace_manager), 'range': row.range.n3(g.namespace_manager)} for index, row in enumerate(results)]
     )
     try:
         with open(f'./build/class/{class_label}.md', mode='w') as f:
@@ -62,8 +77,8 @@ def main():
         raise Exception('Ontology not found')
     onto = ontos[0]
 
-    classes = [s for s in g.subjects(predicate=rdflib.RDF["type"], object=rdflib.OWL['Class'])]
-
+    classes = [s for s in g.subjects(predicate=rdflib.RDF["type"], object=rdflib.OWL['Class']) if type(s) != rdflib.BNode]
+    [print(type(c)) for c in classes]
   
 
     onto_dict = {
