@@ -4,7 +4,7 @@
 
 ## Contributors
 
-{% for contributor in contributors -%}
+{% for contributor in contributors%}
 
 - {{contributor}}
   {%- endfor %}

@@ -29,9 +29,10 @@ def render_class(g: Graph, onto, class_object, template: Template):
     results = g.query(f"""
         SELECT ?predicate ?range
         WHERE {{
-            ?predicate rdf:type owl:DatatypeProperty ;
+            ?predicate rdf:type ?type ;
             rdfs:domain {class_object.n3()} ;
-            rdfs:range ?range ;     
+            rdfs:range ?range .
+            VALUES ?type {{ owl:DatatypeProperty owl:ObjectProperty }}
         }}""")
 
     class_md = template.render(
@@ -56,7 +57,7 @@ parser.add_argument(
 # add languages settings
 # add custom template folder
 # add footer and navigation settings
-# add mermaid settings
+# add mermaid settings (choose or not to display mermaid schemas, customize mermaid settings)
 
 def main():
     args = parser.parse_args()
@@ -78,8 +79,6 @@ def main():
     onto = ontos[0]
 
     classes = [s for s in g.subjects(predicate=rdflib.RDF["type"], object=rdflib.OWL['Class']) if type(s) != rdflib.BNode]
-    [print(type(c)) for c in classes]
-  
 
     onto_dict = {
             'label': get_object(g, onto, rdflib.RDFS['label']),
