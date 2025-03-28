@@ -1,4 +1,4 @@
-# ontomdoc
+# ontodoc
 
 A python module to generate markdown documentation for ontologies.
 
@@ -6,13 +6,13 @@ Based on `rdflib` and `jinja2`.
 
 ## Installation
 
-`pip install ontomdoc`
+`pip install ontodoc`
 
 ## Usage
 
 ### Command line usage
 
-`python -m ontomdoc`
+`python -m ontodoc`
 
 By default, the file named `ontology.ttl` will be used to generate your documentation in the `build` destination folder.
 You can easily change settings as you need.

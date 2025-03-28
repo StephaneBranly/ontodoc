@@ -1,29 +1,30 @@
+import typing
 from jinja2 import Template
-from rdflib import Graph
+from rdflib import Graph, Node
 import rdflib
 
-from ontomdoc.utils import get_object
-
-def render_class(g: Graph, onto, class_object, template: Template):
-    class_id = class_object.n3(namespace_manager=g.namespace_manager).split(':')[-1]
-    class_label = get_object(g, subject=class_object, predicate=rdflib.RDFS['label'])
-    class_comment  = get_object(g, subject=class_object, predicate=rdflib.RDFS['comment'])
+from ontodoc.utils import get_object
     
-    results = g.query(f"""
+class Class:
+    def __init__(self, g: Graph, onto, class_node: Node, template: Template):
+        self.template = template
+        self.onto = onto
+        self.id = class_node.n3(namespace_manager=g.namespace_manager).split(':')[-1]
+        self.label = get_object(g, subject=class_node, predicate=rdflib.RDFS['label'])
+        self.comment = get_object(g, subject=class_node, predicate=rdflib.RDFS['comment'])
+
+        results = g.query(f"""
         SELECT ?predicate ?range ?comment ?label
         WHERE {{
             ?predicate rdf:type ?type ;
-            rdfs:domain {class_object.n3()} ;
+            rdfs:domain {class_node.n3()} ;
             rdfs:range ?range .
             OPTIONAL {{ ?predicate rdfs:comment ?comment }} .
             OPTIONAL {{ ?predicate rdfs:label ?label }} .
             VALUES ?type {{ owl:DatatypeProperty owl:ObjectProperty }}
         }}""")
 
-    class_md = template.render(
-        onto=onto,
-        classe={'id':class_id, 'label': class_label, 'comment': class_comment},
-        triples=[{
+        self.triples = [{
             'id': index,
             'predicate': row.predicate.n3(g.namespace_manager),
             'range': row.range.n3(g.namespace_manager),
@@ -31,7 +32,6 @@ def render_class(g: Graph, onto, class_object, template: Template):
             'comment': row.comment.n3(g.namespace_manager).replace('\n',' ') if row.comment else None,
             'link': row.range.n3(g.namespace_manager).split(':')[1] if row.range.n3(g.namespace_manager).startswith(':') else None
         } for index, row in enumerate(results)]
-    )
-    
-    return class_id, class_md
-    
+
+    def __str__(self):
+        return self.template.render(self.__dict__)

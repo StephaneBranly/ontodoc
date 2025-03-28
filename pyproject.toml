@@ -1,5 +1,5 @@
 [project]
-name = "ontomdoc"
+name = "ontodoc"
 version = "0.0.0"
 description = "Generate easily your markdown documentation for any ontology"
 authors = [
@@ -9,10 +9,10 @@ readme = "README.md"
 requires-python = ">=3.8.1"
 
 [tool.poetry]
-packages = [{include = "ontomdoc", from = "./"}]
+packages = [{include = "ontodoc", from = "./"}]
 
 [tool.poetry.scripts]
-ontomdoc = "ontomdoc.cli:main"
+ontodoc = "ontodoc.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.8.1"
