@@ -5,6 +5,7 @@ import pathlib
 from rdflib import Graph
 import rdflib
 
+from ontodoc.classes.Footer import Footer
 from ontodoc.classes.Ontology import Ontology
 from ontodoc.generate_page import generate_page
 
@@ -70,12 +71,25 @@ def main():
     #             f.write(class_md)
     #     except:
     #         print('Error for class ', class_id)
+    if args.footer:
+        footer = Footer(onto, templates['footer.md']).__str__()
+    else:
+        footer = None
+
     ontology = Ontology(g, onto, templates)
     # homepage = Homepage(g, onto, templates['homepage.md'])
     # for c in homepage.classes:
 
-    generate_page(ontology.__str__(), f'{args.output}/homepage2.md', True, onto)
+    if args.concatenate:
+        page = ontology.__str__()
+        for c in ontology.classes:
+            page += '\n\n' + c.__str__()
+        generate_page(page, f'{args.output}/ontology.md', onto, footer)
 
-
+    else:
+        generate_page(ontology.__str__(), f'{args.output}/homepage.md', onto, footer)
+        for c in ontology.classes:
+            generate_page(c.__str__(), f'{args.output}class/{c.id}.md', onto, footer)
+            
 if __name__ == '__main__':
     main()

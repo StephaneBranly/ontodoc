@@ -34,4 +34,4 @@ class Class:
         } for index, row in enumerate(results)]
 
     def __str__(self):
-        return self.template.render(self.__dict__)
+        return self.template.render(classe=self.__dict__, onto=self.onto.__dict__)

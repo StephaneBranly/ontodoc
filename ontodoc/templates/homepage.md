@@ -10,7 +10,6 @@
 
 ## Classes
 
-{% for class in onto.classes -%}
-
+{% for class in onto.classes %}
 [{{class.label}}](class/{{class.id}}.md),
 {%- endfor %}

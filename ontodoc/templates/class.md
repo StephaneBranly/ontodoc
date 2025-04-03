@@ -4,10 +4,16 @@
 
 **{{classe.comment if classe.comment}}**
 
-| Predicate                 | Label                            | Comment                              | Type                                   |
-| ------------------------- | -------------------------------- | ------------------------------------ | -------------------------------------- |
-| {%- for triple in triples | sort(attribute='predicate') %}   |
-| {{triple.predicate}}      | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} | [{{triple.range}}]({{triple.link}}.md) |
+| Predicate                        | Label                            | Comment                              | Type |
+| -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
+| {%- for triple in classe.triples | sort(attribute='predicate') %}   |
+| {{triple.predicate}}             | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
+
+{%- if triple.link -%}
+[{{triple.range}}]({{triple.link}}.md)
+{%- else -%}
+<kbd>{{triple.range}}</kbd>
+{%- endif %} |
 
 {%- endfor%}
 
@@ -21,7 +27,7 @@ config:
 ---
 flowchart LR
 
-{%- for triple in triples|sort(attribute='predicate') %}
+{%- for triple in classe.triples|sort(attribute='predicate') %}
     {{classe.id}} -- {{triple.predicate}} --> {{triple.id}}[{{triple.range}}]
     class {{triple.id}} literal;
 {%- endfor%}
