@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from ontodoc import __version__
 from ontodoc.classes.Ontology import Ontology
 
 def generate_page(content: str, path: Path, onto: Ontology, footer: str = None):
@@ -11,4 +12,4 @@ def generate_page(content: str, path: Path, onto: Ontology, footer: str = None):
         if footer:
             f.write(footer)
 
-        f.write('\n\nGenerated with [ontodoc](https://github.com/StephaneBranly/ontodoc)')
+        f.write(f'\n\nGenerated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v{__version__}*')

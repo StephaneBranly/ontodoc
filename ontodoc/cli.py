@@ -64,21 +64,12 @@ def main():
         raise Exception('Ontology not found')
     onto = ontos[0]
 
-    # for c in classes:
-    #     class_id, class_md = render_class(g, onto_dict, c, templates['class.md'])
-    #     try:
-    #         with open(f'{args.output}/class/{class_id}.md', mode='w') as f:
-    #             f.write(class_md)
-    #     except:
-    #         print('Error for class ', class_id)
     if args.footer:
         footer = Footer(onto, templates['footer.md']).__str__()
     else:
         footer = None
 
     ontology = Ontology(g, onto, templates)
-    # homepage = Homepage(g, onto, templates['homepage.md'])
-    # for c in homepage.classes:
 
     if args.concatenate:
         page = ontology.__str__()
