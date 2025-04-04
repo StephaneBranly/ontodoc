@@ -31,7 +31,7 @@ parser.add_argument(
     "-o", "--output", help='Output directory for the generated documentation', default='build/'
 )
 parser.add_argument(
-    "-t", "--templates", help="Custom templates folder"
+    "-t", "--templates", help="Custom templates folder", default='templates/'
 )
 parser.add_argument(
     "-f", "--footer", help="Add footer for each page", action=argparse.BooleanOptionalAction, default=True
