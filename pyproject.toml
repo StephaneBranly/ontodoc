@@ -10,6 +10,12 @@ requires-python = ">=3.8.1"
 
 [tool.poetry]
 packages = [{include = "ontodoc", from = "./"}]
+name = "ontodoc
+version = "0.0.0"
+description = "Generate easily your markdown documentation for any ontology"
+authors = ["StephaneBranly <tephanebranly.pro@gmail.com>"]
+readme = "README.md"
+requires-python = ">=3.8"
 
 [tool.poetry.scripts]
 ontodoc = "ontodoc.cli:main"
