@@ -2,15 +2,18 @@ import typing
 from jinja2 import Template
 from rdflib import Graph, Node
 import rdflib
-
+import re
 from ontodoc.utils import get_object
     
 class Class:
     def __init__(self, g: Graph, onto, class_node: Node, template: Template):
         self.template = template
         self.onto = onto
-        self.id = class_node.n3(namespace_manager=g.namespace_manager).split(':')[-1]
+        self.id = re.sub(r'[^a-zA-Z\-_0-0]+', '_', class_node.n3(namespace_manager=g.namespace_manager).split(':')[-1])
+        
         self.label = get_object(g, subject=class_node, predicate=rdflib.RDFS['label'])
+        if not self.label:
+            self.label = self.id
         self.comment = get_object(g, subject=class_node, predicate=rdflib.RDFS['comment'])
 
         results = g.query(f"""

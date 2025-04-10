@@ -1,5 +1,6 @@
 import argparse
 from jinja2 import Environment, FileSystemLoader
+import rdflib.namespace
 from ontodoc import __version__
 import pathlib
 from rdflib import Graph
@@ -25,7 +26,7 @@ parser.add_argument(
     "-v", "--version", action="version", version="{version}".format(version=__version__)
 )
 parser.add_argument(
-    "-i", "--input", help='Input ontology file', default='./example/ontology.ttl'
+    "-i", "--input", help='Input ontology file', default='./ontology.ttl'
 )
 parser.add_argument(
     "-o", "--output", help='Output directory for the generated documentation', default='build/'
@@ -43,8 +44,9 @@ parser.add_argument(
     "-s", "--schema", help="Display schemas", action=argparse.BooleanOptionalAction, default=True
 )
 parser.add_argument(
-    "-m", "--model", help='Model type for the documentation. markdown or html'
+    "-m", "--model", help='Model type for the documentation. markdown, gh_wiki'
 )
+
 # add languages settings
 # add footer and navigation settings
 
@@ -56,7 +58,7 @@ def main():
     custom_env = Environment(loader=FileSystemLoader(args.templates)) if args.templates else None
     templates = concat_templates_environment(default_env, custom_env)
 
-    g = Graph()
+    g = Graph(bind_namespaces='none')
     g.parse(args.input)
 
     ontos = [s for s in g.subjects(predicate=rdflib.RDF["type"], object=rdflib.OWL['Ontology'])]
@@ -66,6 +68,9 @@ def main():
 
     if args.footer:
         footer = Footer(onto, templates['footer.md']).__str__()
+        if args.model == 'gh_wiki':
+            generate_page(footer, f'{args.output}/_Footer.md', onto)
+            footer = None
     else:
         footer = None
 

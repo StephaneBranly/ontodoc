@@ -1,8 +1,10 @@
 name: Build doc
-on: pull_request
+on:
+  release:
+    types: [created]
 
 jobs:
-  ci:
+  build_doc:
     strategy:
       fail-fast: false
       matrix:

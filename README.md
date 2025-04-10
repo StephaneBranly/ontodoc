@@ -27,15 +27,15 @@ By default, the file named `ontology.ttl` will be used to generate your document
 You can easily change settings as you need.
 Available arguments :
 
-| Argument name                         | Default        | Description                                          |
-| ------------------------------------- | -------------- | ---------------------------------------------------- |
-| `-i, --input INPUT`                   | `ontology.ttl` | _Input ontology file_                                |
-| `-o, --output OUTPUT`                 | `build/`       | _Output directory for the generated documentation_   |
-| `-t, --templates TEMPLATES`           | `templates/`   | _Custom templates folder_                            |
-| `-f, --footer, --no-footer`           | `true`         | _Add footer for each page_                           |
-| `-c, --concatenate, --no-concatenate` | `false`        | _Concatenate documentation into an unique file_      |
-| `-s, --schema, --no-schema`           | `true`         | _Display schemas_                                    |
-| `-m, --model MODEL`                   | `markdown`     | _Model type for the documentation. markdown or html_ |
+| Argument name                         | Default        | Description                                           |
+| ------------------------------------- | -------------- | ----------------------------------------------------- |
+| `-i, --input INPUT`                   | `ontology.ttl` | _Input ontology file_                                 |
+| `-o, --output OUTPUT`                 | `build/`       | _Output directory for the generated documentation_    |
+| `-t, --templates TEMPLATES`           | `templates/`   | _Custom templates folder_                             |
+| `-f, --footer, --no-footer`           | `true`         | _Add footer for each page_                            |
+| `-c, --concatenate, --no-concatenate` | `false`        | _Concatenate documentation into an unique file_       |
+| `-s, --schema, --no-schema`           | `true`         | _Display schemas_                                     |
+| `-m, --model MODEL`                   | `markdown`     | _Model type for the documentation. markdown, gh_wiki_ |
 
 ### Automatically generate your documentation
 
@@ -46,3 +46,5 @@ You can explore `github actions` to automatically generate and publish your docu
 Feel free to contribute to this open source project!
 
 ## License 🔓
+
+## They already have integrated Ontodoc ♥️

@@ -9,6 +9,5 @@ class Footer:
         
     def __str__(self):
         return "\n\n"+self.template.render(
-            # onto=self.onto.__dict__,
             metadata={'editionDate': datetime.date.today().strftime('%Y-%m-%d')}
         )
