@@ -41,10 +41,22 @@ Available arguments :
 
 You can explore `github actions` to automatically generate and publish your documentation.
 
+## Example 👀
+
+Look at the [example for _foaf_](./example/build/homagepage.md) to see what type of documentation you can easily build in 2 lines!
+
 ## Contributing </>
 
 Feel free to contribute to this open source project!
 
+We need help to implement new features, fix bugs listed in [issues](https://github.com/StephaneBranly/ontodoc/issues).
+
+If you have any idea, create your own issue.
+
 ## License 🔓
 
+[Apache License 2.0](LICENCE.txt)
+
 ## They already have integrated Ontodoc ♥️
+
+_Comming soon..._
