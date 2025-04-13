@@ -3,7 +3,8 @@ from jinja2 import Template
 from rdflib import Graph, Node
 import rdflib
 import re
-from ontodoc.utils import get_comment, get_label, get_object
+from ontodoc.ontology_properties import COMMENT, LABEL
+from ontodoc.utils import get_object
     
 class Class:
     def __init__(self, g: Graph, onto, class_node: Node, template: Template):
@@ -11,10 +12,10 @@ class Class:
         self.onto = onto
         self.id = re.sub(r'[^a-zA-Z\-_0-0]+', '_', class_node.n3(namespace_manager=g.namespace_manager).split(':')[-1])
         
-        self.label = get_label(g, class_node)
+        self.label = get_object(g, class_node, LABEL)
         if not self.label:
             self.label = self.id
-        self.comment = get_comment(g, class_node)
+        self.comment = get_object(g, class_node, COMMENT)
 
         results = g.query(f"""
         SELECT ?predicate ?range ?comment ?label

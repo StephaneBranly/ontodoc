@@ -51,6 +51,6 @@ The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and
 
 ---
 
-Documentation generated on 2025-04-10
+Documentation generated on 2025-04-13
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.0*

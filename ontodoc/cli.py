@@ -1,11 +1,13 @@
 import argparse
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader, Template
 import rdflib.namespace
 from ontodoc import __version__
 import pathlib
 from rdflib import Graph
 import rdflib
+import json
 
+from ontodoc.classes.Class import Class
 from ontodoc.classes.Footer import Footer
 from ontodoc.classes.Ontology import Ontology
 from ontodoc.generate_page import generate_page
@@ -76,16 +78,35 @@ def main():
 
     ontology = Ontology(g, onto, templates)
 
-    if args.concatenate:
-        page = ontology.__str__()
-        for c in ontology.classes:
-            page += '\n\n' + c.__str__()
-        generate_page(page, f'{args.output}/ontology.md', onto, footer)
+    import json
 
-    else:
-        generate_page(ontology.__str__(), f'{args.output}/homepage.md', onto, footer)
+    class OntoDocEncoder(json.JSONEncoder):
+        def default(self, obj):
+            if isinstance(obj, Graph):
+                return None
+            if isinstance(obj, Template):
+                return None
+            if isinstance(obj, Class):
+                return obj.__dict__
+            if isinstance(obj, Ontology):
+                return None
+            return super(OntoDocEncoder, self).default(obj)
+
+    if args.model == 'json':
+        generate_page(json.dumps(ontology.__dict__, indent=2, cls=OntoDocEncoder), f'{args.output}/ontology.json', add_signature=False)
         for c in ontology.classes:
-            generate_page(c.__str__(), f'{args.output}class/{c.id}.md', onto, footer)
-            
+            generate_page(json.dumps(c.__dict__, indent=2, cls=OntoDocEncoder), f'{args.output}/class/{c.id}.json', add_signature=False)
+    elif args.model in ['markdown', 'gh_wiki']:
+        if args.concatenate:
+            page = ontology.__str__()
+            for c in ontology.classes:
+                page += '\n\n' + c.__str__()
+            generate_page(page, f'{args.output}/ontology.md', onto, footer)
+
+        else:
+            generate_page(ontology.__str__(), f'{args.output}/homepage.md', onto, footer)
+            for c in ontology.classes:
+                generate_page(c.__str__(), f'{args.output}class/{c.id}.md', onto, footer)
+                
 if __name__ == '__main__':
     main()

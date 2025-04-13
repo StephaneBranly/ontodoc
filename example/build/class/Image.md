@@ -25,11 +25,13 @@ flowchart LR
     class 1 literal;
     class Image baseclass;
 classDef literal fill:#fcba03,stroke:#333,stroke-width:4px,color:black;
+classDef literal fill:#1cba03,stroke:#333,stroke-width:4px,color:black;
 classDef baseclass fill:#030ffc,stroke:#333,stroke-width:4px;
+classDef baseclass fill:#130ffc,stroke:#333,stroke-width:4px;
 ```
 
 ---
 
-Documentation generated on 2025-04-10
+Documentation generated on 2025-04-13
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.0*

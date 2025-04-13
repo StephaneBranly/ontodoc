@@ -7,6 +7,12 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.8.1"
+keywords = ['Ontology', 'rdflib', 'jinja2', 'documentation', 'markdown']
+license = 'Apache-2.0'
+
+[project.urls]
+Source = 'https://github.com/StephaneBranly/ontodoc'
+Tracker = 'https://github.com/StephaneBranly/ontodoc/issues'
 
 [tool.poetry]
 packages = [{include = "ontodoc", from = "./"}]

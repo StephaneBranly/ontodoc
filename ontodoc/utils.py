@@ -10,24 +10,13 @@ def get_object(g: Graph, subject, predicate):
         return None
     return oo[0]
 
-def get_label(g: Graph, subject):
+def get_object(g: Graph, subject, predicate_list):
+    if type(predicate_list) == dict and 'predicates' in predicate_list:
+        predicate_list = predicate_list['predicates']
+    if type(predicate_list) == str:
+        predicate_list = [predicate_list]
     for o in chain(
-        g.objects(subject, RDFS.label),
-        g.objects(subject, DC.title),
-        g.objects(subject, SKOS.prefLabel),
-        g.objects(subject, SDO.name),
-        g.objects(subject, DCTERMS.title),
-    ):
-        return o
-    return None
-
-def get_comment(g: Graph, subject):
-    for o in chain(
-        g.objects(subject, RDFS.comment),
-        g.objects(subject, DCTERMS.description),
-        g.objects(subject, SKOS.definition),
-        g.objects(subject, SDO.description),
-        g.objects(subject, DC.description),
+        [o for p in predicate_list for o in g.objects(subject, p)]
     ):
         return o
     return None

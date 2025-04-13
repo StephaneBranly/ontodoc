@@ -1,5 +1,5 @@
 <p align="center">
-<img src='./src/logo.png' height='200' alt='ontodoc logo' />
+<img src='https://github.com/StephaneBranly/ontodoc/blob/main/src/logo.png' height='200' alt='ontodoc logo' />
 </p>
 
 # ontodoc
@@ -43,7 +43,27 @@ You can explore `github actions` to automatically generate and publish your docu
 
 ## Example 👀
 
-Look at the [example for _foaf_](./example/build/homagepage.md) to see what type of documentation you can easily build in 2 lines!
+Look at the [example for _foaf_](https://github.com/StephaneBranly/ontodoc/blob/main/example/build/homepage.md) to see what type of documentation you can easily build in 2 lines!
+
+## How does it work ? 🔧
+
+```mermaid
+flowchart LR
+ subgraph s1["Ontodoc"]
+        n5["Markdown human readable documentation"]
+        n8["Markdown templates"]
+        n4["Structured ontology description"]
+        n9["Command Line Interface"]
+  end
+    n4 --> n5
+    n8 --> n5
+    n7(("Ontology")) --> n9
+    n9 --> n4
+    n9 -.-> n8
+
+    n4@{ shape: braces}
+    n9@{ shape: text}
+```
 
 ## Contributing </>
 
@@ -55,7 +75,7 @@ If you have any idea, create your own issue.
 
 ## License 🔓
 
-[Apache License 2.0](LICENCE.txt)
+[Apache License 2.0](https://github.com/StephaneBranly/ontodoc/blob/main/LICENCE.txt)
 
 ## They already have integrated Ontodoc ♥️
 

@@ -33,5 +33,7 @@ flowchart LR
 {%- endfor%}
     class {{classe.id}} baseclass;
 classDef literal fill:#fcba03,stroke:#333,stroke-width:4px,color:black;
+classDef literal fill:#1cba03,stroke:#333,stroke-width:4px,color:black;
 classDef baseclass fill:#030ffc,stroke:#333,stroke-width:4px;
+classDef baseclass fill:#130ffc,stroke:#333,stroke-width:4px;
 ```
