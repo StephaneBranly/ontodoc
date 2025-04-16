@@ -4,10 +4,11 @@
 
 **{{classe.comment if classe.comment}}**
 
-| Predicate                        | Label                            | Comment                              | Type |
+{% if classe.triples|length %}
+| Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
-| {%- for triple in classe.triples | sort(attribute='predicate') %}   |
-| {{triple.predicate}}             | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
+| {%- for triple in classe.triples | sort(attribute='predicate') %} |
+| {{triple.predicate}} | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
 
 {%- if triple.link -%}
 [{{triple.range}}]({{triple.link}}.md)
@@ -33,7 +34,7 @@ flowchart LR
 {%- endfor%}
     class {{classe.id}} baseclass;
 classDef literal fill:#fcba03,stroke:#333,stroke-width:4px,color:black;
-classDef literal fill:#1cba03,stroke:#333,stroke-width:4px,color:black;
 classDef baseclass fill:#030ffc,stroke:#333,stroke-width:4px;
-classDef baseclass fill:#130ffc,stroke:#333,stroke-width:4px;
 ```
+
+{% endif %}

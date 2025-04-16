@@ -1,22 +1,32 @@
 
 from itertools import chain
 
-from rdflib import DC, DCTERMS, RDFS, SDO, SKOS, Graph
+from rdflib import Graph
 
+from ontodoc.ontology_properties import ONTOLOGY_PROP
 
-def get_object(g: Graph, subject, predicate):
-    oo = [o for o in g.objects(subject=subject, predicate=predicate)]
-    if not len(oo):
-        return None
-    return oo[0]
+def get_object(g: Graph, subject, predicate_list: ONTOLOGY_PROP, return_all=False):
+    while type(predicate_list) == type and ONTOLOGY_PROP == predicate_list.__base__:
+        return_all = predicate_list.array
+        predicate_list = predicate_list.predicates
 
-def get_object(g: Graph, subject, predicate_list):
-    if type(predicate_list) == dict and 'predicates' in predicate_list:
-        predicate_list = predicate_list['predicates']
-    if type(predicate_list) == str:
+    if type(predicate_list) == list:
+        pass
+    else:
         predicate_list = [predicate_list]
-    for o in chain(
+
+    
+    objects = list(set(chain(
         [o for p in predicate_list for o in g.objects(subject, p)]
-    ):
-        return o
+    )))
+
+    if len(objects):
+        return objects if return_all else objects[0]
+
     return None
+
+def get_prefix(graph: Graph, n):
+    return n.n3(graph.namespace_manager).split(':')[0]
+
+def get_suffix(graph: Graph, n):
+    return n.n3(graph.namespace_manager).split(':')[-1]

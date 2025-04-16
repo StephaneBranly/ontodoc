@@ -2,8 +2,6 @@
 
 The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.
 
-## Contributors
-
 
 
 ## Classes
@@ -51,6 +49,6 @@ The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and
 
 ---
 
-Documentation generated on 2025-04-13
+Documentation generated on 2025-04-16
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.0*

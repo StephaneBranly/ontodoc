@@ -2,11 +2,11 @@
 
 {{onto.comment}}
 
-## Contributors
-
-{% for contributor in onto.contributors%}
+{% if onto.contributor and onto.contributor|length %} ## Contributors
+{% for contributor in onto.contributor%}
 
 - {{contributor}}{%- endfor %}
+  {% endif %}
 
 ## Classes
 
