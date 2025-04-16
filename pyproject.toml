@@ -1,0 +1,35 @@
+[project]
+name = "ontodoc"
+version = "0.0.0"
+description = "Generate easily your markdown documentation for any ontology"
+authors = [
+    {name = "StephaneBranly",email = "stephanebranly.pro@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8.1"
+keywords = ['Ontology', 'rdflib', 'jinja2', 'documentation', 'markdown']
+license = 'Apache-2.0'
+
+[project.urls]
+Source = 'https://github.com/StephaneBranly/ontodoc'
+Tracker = 'https://github.com/StephaneBranly/ontodoc/issues'
+
+[tool.poetry]
+packages = [{include = "ontodoc", from = "./"}]
+name = "ontodoc"
+version = "0.0.0"
+description = "Generate easily your markdown documentation for any ontology"
+authors = ["StephaneBranly <stephanebranly.pro@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+ontodoc = "ontodoc.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+jinja2 = ">=3.1.6,<4.0.0"
+rdflib = ">=7.1.3,<8.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
