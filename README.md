@@ -4,6 +4,8 @@
 
 # ontodoc
 
+![PyPIVersion](https://img.shields.io/pypi/v/ontodoc) ![PyPI - Downloads](https://img.shields.io/pypi/dm/ontodoc) ![GitHub License](https://img.shields.io/github/license/StephaneBranly/ontodoc)
+
 A python module to generate markdown documentation for ontologies.
 
 Based on `rdflib` and `jinja2`.
