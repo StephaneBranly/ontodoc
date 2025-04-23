@@ -48,21 +48,22 @@ Look at the [example for _foaf_](https://github.com/StephaneBranly/ontodoc/blob/
 ## How does it work ? 🔧
 
 ```mermaid
+%% THIS IS A SCHEMA, IF YOU CANNOT SEE IT, PLEASE TRY TO CONSULT THIS PAGE ON GITHUB AND ON A DESKTOP WEB NAVIGATOR
 flowchart LR
  subgraph s1["Ontodoc"]
-        n5["Markdown human readable documentation"]
-        n8["Markdown templates"]
-        n4["Structured ontology description"]
-        n9["Command Line Interface"]
+        mdhrd["Markdown human readable documentation"]
+        mt["Markdown templates"]
+        sod["Structured ontology description"]
+        cli["Command Line Interface"]
   end
-    n4 --> n5
-    n8 --> n5
-    n7(("Ontology")) --> n9
-    n9 --> n4
-    n9 -.-> n8
+    sod --> mdhrd
+    mt --> mdhrd
+    on(("Ontology")) --> cli
+    cli --> sod
+    cli -.-> mt
 
-    n4@{ shape: braces}
-    n9@{ shape: text}
+    sod@{ shape: braces}
+    cli@{ shape: text}
 ```
 
 ## Contributing </>
