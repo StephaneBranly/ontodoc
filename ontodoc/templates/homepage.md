@@ -14,6 +14,15 @@
 [{{class.label}}](class/{{class.id}}.md),
 {%- endfor %}
 
+## Statistics
+
+- **{{onto.classes|length}}** classes
+- **{{onto.objectProperties|length + onto.datatypeProperties|length + onto.annotationProperties|length + onto.functionalProperties|length}}** Properties
+  - **{{onto.objectProperties|length}}** object
+  - **{{onto.datatypeProperties|length}}** datatype
+  - **{{onto.annotationProperties|length}}** annotation
+  - **{{onto.functionalProperties|length}}** functional
+
 ## Namepaces
 
 {% for namespace in onto.namespaces%}

@@ -20,8 +20,14 @@ class Ontology:
         self.namespaces = [{'prefix': i[0], 'uri': i[1]} for i in graph.namespace_manager.namespaces()]
         self.onto_prefix = [prefix for prefix, uriref in graph.namespace_manager.namespaces() if uriref.n3(graph.namespace_manager) == onto_node.n3(graph.namespace_manager)]
         self.onto_prefix = self.onto_prefix[0] if len(self.onto_prefix) > 0 else None
-        self.classes = [Class(self.graph, self, s, self.templates['class.md']) for s in self.graph.subjects(predicate=rdflib.RDF["type"], object=rdflib.OWL['Class']) if type(s) == rdflib.URIRef and get_prefix(self.graph, s) == self.onto_prefix]
 
+
+        self.classes = [Class(self.graph, self, s, self.templates['class.md']) for s in self.graph.subjects(predicate=rdflib.RDF.type, object=rdflib.OWL.Class) if type(s) == rdflib.URIRef and get_prefix(self.graph, s) == self.onto_prefix]
+        self.objectProperties = [s for s in self.graph.subjects(predicate=rdflib.RDF.type, object=rdflib.OWL.ObjectProperty) if type(s) == rdflib.URIRef and get_prefix(self.graph, s) == self.onto_prefix]
+        self.datatypeProperties = [s for s in self.graph.subjects(predicate=rdflib.RDF.type, object=rdflib.OWL.DatatypeProperty) if type(s) == rdflib.URIRef and get_prefix(self.graph, s) == self.onto_prefix]
+        self.annotationProperties = [s for s in self.graph.subjects(predicate=rdflib.RDF.type, object=rdflib.OWL.AnnotationProperty) if type(s) == rdflib.URIRef and get_prefix(self.graph, s) == self.onto_prefix]
+        self.functionalProperties = [s for s in self.graph.subjects(predicate=rdflib.RDF.type, object=rdflib.OWL.FunctionalProperty) if type(s) == rdflib.URIRef and get_prefix(self.graph, s) == self.onto_prefix]
+    
     def __str__(self):
         homepage = Homepage(self.graph, self, self.templates['homepage.md'])
         return homepage.__str__()
