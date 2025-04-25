@@ -1,0 +1,10 @@
+{
+  "template": null,
+  "onto": null,
+  "class_node": "http://xmlns.com/foaf/0.1/Project",
+  "id": "Project",
+  "label": "Project",
+  "comment": "A project (a collective endeavour of some kind).",
+  "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Project a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Project\" ;\n    rdfs:comment \"A project (a collective endeavour of some kind).\" ;\n    rdfs:isDefinedBy foaf: ;\n    owl:disjointWith foaf:Document,\n        foaf:Person ;\n    ns1:term_status \"testing\" .\n\n",
+  "triples": []
+}

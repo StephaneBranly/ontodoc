@@ -4,6 +4,15 @@ The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and
 
 
 
+## Summary
+
+- **13** classes
+- **65** Properties
+  - **33** object
+  - **27** datatype
+  - **1** annotation
+  - **4** functional
+
 ## Classes
 
 
@@ -20,6 +29,89 @@ The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and
 [Online Gaming Account](class/OnlineGamingAccount.md),
 [Online E-commerce Account](class/OnlineEcommerceAccount.md),
 [Online Chat Account](class/OnlineChatAccount.md),
+
+## Properties
+
+### Object Properties
+
+
+[personal mailbox](property/mbox.md),
+[based near](property/based_near.md),
+[phone](property/phone.md),
+[homepage](property/homepage.md),
+[weblog](property/weblog.md),
+[openid](property/openid.md),
+[tipjar](property/tipjar.md),
+[made](property/made.md),
+[maker](property/maker.md),
+[image](property/img.md),
+[depiction](property/depiction.md),
+[depicts](property/depicts.md),
+[thumbnail](property/thumbnail.md),
+[workplace homepage](property/workplaceHomepage.md),
+[work info homepage](property/workInfoHomepage.md),
+[schoolHomepage](property/schoolHomepage.md),
+[knows](property/knows.md),
+[interest](property/interest.md),
+[topic_interest](property/topic_interest.md),
+[publications](property/publications.md),
+[current project](property/currentProject.md),
+[past project](property/pastProject.md),
+[funded by](property/fundedBy.md),
+[logo](property/logo.md),
+[topic](property/topic.md),
+[primary topic](property/primaryTopic.md),
+[focus](property/focus.md),
+[page](property/page.md),
+[theme](property/theme.md),
+[account](property/account.md),
+[account](property/holdsAccount.md),
+[account service homepage](property/accountServiceHomepage.md),
+[member](property/member.md),
+
+### Datatype Properties
+
+
+[sha1sum of a personal mailbox URI name](property/mbox_sha_sum.md),
+[gender](property/gender.md),
+[geekcode](property/geekcode.md),
+[DNA checksum](property/dnaChecksum.md),
+[sha1sum (hex)](property/sha_.md),
+[title](property/title.md),
+[nickname](property/nick.md),
+[jabber ID](property/jabberID.md),
+[AIM chat ID](property/aimChatID.md),
+[Skype ID](property/skypeID.md),
+[ICQ chat ID](property/icqChatID.md),
+[Yahoo chat ID](property/yahooChatID.md),
+[MSN chat ID](property/msnChatID.md),
+[name](property/name.md),
+[firstName](property/firstName.md),
+[lastName](property/lastName.md),
+[Given name](property/givenName.md),
+[Given name](property/givenname.md),
+[Surname](property/surname.md),
+[family_name](property/family_name.md),
+[familyName](property/familyName.md),
+[plan](property/plan.md),
+[myersBriggs](property/myersBriggs.md),
+[account name](property/accountName.md),
+[birthday](property/birthday.md),
+[age](property/age.md),
+[status](property/status.md),
+
+### Annotation Properties
+
+
+[membershipClass](property/membershipClass.md),
+
+### Functional Properties
+
+
+[gender](property/gender.md),
+[primary topic](property/primaryTopic.md),
+[birthday](property/birthday.md),
+[age](property/age.md),
 
 ## Namepaces
 
@@ -49,6 +141,6 @@ The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and
 
 ---
 
-Documentation generated on 2025-04-16
+Documentation generated on 2025-04-25
 
-Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.0*
+Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

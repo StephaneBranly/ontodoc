@@ -1,0 +1,19 @@
+{
+  "template": null,
+  "onto": null,
+  "class_node": "http://xmlns.com/foaf/0.1/Group",
+  "id": "Group",
+  "label": "Group",
+  "comment": "A class of Agents.",
+  "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Group a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Group\" ;\n    rdfs:comment \"A class of Agents.\" ;\n    rdfs:subClassOf foaf:Agent ;\n    ns1:term_status \"stable\" .\n\n",
+  "triples": [
+    {
+      "id": 0,
+      "predicate": "foaf:member",
+      "range": "foaf:Agent",
+      "label": "\"member\"",
+      "comment": "\"Indicates a member of a Group\"",
+      "link": "Agent.md"
+    }
+  ]
+}

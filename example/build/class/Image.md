@@ -2,14 +2,14 @@
 
 ## Image
 
-**An image.**
+> **An image.**
 
 
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-| foaf:depicts | "depicts" | "A thing depicted in this representation." |<kbd>owl:Thing</kbd> | |
-| foaf:thumbnail | "thumbnail" | "A derived thumbnail image." |<kbd>foaf:Image</kbd> |
+| foaf:depicts | "depicts" | "A thing depicted in this representation." |[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>) | |
+| foaf:thumbnail | "thumbnail" | "A derived thumbnail image." |[foaf:Image](Image.md) |
 
 ## Schema
 
@@ -31,8 +31,28 @@ classDef baseclass fill:#030ffc,stroke:#333,stroke-width:4px;
 
 
 
+## Serialized
+
+```ttl
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+foaf:Image a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Image" ;
+    rdfs:comment "An image." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subClassOf foaf:Document ;
+    owl:equivalentClass <http://schema.org/ImageObject> ;
+    ns1:term_status "stable" .
+
+
+```
+
 ---
 
-Documentation generated on 2025-04-16
+Documentation generated on 2025-04-25
 
-Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.0*
+Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

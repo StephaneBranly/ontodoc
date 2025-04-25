@@ -1,0 +1,1455 @@
+{
+  "graph": null,
+  "publisher": null,
+  "creator": null,
+  "contributor": null,
+  "created": null,
+  "dateAccepted": null,
+  "modified": null,
+  "issued": null,
+  "license": null,
+  "rights": null,
+  "//schema.org/category>": null,
+  "versionIRI": null,
+  "versionInfo": null,
+  "priorVersion": "1.1.1",
+  "//schema.org/identifier>": null,
+  "//purl.org/vocab/vann/preferredNamespacePrefix>": null,
+  "//purl.org/vocab/vann/preferredNamespaceUri>": null,
+  "historyNote": null,
+  "scopeNote": null,
+  "source": null,
+  "provenance": null,
+  "note": null,
+  "comment": "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.",
+  "label": "Friend of a Friend (FOAF) vocabulary",
+  "templates": {
+    "class.md": null,
+    "footer.md": null,
+    "homepage.md": null,
+    "property.md": null
+  },
+  "onto_node": "http://xmlns.com/foaf/0.1/",
+  "namespaces": [
+    {
+      "prefix": "foaf",
+      "uri": "http://xmlns.com/foaf/0.1/"
+    },
+    {
+      "prefix": "owl",
+      "uri": "http://www.w3.org/2002/07/owl#"
+    },
+    {
+      "prefix": "dc11",
+      "uri": "http://purl.org/dc/elements/1.1/"
+    },
+    {
+      "prefix": "wot",
+      "uri": "http://xmlns.com/wot/0.1/"
+    },
+    {
+      "prefix": "rdfs",
+      "uri": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    {
+      "prefix": "ns0",
+      "uri": "http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    },
+    {
+      "prefix": "schema",
+      "uri": "http://schema.org/"
+    },
+    {
+      "prefix": "geo",
+      "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+    },
+    {
+      "prefix": "dc",
+      "uri": "http://purl.org/dc/terms/"
+    },
+    {
+      "prefix": "rdf",
+      "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    {
+      "prefix": "skos",
+      "uri": "http://www.w3.org/2004/02/skos/core#"
+    }
+  ],
+  "onto_prefix": "foaf",
+  "objectProperties": [
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/mbox",
+      "id": "mbox",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:mbox a rdf:Property,\n        owl:InverseFunctionalProperty,\n        owl:ObjectProperty ;\n    rdfs:label \"personal mailbox\" ;\n    rdfs:comment \"A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "personal mailbox",
+      "comment": "A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/based_near",
+      "id": "based_near",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:based_near a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"based near\" ;\n    rdfs:comment \"A location that something is based near, for some broadly human notion of near.\" ;\n    rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "based near",
+      "comment": "A location that something is based near, for some broadly human notion of near.",
+      "range": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+      "domain": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+      "range_link": "<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>",
+      "domain_link": "<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/phone",
+      "id": "phone",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:phone a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"phone\" ;\n    rdfs:comment \"A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel).\" ;\n    rdfs:isDefinedBy foaf: ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "phone",
+      "comment": "A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel).",
+      "range": null,
+      "domain": null,
+      "range_link": null,
+      "domain_link": null
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/homepage",
+      "id": "homepage",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:homepage a rdf:Property,\n        owl:InverseFunctionalProperty,\n        owl:ObjectProperty ;\n    rdfs:label \"homepage\" ;\n    rdfs:comment \"A homepage for some thing.\" ;\n    rdfs:domain owl:Thing ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    rdfs:subPropertyOf foaf:isPrimaryTopicOf,\n        foaf:page ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "homepage",
+      "comment": "A homepage for some thing.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://www.w3.org/2002/07/owl#Thing",
+      "range_link": "Document.md",
+      "domain_link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/weblog",
+      "id": "weblog",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:weblog a rdf:Property,\n        owl:InverseFunctionalProperty,\n        owl:ObjectProperty ;\n    rdfs:label \"weblog\" ;\n    rdfs:comment \"A weblog of some thing (whether person, group, company etc.).\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    rdfs:subPropertyOf foaf:page ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "weblog",
+      "comment": "A weblog of some thing (whether person, group, company etc.).",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "Document.md",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/openid",
+      "id": "openid",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:openid a rdf:Property,\n        owl:InverseFunctionalProperty,\n        owl:ObjectProperty ;\n    rdfs:label \"openid\" ;\n    rdfs:comment \"An OpenID for an Agent.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    rdfs:subPropertyOf foaf:isPrimaryTopicOf ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "openid",
+      "comment": "An OpenID for an Agent.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "Document.md",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/tipjar",
+      "id": "tipjar",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:tipjar a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"tipjar\" ;\n    rdfs:comment \"A tipjar document for this agent, describing means for payment and reward.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    rdfs:subPropertyOf foaf:page ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "tipjar",
+      "comment": "A tipjar document for this agent, describing means for payment and reward.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "Document.md",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/made",
+      "id": "made",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:made a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"made\" ;\n    rdfs:comment \"Something that was made by this agent.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    owl:inverseOf foaf:maker ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "made",
+      "comment": "Something that was made by this agent.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/maker",
+      "id": "maker",
+      "serialized": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:maker a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"maker\" ;\n    rdfs:comment \"An agent that  made this thing.\" ;\n    rdfs:domain owl:Thing ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Agent ;\n    owl:equivalentProperty dcterms:creator ;\n    owl:inverseOf foaf:made ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "maker",
+      "comment": "An agent that  made this thing.",
+      "range": "http://xmlns.com/foaf/0.1/Agent",
+      "domain": "http://www.w3.org/2002/07/owl#Thing",
+      "range_link": "Agent.md",
+      "domain_link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/img",
+      "id": "img",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:img a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"image\" ;\n    rdfs:comment \"An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage).\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Image ;\n    rdfs:subPropertyOf foaf:depiction ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "image",
+      "comment": "An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage).",
+      "range": "http://xmlns.com/foaf/0.1/Image",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "Image.md",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/depiction",
+      "id": "depiction",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:depiction a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"depiction\" ;\n    rdfs:comment \"A depiction of some thing.\" ;\n    rdfs:domain owl:Thing ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Image ;\n    owl:inverseOf foaf:depicts ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "depiction",
+      "comment": "A depiction of some thing.",
+      "range": "http://xmlns.com/foaf/0.1/Image",
+      "domain": "http://www.w3.org/2002/07/owl#Thing",
+      "range_link": "Image.md",
+      "domain_link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/depicts",
+      "id": "depicts",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:depicts a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"depicts\" ;\n    rdfs:comment \"A thing depicted in this representation.\" ;\n    rdfs:domain foaf:Image ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    owl:inverseOf foaf:depiction ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "depicts",
+      "comment": "A thing depicted in this representation.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://xmlns.com/foaf/0.1/Image",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "Image.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/thumbnail",
+      "id": "thumbnail",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:thumbnail a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"thumbnail\" ;\n    rdfs:comment \"A derived thumbnail image.\" ;\n    rdfs:domain foaf:Image ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Image ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "thumbnail",
+      "comment": "A derived thumbnail image.",
+      "range": "http://xmlns.com/foaf/0.1/Image",
+      "domain": "http://xmlns.com/foaf/0.1/Image",
+      "range_link": "Image.md",
+      "domain_link": "Image.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/workplaceHomepage",
+      "id": "workplaceHomepage",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:workplaceHomepage a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"workplace homepage\" ;\n    rdfs:comment \"A workplace homepage of some person; the homepage of an organization they work for.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "workplace homepage",
+      "comment": "A workplace homepage of some person; the homepage of an organization they work for.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "Document.md",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/workInfoHomepage",
+      "id": "workInfoHomepage",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:workInfoHomepage a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"work info homepage\" ;\n    rdfs:comment \"A work info homepage of some person; a page about their work for some organization.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "work info homepage",
+      "comment": "A work info homepage of some person; a page about their work for some organization.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "Document.md",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/schoolHomepage",
+      "id": "schoolHomepage",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:schoolHomepage a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"schoolHomepage\" ;\n    rdfs:comment \"A homepage of a school attended by the person.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "schoolHomepage",
+      "comment": "A homepage of a school attended by the person.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "Document.md",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/knows",
+      "id": "knows",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:knows a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"knows\" ;\n    rdfs:comment \"A person known by this person (indicating some level of reciprocated interaction between the parties).\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Person ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "knows",
+      "comment": "A person known by this person (indicating some level of reciprocated interaction between the parties).",
+      "range": "http://xmlns.com/foaf/0.1/Person",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "Person.md",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/interest",
+      "id": "interest",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:interest a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"interest\" ;\n    rdfs:comment \"A page about a topic of interest to this person.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "interest",
+      "comment": "A page about a topic of interest to this person.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "Document.md",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/topic_interest",
+      "id": "topic_interest",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:topic_interest a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"topic_interest\" ;\n    rdfs:comment \"A thing of interest to this person.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "topic_interest",
+      "comment": "A thing of interest to this person.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/publications",
+      "id": "publications",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:publications a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"publications\" ;\n    rdfs:comment \"A link to the publications of this person.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "publications",
+      "comment": "A link to the publications of this person.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "Document.md",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/currentProject",
+      "id": "currentProject",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:currentProject a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"current project\" ;\n    rdfs:comment \"A current project this person works on.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "current project",
+      "comment": "A current project this person works on.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/pastProject",
+      "id": "pastProject",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:pastProject a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"past project\" ;\n    rdfs:comment \"A project this person has previously worked on.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "past project",
+      "comment": "A project this person has previously worked on.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/fundedBy",
+      "id": "fundedBy",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:fundedBy a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"funded by\" ;\n    rdfs:comment \"An organization funding a project or person.\" ;\n    rdfs:domain owl:Thing ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    ns1:term_status \"archaic\" .\n\n",
+      "label": "funded by",
+      "comment": "An organization funding a project or person.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://www.w3.org/2002/07/owl#Thing",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/logo",
+      "id": "logo",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:logo a rdf:Property,\n        owl:InverseFunctionalProperty,\n        owl:ObjectProperty ;\n    rdfs:label \"logo\" ;\n    rdfs:comment \"A logo representing some thing.\" ;\n    rdfs:domain owl:Thing ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "logo",
+      "comment": "A logo representing some thing.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://www.w3.org/2002/07/owl#Thing",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/topic",
+      "id": "topic",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:topic a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"topic\" ;\n    rdfs:comment \"A topic of some page or document.\" ;\n    rdfs:domain foaf:Document ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    owl:inverseOf foaf:page ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "topic",
+      "comment": "A topic of some page or document.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://xmlns.com/foaf/0.1/Document",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "Document.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/primaryTopic",
+      "id": "primaryTopic",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:primaryTopic a rdf:Property,\n        owl:FunctionalProperty,\n        owl:ObjectProperty ;\n    rdfs:label \"primary topic\" ;\n    rdfs:comment \"The primary topic of some page or document.\" ;\n    rdfs:domain foaf:Document ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    owl:inverseOf foaf:isPrimaryTopicOf ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "primary topic",
+      "comment": "The primary topic of some page or document.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://xmlns.com/foaf/0.1/Document",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "Document.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/focus",
+      "id": "focus",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nfoaf:focus a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"focus\" ;\n    rdfs:comment \"The underlying or 'focal' entity associated with some SKOS-described concept.\" ;\n    rdfs:domain skos:Concept ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "focus",
+      "comment": "The underlying or 'focal' entity associated with some SKOS-described concept.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://www.w3.org/2004/02/skos/core#Concept",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "<http://www.w3.org/2004/02/skos/core#Concept>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/page",
+      "id": "page",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:page a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"page\" ;\n    rdfs:comment \"A page or document about this thing.\" ;\n    rdfs:domain owl:Thing ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    owl:inverseOf foaf:topic ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "page",
+      "comment": "A page or document about this thing.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://www.w3.org/2002/07/owl#Thing",
+      "range_link": "Document.md",
+      "domain_link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/theme",
+      "id": "theme",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:theme a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"theme\" ;\n    rdfs:comment \"A theme.\" ;\n    rdfs:domain owl:Thing ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    ns1:term_status \"archaic\" .\n\n",
+      "label": "theme",
+      "comment": "A theme.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://www.w3.org/2002/07/owl#Thing",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/account",
+      "id": "account",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:account a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"account\" ;\n    rdfs:comment \"Indicates an account held by this agent.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:OnlineAccount ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "account",
+      "comment": "Indicates an account held by this agent.",
+      "range": "http://xmlns.com/foaf/0.1/OnlineAccount",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "OnlineAccount.md",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/holdsAccount",
+      "id": "holdsAccount",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:holdsAccount a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"account\" ;\n    rdfs:comment \"Indicates an account held by this agent.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:OnlineAccount ;\n    ns1:term_status \"archaic\" .\n\n",
+      "label": "account",
+      "comment": "Indicates an account held by this agent.",
+      "range": "http://xmlns.com/foaf/0.1/OnlineAccount",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "OnlineAccount.md",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/accountServiceHomepage",
+      "id": "accountServiceHomepage",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:accountServiceHomepage a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"account service homepage\" ;\n    rdfs:comment \"Indicates a homepage of the service provide for this online account.\" ;\n    rdfs:domain foaf:OnlineAccount ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Document ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "account service homepage",
+      "comment": "Indicates a homepage of the service provide for this online account.",
+      "range": "http://xmlns.com/foaf/0.1/Document",
+      "domain": "http://xmlns.com/foaf/0.1/OnlineAccount",
+      "range_link": "Document.md",
+      "domain_link": "OnlineAccount.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/member",
+      "id": "member",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:member a rdf:Property,\n        owl:ObjectProperty ;\n    rdfs:label \"member\" ;\n    rdfs:comment \"Indicates a member of a Group\" ;\n    rdfs:domain foaf:Group ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range foaf:Agent ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "member",
+      "comment": "Indicates a member of a Group",
+      "range": "http://xmlns.com/foaf/0.1/Agent",
+      "domain": "http://xmlns.com/foaf/0.1/Group",
+      "range_link": "Agent.md",
+      "domain_link": "Group.md"
+    }
+  ],
+  "datatypeProperties": [
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/mbox_sha1sum",
+      "id": "mbox_sha_sum",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:mbox_sha1sum a rdf:Property,\n        owl:DatatypeProperty,\n        owl:InverseFunctionalProperty ;\n    rdfs:label \"sha1sum of a personal mailbox URI name\" ;\n    rdfs:comment \"The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "sha1sum of a personal mailbox URI name",
+      "comment": "The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/gender",
+      "id": "gender",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:gender a rdf:Property,\n        owl:DatatypeProperty,\n        owl:FunctionalProperty ;\n    rdfs:label \"gender\" ;\n    rdfs:comment \"The gender of this Agent (typically but not necessarily 'male' or 'female').\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "gender",
+      "comment": "The gender of this Agent (typically but not necessarily 'male' or 'female').",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/geekcode",
+      "id": "geekcode",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:geekcode a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"geekcode\" ;\n    rdfs:comment \"A textual geekcode for this person, see http://www.geekcode.com/geek.html\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"archaic\" .\n\n",
+      "label": "geekcode",
+      "comment": "A textual geekcode for this person, see http://www.geekcode.com/geek.html",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/dnaChecksum",
+      "id": "dnaChecksum",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:dnaChecksum a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"DNA checksum\" ;\n    rdfs:comment \"A checksum for the DNA of some thing. Joke.\" ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"archaic\" .\n\n",
+      "label": "DNA checksum",
+      "comment": "A checksum for the DNA of some thing. Joke.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": null,
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": null
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/sha1",
+      "id": "sha_",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:sha1 a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"sha1sum (hex)\" ;\n    rdfs:comment \"A sha1sum hash, in hex.\" ;\n    rdfs:domain foaf:Document ;\n    rdfs:isDefinedBy foaf: ;\n    ns1:term_status \"unstable\" .\n\n",
+      "label": "sha1sum (hex)",
+      "comment": "A sha1sum hash, in hex.",
+      "range": null,
+      "domain": "http://xmlns.com/foaf/0.1/Document",
+      "range_link": null,
+      "domain_link": "Document.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/title",
+      "id": "title",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:title a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"title\" ;\n    rdfs:comment \"Title (Mr, Mrs, Ms, Dr. etc)\" ;\n    rdfs:isDefinedBy foaf: ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "title",
+      "comment": "Title (Mr, Mrs, Ms, Dr. etc)",
+      "range": null,
+      "domain": null,
+      "range_link": null,
+      "domain_link": null
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/nick",
+      "id": "nick",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:nick a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"nickname\" ;\n    rdfs:comment \"A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).\" ;\n    rdfs:isDefinedBy foaf: ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "nickname",
+      "comment": "A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).",
+      "range": null,
+      "domain": null,
+      "range_link": null,
+      "domain_link": null
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/jabberID",
+      "id": "jabberID",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:jabberID a rdf:Property,\n        owl:DatatypeProperty,\n        owl:InverseFunctionalProperty ;\n    rdfs:label \"jabber ID\" ;\n    rdfs:comment \"A jabber ID for something.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "jabber ID",
+      "comment": "A jabber ID for something.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/aimChatID",
+      "id": "aimChatID",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:aimChatID a rdf:Property,\n        owl:DatatypeProperty,\n        owl:InverseFunctionalProperty ;\n    rdfs:label \"AIM chat ID\" ;\n    rdfs:comment \"An AIM chat ID\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    rdfs:subPropertyOf foaf:nick ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "AIM chat ID",
+      "comment": "An AIM chat ID",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/skypeID",
+      "id": "skypeID",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:skypeID a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"Skype ID\" ;\n    rdfs:comment \"A Skype ID\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    rdfs:subPropertyOf foaf:nick ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "Skype ID",
+      "comment": "A Skype ID",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/icqChatID",
+      "id": "icqChatID",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:icqChatID a rdf:Property,\n        owl:DatatypeProperty,\n        owl:InverseFunctionalProperty ;\n    rdfs:label \"ICQ chat ID\" ;\n    rdfs:comment \"An ICQ chat ID\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    rdfs:subPropertyOf foaf:nick ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "ICQ chat ID",
+      "comment": "An ICQ chat ID",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/yahooChatID",
+      "id": "yahooChatID",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:yahooChatID a rdf:Property,\n        owl:DatatypeProperty,\n        owl:InverseFunctionalProperty ;\n    rdfs:label \"Yahoo chat ID\" ;\n    rdfs:comment \"A Yahoo chat ID\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    rdfs:subPropertyOf foaf:nick ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "Yahoo chat ID",
+      "comment": "A Yahoo chat ID",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/msnChatID",
+      "id": "msnChatID",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:msnChatID a rdf:Property,\n        owl:DatatypeProperty,\n        owl:InverseFunctionalProperty ;\n    rdfs:label \"MSN chat ID\" ;\n    rdfs:comment \"An MSN chat ID\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    rdfs:subPropertyOf foaf:nick ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "MSN chat ID",
+      "comment": "An MSN chat ID",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/name",
+      "id": "name",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:name a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"name\" ;\n    rdfs:comment \"A name for some thing.\" ;\n    rdfs:domain owl:Thing ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    rdfs:subPropertyOf rdfs:label ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "name",
+      "comment": "A name for some thing.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://www.w3.org/2002/07/owl#Thing",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/firstName",
+      "id": "firstName",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:firstName a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"firstName\" ;\n    rdfs:comment \"The first name of a person.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "firstName",
+      "comment": "The first name of a person.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/lastName",
+      "id": "lastName",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:lastName a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"lastName\" ;\n    rdfs:comment \"The last name of a person.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "lastName",
+      "comment": "The last name of a person.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/givenName",
+      "id": "givenName",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:givenName a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"Given name\" ;\n    rdfs:comment \"The given name of some person.\" ;\n    rdfs:isDefinedBy foaf: ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "Given name",
+      "comment": "The given name of some person.",
+      "range": null,
+      "domain": null,
+      "range_link": null,
+      "domain_link": null
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/givenname",
+      "id": "givenname",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:givenname a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"Given name\" ;\n    rdfs:comment \"The given name of some person.\" ;\n    rdfs:isDefinedBy foaf: ;\n    ns1:term_status \"archaic\" .\n\n",
+      "label": "Given name",
+      "comment": "The given name of some person.",
+      "range": null,
+      "domain": null,
+      "range_link": null,
+      "domain_link": null
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/surname",
+      "id": "surname",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:surname a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"Surname\" ;\n    rdfs:comment \"The surname of some person.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"archaic\" .\n\n",
+      "label": "Surname",
+      "comment": "The surname of some person.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/family_name",
+      "id": "family_name",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:family_name a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"family_name\" ;\n    rdfs:comment \"The family name of some person.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"archaic\" .\n\n",
+      "label": "family_name",
+      "comment": "The family name of some person.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/familyName",
+      "id": "familyName",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:familyName a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"familyName\" ;\n    rdfs:comment \"The family name of some person.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "familyName",
+      "comment": "The family name of some person.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/plan",
+      "id": "plan",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:plan a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"plan\" ;\n    rdfs:comment \"A .plan comment, in the tradition of finger and '.plan' files.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "plan",
+      "comment": "A .plan comment, in the tradition of finger and '.plan' files.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/myersBriggs",
+      "id": "myersBriggs",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:myersBriggs a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"myersBriggs\" ;\n    rdfs:comment \"A Myers Briggs (MBTI) personality classification.\" ;\n    rdfs:domain foaf:Person ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "myersBriggs",
+      "comment": "A Myers Briggs (MBTI) personality classification.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Person",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Person.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/accountName",
+      "id": "accountName",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:accountName a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"account name\" ;\n    rdfs:comment \"Indicates the name (identifier) associated with this online account.\" ;\n    rdfs:domain foaf:OnlineAccount ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "account name",
+      "comment": "Indicates the name (identifier) associated with this online account.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/OnlineAccount",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "OnlineAccount.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/birthday",
+      "id": "birthday",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:birthday a rdf:Property,\n        owl:DatatypeProperty,\n        owl:FunctionalProperty ;\n    rdfs:label \"birthday\" ;\n    rdfs:comment \"The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"unstable\" .\n\n",
+      "label": "birthday",
+      "comment": "The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/age",
+      "id": "age",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:age a rdf:Property,\n        owl:DatatypeProperty,\n        owl:FunctionalProperty ;\n    rdfs:label \"age\" ;\n    rdfs:comment \"The age in years of some agent.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"unstable\" .\n\n",
+      "label": "age",
+      "comment": "The age in years of some agent.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/status",
+      "id": "status",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:status a rdf:Property,\n        owl:DatatypeProperty ;\n    rdfs:label \"status\" ;\n    rdfs:comment \"A string expressing what the user is happy for the general public (normally) to know about their current activity.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"unstable\" .\n\n",
+      "label": "status",
+      "comment": "A string expressing what the user is happy for the general public (normally) to know about their current activity.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    }
+  ],
+  "annotationProperties": [
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/membershipClass",
+      "id": "membershipClass",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:membershipClass a rdf:Property,\n        owl:AnnotationProperty ;\n    rdfs:label \"membershipClass\" ;\n    rdfs:comment \"Indicates the class of individuals that are a member of a Group\" ;\n    rdfs:isDefinedBy foaf: ;\n    ns1:term_status \"unstable\" .\n\n",
+      "label": "membershipClass",
+      "comment": "Indicates the class of individuals that are a member of a Group",
+      "range": null,
+      "domain": null,
+      "range_link": null,
+      "domain_link": null
+    }
+  ],
+  "functionalProperties": [
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/gender",
+      "id": "gender",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:gender a rdf:Property,\n        owl:DatatypeProperty,\n        owl:FunctionalProperty ;\n    rdfs:label \"gender\" ;\n    rdfs:comment \"The gender of this Agent (typically but not necessarily 'male' or 'female').\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"testing\" .\n\n",
+      "label": "gender",
+      "comment": "The gender of this Agent (typically but not necessarily 'male' or 'female').",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/primaryTopic",
+      "id": "primaryTopic",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:primaryTopic a rdf:Property,\n        owl:FunctionalProperty,\n        owl:ObjectProperty ;\n    rdfs:label \"primary topic\" ;\n    rdfs:comment \"The primary topic of some page or document.\" ;\n    rdfs:domain foaf:Document ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range owl:Thing ;\n    owl:inverseOf foaf:isPrimaryTopicOf ;\n    ns1:term_status \"stable\" .\n\n",
+      "label": "primary topic",
+      "comment": "The primary topic of some page or document.",
+      "range": "http://www.w3.org/2002/07/owl#Thing",
+      "domain": "http://xmlns.com/foaf/0.1/Document",
+      "range_link": "<http://www.w3.org/2002/07/owl#Thing>",
+      "domain_link": "Document.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/birthday",
+      "id": "birthday",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:birthday a rdf:Property,\n        owl:DatatypeProperty,\n        owl:FunctionalProperty ;\n    rdfs:label \"birthday\" ;\n    rdfs:comment \"The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"unstable\" .\n\n",
+      "label": "birthday",
+      "comment": "The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    },
+    {
+      "template": null,
+      "onto": null,
+      "property_node": "http://xmlns.com/foaf/0.1/age",
+      "id": "age",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:age a rdf:Property,\n        owl:DatatypeProperty,\n        owl:FunctionalProperty ;\n    rdfs:label \"age\" ;\n    rdfs:comment \"The age in years of some agent.\" ;\n    rdfs:domain foaf:Agent ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:range rdfs:Literal ;\n    ns1:term_status \"unstable\" .\n\n",
+      "label": "age",
+      "comment": "The age in years of some agent.",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "domain": "http://xmlns.com/foaf/0.1/Agent",
+      "range_link": "<http://www.w3.org/2000/01/rdf-schema#Literal>",
+      "domain_link": "Agent.md"
+    }
+  ],
+  "classes": [
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/LabelProperty",
+      "id": "LabelProperty",
+      "label": "Label Property",
+      "comment": "A foaf:LabelProperty is any RDF property with texual values that serve as labels.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:LabelProperty a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Label Property\" ;\n    rdfs:comment \"A foaf:LabelProperty is any RDF property with texual values that serve as labels.\" ;\n    rdfs:isDefinedBy foaf: ;\n    ns1:term_status \"unstable\" .\n\n",
+      "triples": []
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/Person",
+      "id": "Person",
+      "label": "Person",
+      "comment": "A person.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Person a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Person\" ;\n    rdfs:comment \"A person.\" ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>,\n        foaf:Agent ;\n    owl:disjointWith foaf:Organization,\n        foaf:Project ;\n    owl:equivalentClass <http://schema.org/Person>,\n        <http://www.w3.org/2000/10/swap/pim/contact#Person> ;\n    ns1:term_status \"stable\" .\n\n",
+      "triples": [
+        {
+          "id": 0,
+          "predicate": "foaf:geekcode",
+          "range": "rdfs:Literal",
+          "label": "\"geekcode\"",
+          "comment": "\"A textual geekcode for this person, see http://www.geekcode.com/geek.html\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 1,
+          "predicate": "foaf:firstName",
+          "range": "rdfs:Literal",
+          "label": "\"firstName\"",
+          "comment": "\"The first name of a person.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 2,
+          "predicate": "foaf:lastName",
+          "range": "rdfs:Literal",
+          "label": "\"lastName\"",
+          "comment": "\"The last name of a person.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 3,
+          "predicate": "foaf:surname",
+          "range": "rdfs:Literal",
+          "label": "\"Surname\"",
+          "comment": "\"The surname of some person.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 4,
+          "predicate": "foaf:family_name",
+          "range": "rdfs:Literal",
+          "label": "\"family_name\"",
+          "comment": "\"The family name of some person.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 5,
+          "predicate": "foaf:familyName",
+          "range": "rdfs:Literal",
+          "label": "\"familyName\"",
+          "comment": "\"The family name of some person.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 6,
+          "predicate": "foaf:plan",
+          "range": "rdfs:Literal",
+          "label": "\"plan\"",
+          "comment": "\"A .plan comment, in the tradition of finger and '.plan' files.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 7,
+          "predicate": "foaf:myersBriggs",
+          "range": "rdfs:Literal",
+          "label": "\"myersBriggs\"",
+          "comment": "\"A Myers Briggs (MBTI) personality classification.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 8,
+          "predicate": "foaf:img",
+          "range": "foaf:Image",
+          "label": "\"image\"",
+          "comment": "\"An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage).\"",
+          "link": "Image.md"
+        },
+        {
+          "id": 9,
+          "predicate": "foaf:workplaceHomepage",
+          "range": "foaf:Document",
+          "label": "\"workplace homepage\"",
+          "comment": "\"A workplace homepage of some person; the homepage of an organization they work for.\"",
+          "link": "Document.md"
+        },
+        {
+          "id": 10,
+          "predicate": "foaf:workInfoHomepage",
+          "range": "foaf:Document",
+          "label": "\"work info homepage\"",
+          "comment": "\"A work info homepage of some person; a page about their work for some organization.\"",
+          "link": "Document.md"
+        },
+        {
+          "id": 11,
+          "predicate": "foaf:schoolHomepage",
+          "range": "foaf:Document",
+          "label": "\"schoolHomepage\"",
+          "comment": "\"A homepage of a school attended by the person.\"",
+          "link": "Document.md"
+        },
+        {
+          "id": 12,
+          "predicate": "foaf:knows",
+          "range": "foaf:Person",
+          "label": "\"knows\"",
+          "comment": "\"A person known by this person (indicating some level of reciprocated interaction between the parties).\"",
+          "link": "Person.md"
+        },
+        {
+          "id": 13,
+          "predicate": "foaf:publications",
+          "range": "foaf:Document",
+          "label": "\"publications\"",
+          "comment": "\"A link to the publications of this person.\"",
+          "link": "Document.md"
+        },
+        {
+          "id": 14,
+          "predicate": "foaf:currentProject",
+          "range": "owl:Thing",
+          "label": "\"current project\"",
+          "comment": "\"A current project this person works on.\"",
+          "link": "<http://www.w3.org/2002/07/owl#Thing>"
+        },
+        {
+          "id": 15,
+          "predicate": "foaf:pastProject",
+          "range": "owl:Thing",
+          "label": "\"past project\"",
+          "comment": "\"A project this person has previously worked on.\"",
+          "link": "<http://www.w3.org/2002/07/owl#Thing>"
+        }
+      ]
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/Agent",
+      "id": "Agent",
+      "label": "Agent",
+      "comment": "An agent (eg. person, group, software or physical artifact).",
+      "serialized": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Agent a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Agent\" ;\n    rdfs:comment \"An agent (eg. person, group, software or physical artifact).\" ;\n    owl:equivalentClass dcterms:Agent ;\n    ns1:term_status \"stable\" .\n\n",
+      "triples": [
+        {
+          "id": 0,
+          "predicate": "foaf:mbox_sha1sum",
+          "range": "rdfs:Literal",
+          "label": "\"sha1sum of a personal mailbox URI name\"",
+          "comment": "\"The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 1,
+          "predicate": "foaf:gender",
+          "range": "rdfs:Literal",
+          "label": "\"gender\"",
+          "comment": "\"The gender of this Agent (typically but not necessarily 'male' or 'female').\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 2,
+          "predicate": "foaf:jabberID",
+          "range": "rdfs:Literal",
+          "label": "\"jabber ID\"",
+          "comment": "\"A jabber ID for something.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 3,
+          "predicate": "foaf:aimChatID",
+          "range": "rdfs:Literal",
+          "label": "\"AIM chat ID\"",
+          "comment": "\"An AIM chat ID\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 4,
+          "predicate": "foaf:skypeID",
+          "range": "rdfs:Literal",
+          "label": "\"Skype ID\"",
+          "comment": "\"A Skype ID\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 5,
+          "predicate": "foaf:icqChatID",
+          "range": "rdfs:Literal",
+          "label": "\"ICQ chat ID\"",
+          "comment": "\"An ICQ chat ID\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 6,
+          "predicate": "foaf:yahooChatID",
+          "range": "rdfs:Literal",
+          "label": "\"Yahoo chat ID\"",
+          "comment": "\"A Yahoo chat ID\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 7,
+          "predicate": "foaf:msnChatID",
+          "range": "rdfs:Literal",
+          "label": "\"MSN chat ID\"",
+          "comment": "\"An MSN chat ID\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 8,
+          "predicate": "foaf:birthday",
+          "range": "rdfs:Literal",
+          "label": "\"birthday\"",
+          "comment": "\"The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 9,
+          "predicate": "foaf:age",
+          "range": "rdfs:Literal",
+          "label": "\"age\"",
+          "comment": "\"The age in years of some agent.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 10,
+          "predicate": "foaf:status",
+          "range": "rdfs:Literal",
+          "label": "\"status\"",
+          "comment": "\"A string expressing what the user is happy for the general public (normally) to know about their current activity.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 11,
+          "predicate": "foaf:gender",
+          "range": "rdfs:Literal",
+          "label": "\"gender\"",
+          "comment": "\"The gender of this Agent (typically but not necessarily 'male' or 'female').\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 12,
+          "predicate": "foaf:birthday",
+          "range": "rdfs:Literal",
+          "label": "\"birthday\"",
+          "comment": "\"The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 13,
+          "predicate": "foaf:age",
+          "range": "rdfs:Literal",
+          "label": "\"age\"",
+          "comment": "\"The age in years of some agent.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 14,
+          "predicate": "foaf:mbox",
+          "range": "owl:Thing",
+          "label": "\"personal mailbox\"",
+          "comment": "\"A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.\"",
+          "link": "<http://www.w3.org/2002/07/owl#Thing>"
+        },
+        {
+          "id": 15,
+          "predicate": "foaf:weblog",
+          "range": "foaf:Document",
+          "label": "\"weblog\"",
+          "comment": "\"A weblog of some thing (whether person, group, company etc.).\"",
+          "link": "Document.md"
+        },
+        {
+          "id": 16,
+          "predicate": "foaf:openid",
+          "range": "foaf:Document",
+          "label": "\"openid\"",
+          "comment": "\"An OpenID for an Agent.\"",
+          "link": "Document.md"
+        },
+        {
+          "id": 17,
+          "predicate": "foaf:tipjar",
+          "range": "foaf:Document",
+          "label": "\"tipjar\"",
+          "comment": "\"A tipjar document for this agent, describing means for payment and reward.\"",
+          "link": "Document.md"
+        },
+        {
+          "id": 18,
+          "predicate": "foaf:made",
+          "range": "owl:Thing",
+          "label": "\"made\"",
+          "comment": "\"Something that was made by this agent.\"",
+          "link": "<http://www.w3.org/2002/07/owl#Thing>"
+        },
+        {
+          "id": 19,
+          "predicate": "foaf:interest",
+          "range": "foaf:Document",
+          "label": "\"interest\"",
+          "comment": "\"A page about a topic of interest to this person.\"",
+          "link": "Document.md"
+        },
+        {
+          "id": 20,
+          "predicate": "foaf:topic_interest",
+          "range": "owl:Thing",
+          "label": "\"topic_interest\"",
+          "comment": "\"A thing of interest to this person.\"",
+          "link": "<http://www.w3.org/2002/07/owl#Thing>"
+        },
+        {
+          "id": 21,
+          "predicate": "foaf:account",
+          "range": "foaf:OnlineAccount",
+          "label": "\"account\"",
+          "comment": "\"Indicates an account held by this agent.\"",
+          "link": "OnlineAccount.md"
+        },
+        {
+          "id": 22,
+          "predicate": "foaf:holdsAccount",
+          "range": "foaf:OnlineAccount",
+          "label": "\"account\"",
+          "comment": "\"Indicates an account held by this agent.\"",
+          "link": "OnlineAccount.md"
+        }
+      ]
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/Document",
+      "id": "Document",
+      "label": "Document",
+      "comment": "A document.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Document a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Document\" ;\n    rdfs:comment \"A document.\" ;\n    rdfs:isDefinedBy foaf: ;\n    owl:disjointWith foaf:Organization,\n        foaf:Project ;\n    owl:equivalentClass <http://schema.org/CreativeWork> ;\n    ns1:term_status \"stable\" .\n\n",
+      "triples": [
+        {
+          "id": 0,
+          "predicate": "foaf:sha1",
+          "range": null,
+          "label": "\"sha1sum (hex)\"",
+          "comment": "\"A sha1sum hash, in hex.\"",
+          "link": null
+        },
+        {
+          "id": 1,
+          "predicate": "foaf:primaryTopic",
+          "range": "owl:Thing",
+          "label": "\"primary topic\"",
+          "comment": "\"The primary topic of some page or document.\"",
+          "link": "<http://www.w3.org/2002/07/owl#Thing>"
+        },
+        {
+          "id": 2,
+          "predicate": "foaf:topic",
+          "range": "owl:Thing",
+          "label": "\"topic\"",
+          "comment": "\"A topic of some page or document.\"",
+          "link": "<http://www.w3.org/2002/07/owl#Thing>"
+        },
+        {
+          "id": 3,
+          "predicate": "foaf:primaryTopic",
+          "range": "owl:Thing",
+          "label": "\"primary topic\"",
+          "comment": "\"The primary topic of some page or document.\"",
+          "link": "<http://www.w3.org/2002/07/owl#Thing>"
+        }
+      ]
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/Organization",
+      "id": "Organization",
+      "label": "Organization",
+      "comment": "An organization.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Organization a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Organization\" ;\n    rdfs:comment \"An organization.\" ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:subClassOf foaf:Agent ;\n    owl:disjointWith foaf:Document,\n        foaf:Person ;\n    ns1:term_status \"stable\" .\n\n",
+      "triples": []
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/Group",
+      "id": "Group",
+      "label": "Group",
+      "comment": "A class of Agents.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Group a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Group\" ;\n    rdfs:comment \"A class of Agents.\" ;\n    rdfs:subClassOf foaf:Agent ;\n    ns1:term_status \"stable\" .\n\n",
+      "triples": [
+        {
+          "id": 0,
+          "predicate": "foaf:member",
+          "range": "foaf:Agent",
+          "label": "\"member\"",
+          "comment": "\"Indicates a member of a Group\"",
+          "link": "Agent.md"
+        }
+      ]
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/Project",
+      "id": "Project",
+      "label": "Project",
+      "comment": "A project (a collective endeavour of some kind).",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Project a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Project\" ;\n    rdfs:comment \"A project (a collective endeavour of some kind).\" ;\n    rdfs:isDefinedBy foaf: ;\n    owl:disjointWith foaf:Document,\n        foaf:Person ;\n    ns1:term_status \"testing\" .\n\n",
+      "triples": []
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/Image",
+      "id": "Image",
+      "label": "Image",
+      "comment": "An image.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Image a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Image\" ;\n    rdfs:comment \"An image.\" ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:subClassOf foaf:Document ;\n    owl:equivalentClass <http://schema.org/ImageObject> ;\n    ns1:term_status \"stable\" .\n\n",
+      "triples": [
+        {
+          "id": 0,
+          "predicate": "foaf:depicts",
+          "range": "owl:Thing",
+          "label": "\"depicts\"",
+          "comment": "\"A thing depicted in this representation.\"",
+          "link": "<http://www.w3.org/2002/07/owl#Thing>"
+        },
+        {
+          "id": 1,
+          "predicate": "foaf:thumbnail",
+          "range": "foaf:Image",
+          "label": "\"thumbnail\"",
+          "comment": "\"A derived thumbnail image.\"",
+          "link": "Image.md"
+        }
+      ]
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/PersonalProfileDocument",
+      "id": "PersonalProfileDocument",
+      "label": "PersonalProfileDocument",
+      "comment": "A personal profile RDF document.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:PersonalProfileDocument a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"PersonalProfileDocument\" ;\n    rdfs:comment \"A personal profile RDF document.\" ;\n    rdfs:subClassOf foaf:Document ;\n    ns1:term_status \"testing\" .\n\n",
+      "triples": []
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/OnlineAccount",
+      "id": "OnlineAccount",
+      "label": "Online Account",
+      "comment": "An online account.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:OnlineAccount a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Online Account\" ;\n    rdfs:comment \"An online account.\" ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:subClassOf owl:Thing ;\n    ns1:term_status \"testing\" .\n\n",
+      "triples": [
+        {
+          "id": 0,
+          "predicate": "foaf:accountName",
+          "range": "rdfs:Literal",
+          "label": "\"account name\"",
+          "comment": "\"Indicates the name (identifier) associated with this online account.\"",
+          "link": "<http://www.w3.org/2000/01/rdf-schema#Literal>"
+        },
+        {
+          "id": 1,
+          "predicate": "foaf:accountServiceHomepage",
+          "range": "foaf:Document",
+          "label": "\"account service homepage\"",
+          "comment": "\"Indicates a homepage of the service provide for this online account.\"",
+          "link": "Document.md"
+        }
+      ]
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/OnlineGamingAccount",
+      "id": "OnlineGamingAccount",
+      "label": "Online Gaming Account",
+      "comment": "An online gaming account.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:OnlineGamingAccount a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Online Gaming Account\" ;\n    rdfs:comment \"An online gaming account.\" ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:subClassOf foaf:OnlineAccount ;\n    ns1:term_status \"unstable\" .\n\n",
+      "triples": []
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/OnlineEcommerceAccount",
+      "id": "OnlineEcommerceAccount",
+      "label": "Online E-commerce Account",
+      "comment": "An online e-commerce account.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:OnlineEcommerceAccount a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Online E-commerce Account\" ;\n    rdfs:comment \"An online e-commerce account.\" ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:subClassOf foaf:OnlineAccount ;\n    ns1:term_status \"unstable\" .\n\n",
+      "triples": []
+    },
+    {
+      "template": null,
+      "onto": null,
+      "class_node": "http://xmlns.com/foaf/0.1/OnlineChatAccount",
+      "id": "OnlineChatAccount",
+      "label": "Online Chat Account",
+      "comment": "An online chat account.",
+      "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:OnlineChatAccount a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Online Chat Account\" ;\n    rdfs:comment \"An online chat account.\" ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:subClassOf foaf:OnlineAccount ;\n    ns1:term_status \"unstable\" .\n\n",
+      "triples": []
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+from itertools import chain
 from pathlib import Path
 from jinja2 import Template
 from rdflib import Graph, Node
@@ -19,14 +20,14 @@ class Class:
 
         self.serialized = serialize_subset(g, class_node)
 
-        results = [p for p in onto.datatypeProperties if p.domain == class_node.n3(g.namespace_manager)]
+        results = [p for p in chain(onto.datatypeProperties, onto.annotationProperties, onto.functionalProperties, onto.objectProperties) if p.domain == class_node]
         self.triples = [{
             'id': index,
             'predicate': row.property_node.n3(g.namespace_manager),
             'range': row.range.n3(g.namespace_manager) if row.range else None,
             'label': row.label.n3(g.namespace_manager) if row.label else None,
             'comment': row.comment.n3(g.namespace_manager).replace('\n','<br>') if row.comment else None,
-            'link': compute_link(g, row.range, onto.onto_prefix, 1) if row.range else None
+            'link': compute_link(g, row.range, onto.onto_prefix) if row.range else None
         } for index, row in enumerate(results)]
 
     def __str__(self):

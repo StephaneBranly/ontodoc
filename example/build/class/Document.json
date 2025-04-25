@@ -1,0 +1,43 @@
+{
+  "template": null,
+  "onto": null,
+  "class_node": "http://xmlns.com/foaf/0.1/Document",
+  "id": "Document",
+  "label": "Document",
+  "comment": "A document.",
+  "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Document a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Document\" ;\n    rdfs:comment \"A document.\" ;\n    rdfs:isDefinedBy foaf: ;\n    owl:disjointWith foaf:Organization,\n        foaf:Project ;\n    owl:equivalentClass <http://schema.org/CreativeWork> ;\n    ns1:term_status \"stable\" .\n\n",
+  "triples": [
+    {
+      "id": 0,
+      "predicate": "foaf:sha1",
+      "range": null,
+      "label": "\"sha1sum (hex)\"",
+      "comment": "\"A sha1sum hash, in hex.\"",
+      "link": null
+    },
+    {
+      "id": 1,
+      "predicate": "foaf:primaryTopic",
+      "range": "owl:Thing",
+      "label": "\"primary topic\"",
+      "comment": "\"The primary topic of some page or document.\"",
+      "link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "id": 2,
+      "predicate": "foaf:topic",
+      "range": "owl:Thing",
+      "label": "\"topic\"",
+      "comment": "\"A topic of some page or document.\"",
+      "link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "id": 3,
+      "predicate": "foaf:primaryTopic",
+      "range": "owl:Thing",
+      "label": "\"primary topic\"",
+      "comment": "\"The primary topic of some page or document.\"",
+      "link": "<http://www.w3.org/2002/07/owl#Thing>"
+    }
+  ]
+}

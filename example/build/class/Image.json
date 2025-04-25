@@ -1,0 +1,27 @@
+{
+  "template": null,
+  "onto": null,
+  "class_node": "http://xmlns.com/foaf/0.1/Image",
+  "id": "Image",
+  "label": "Image",
+  "comment": "An image.",
+  "serialized": "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nfoaf:Image a rdfs:Class,\n        owl:Class ;\n    rdfs:label \"Image\" ;\n    rdfs:comment \"An image.\" ;\n    rdfs:isDefinedBy foaf: ;\n    rdfs:subClassOf foaf:Document ;\n    owl:equivalentClass <http://schema.org/ImageObject> ;\n    ns1:term_status \"stable\" .\n\n",
+  "triples": [
+    {
+      "id": 0,
+      "predicate": "foaf:depicts",
+      "range": "owl:Thing",
+      "label": "\"depicts\"",
+      "comment": "\"A thing depicted in this representation.\"",
+      "link": "<http://www.w3.org/2002/07/owl#Thing>"
+    },
+    {
+      "id": 1,
+      "predicate": "foaf:thumbnail",
+      "range": "foaf:Image",
+      "label": "\"thumbnail\"",
+      "comment": "\"A derived thumbnail image.\"",
+      "link": "Image.md"
+    }
+  ]
+}
