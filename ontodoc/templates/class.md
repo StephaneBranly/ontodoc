@@ -2,7 +2,7 @@
 
 ## {{classe.label if classe.label}}
 
-**{{classe.comment if classe.comment}}**
+> **{{classe.comment if classe.comment}}**
 
 {% if classe.triples|length %}
 | Predicate | Label | Comment | Type |
@@ -11,7 +11,7 @@
 | {{triple.predicate}} | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
 
 {%- if triple.link -%}
-[{{triple.range}}]({{triple.link}}.md)
+[{{triple.range}}]({{triple.link}})
 {%- else -%}
 <kbd>{{triple.range}}</kbd>
 {%- endif %} |
@@ -38,3 +38,9 @@ classDef baseclass fill:#030ffc,stroke:#333,stroke-width:4px;
 ```
 
 {% endif %}
+
+## Serialized
+
+```ttl
+{{classe.serialized}}
+```
