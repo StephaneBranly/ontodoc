@@ -6,7 +6,7 @@ from ontodoc.classes.Ontology import Ontology
 def generate_page(content: str, path: Path, onto: Ontology = None, footer: str = None, add_signature: bool = True):
     if type(path) != Path: path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, mode='w') as f:
+    with open(path, mode='w', encoding='utf-8') as f:
         f.write(content)
 
         if footer:
