@@ -1,4 +1,5 @@
 import argparse
+from itertools import chain
 from jinja2 import Environment, FileSystemLoader, Template
 import rdflib.namespace
 from ontodoc import __version__
@@ -10,6 +11,7 @@ import json
 from ontodoc.classes.Class import Class
 from ontodoc.classes.Footer import Footer
 from ontodoc.classes.Ontology import Ontology
+from ontodoc.classes.Property import Property
 from ontodoc.generate_page import generate_page
 
 def concat_templates_environment(default_env: Environment, custom_env: Environment = None):
@@ -88,6 +90,8 @@ def main():
                 return None
             if isinstance(obj, Class):
                 return obj.__dict__
+            if isinstance(obj, Property):
+                return obj.__dict__
             if isinstance(obj, Ontology):
                 return None
             return super(OntoDocEncoder, self).default(obj)
@@ -107,6 +111,8 @@ def main():
             generate_page(ontology.__str__(), f'{args.output}/homepage.md', onto, footer)
             for c in ontology.classes:
                 generate_page(c.__str__(), f'{args.output}class/{c.id}.md', onto, footer)
+            for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
+                generate_page(p.__str__(), f'{args.output}property/{p.id}.md', onto, footer)
                 
 if __name__ == '__main__':
     main()

@@ -8,13 +8,7 @@
 - {{contributor}}{%- endfor %}
   {% endif %}
 
-## Classes
-
-{% for class in onto.classes %}
-[{{class.label}}](class/{{class.id}}.md),
-{%- endfor %}
-
-## Statistics
+## Summary
 
 - **{{onto.classes|length}}** classes
 - **{{onto.objectProperties|length + onto.datatypeProperties|length + onto.annotationProperties|length + onto.functionalProperties|length}}** Properties
@@ -22,6 +16,38 @@
   - **{{onto.datatypeProperties|length}}** datatype
   - **{{onto.annotationProperties|length}}** annotation
   - **{{onto.functionalProperties|length}}** functional
+
+## Classes
+
+{% for class in onto.classes %}
+[{{class.label}}](class/{{class.id}}.md),
+{%- endfor %}
+
+## Properties
+
+### Object Properties
+
+{% for property in onto.objectProperties %}
+[{{property.label}}](property/{{property.id}}.md),
+{%- endfor %}
+
+### Datatype Properties
+
+{% for property in onto.datatypeProperties %}
+[{{property.label}}](property/{{property.id}}.md),
+{%- endfor %}
+
+### Annotation Properties
+
+{% for property in onto.annotationProperties %}
+[{{property.label}}](property/{{property.id}}.md),
+{%- endfor %}
+
+### Functional Properties
+
+{% for property in onto.functionalProperties %}
+[{{property.label}}](property/{{property.id}}.md),
+{%- endfor %}
 
 ## Namepaces
 
