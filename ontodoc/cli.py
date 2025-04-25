@@ -48,7 +48,7 @@ parser.add_argument(
     "-s", "--schema", help="Display schemas", action=argparse.BooleanOptionalAction, default=True
 )
 parser.add_argument(
-    "-m", "--model", help='Model type for the documentation. markdown, gh_wiki'
+    "-m", "--model", help='Model type for the documentation. markdown, gh_wiki', default='markdown'
 )
 
 # add languages settings
