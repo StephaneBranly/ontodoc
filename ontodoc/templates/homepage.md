@@ -55,3 +55,7 @@
 
 - <kbd>{{namespace.prefix}}:</kbd> {{namespace.uri}},
   {%- endfor %}
+
+## Download ontology
+
+[Ontology available here](./ontology.ttl)

@@ -113,6 +113,9 @@ def main():
                 generate_page(c.__str__(), f'{args.output}class/{c.id}.md', onto, footer)
             for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
                 generate_page(p.__str__(), f'{args.output}property/{p.id}.md', onto, footer)
-                
+
+    with open(f'{args.output}ontology.ttl', mode='w', encoding='utf-8') as f:
+        f.write(g.serialize(format='ttl'))
+
 if __name__ == '__main__':
     main()
