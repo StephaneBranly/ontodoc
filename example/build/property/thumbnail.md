@@ -4,8 +4,9 @@
 
 > **A derived thumbnail image.**
 
-Range :[http://xmlns.com/foaf/0.1/Image](Image.md)
-Domain :[http://xmlns.com/foaf/0.1/Image](Image.md)
+- Range :[http://xmlns.com/foaf/0.1/Image](../class/Image.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/Image](../class/Image.md)
 
 ## Serialized
 

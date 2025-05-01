@@ -4,8 +4,9 @@
 
 > **Indicates a member of a Group**
 
-Range :[http://xmlns.com/foaf/0.1/Agent](Agent.md)
-Domain :[http://xmlns.com/foaf/0.1/Group](Group.md)
+- Range :[http://xmlns.com/foaf/0.1/Agent](../class/Agent.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/Group](../class/Group.md)
 
 ## Serialized
 

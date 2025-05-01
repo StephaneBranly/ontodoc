@@ -4,8 +4,9 @@
 
 > **Indicates an account held by this agent.**
 
-Range :[http://xmlns.com/foaf/0.1/OnlineAccount](OnlineAccount.md)
-Domain :[http://xmlns.com/foaf/0.1/Agent](Agent.md)
+- Range :[http://xmlns.com/foaf/0.1/OnlineAccount](../class/OnlineAccount.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/Agent](../class/Agent.md)
 
 ## Serialized
 

@@ -4,8 +4,9 @@
 
 > **A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel).**
 
-Range :
-Domain :
+
+
+
 
 ## Serialized
 

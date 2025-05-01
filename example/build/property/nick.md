@@ -4,8 +4,9 @@
 
 > **A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).**
 
-Range :
-Domain :
+
+
+
 
 ## Serialized
 

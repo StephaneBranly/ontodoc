@@ -4,8 +4,9 @@
 
 > **A location that something is based near, for some broadly human notion of near.**
 
-Range :[http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing](<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>)
-Domain :[http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing](<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>)
+- Range :[http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing](<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>)
+
+- Domain :[http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing](<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>)
 
 ## Serialized
 

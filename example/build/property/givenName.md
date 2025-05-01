@@ -4,8 +4,9 @@
 
 > **The given name of some person.**
 
-Range :
-Domain :
+
+
+
 
 ## Serialized
 

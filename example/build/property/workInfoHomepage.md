@@ -4,8 +4,9 @@
 
 > **A work info homepage of some person; a page about their work for some organization.**
 
-Range :[http://xmlns.com/foaf/0.1/Document](Document.md)
-Domain :[http://xmlns.com/foaf/0.1/Person](Person.md)
+- Range :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
 ## Serialized
 

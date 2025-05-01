@@ -8,27 +8,8 @@
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-| foaf:accountName | "account name" | "Indicates the name (identifier) associated with this online account." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-| foaf:accountServiceHomepage | "account service homepage" | "Indicates a homepage of the service provide for this online account." |[foaf:Document](Document.md) |
-
-## Schema
-
-```mermaid
----
-config:
-  look: neo
-  theme: neo
----
-flowchart LR
-    OnlineAccount -- foaf:accountName --> 0[rdfs:Literal]
-    class 0 literal;
-    OnlineAccount -- foaf:accountServiceHomepage --> 1[foaf:Document]
-    class 1 literal;
-    class OnlineAccount baseclass;
-classDef literal fill:#fcba03,stroke:#333,stroke-width:4px,color:black;
-classDef baseclass fill:#030ffc,stroke:#333,stroke-width:4px;
-```
-
+|[foaf:accountName](../property/accountName.md) | "account name" | "Indicates the name (identifier) associated with this online account." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
+|[foaf:accountServiceHomepage](../property/accountServiceHomepage.md) | "account service homepage" | "Indicates a homepage of the service provide for this online account." |[foaf:Document](../class/Document.md) |
 
 
 ## Serialized

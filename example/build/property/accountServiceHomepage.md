@@ -4,8 +4,9 @@
 
 > **Indicates a homepage of the service provide for this online account.**
 
-Range :[http://xmlns.com/foaf/0.1/Document](Document.md)
-Domain :[http://xmlns.com/foaf/0.1/OnlineAccount](OnlineAccount.md)
+- Range :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/OnlineAccount](../class/OnlineAccount.md)
 
 ## Serialized
 

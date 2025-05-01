@@ -4,8 +4,9 @@
 
 > **A project this person has previously worked on.**
 
-Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
-Domain :[http://xmlns.com/foaf/0.1/Person](Person.md)
+- Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+
+- Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
 ## Serialized
 

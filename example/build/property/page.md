@@ -4,8 +4,9 @@
 
 > **A page or document about this thing.**
 
-Range :[http://xmlns.com/foaf/0.1/Document](Document.md)
-Domain :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+- Range :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
+
+- Domain :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
 
 ## Serialized
 

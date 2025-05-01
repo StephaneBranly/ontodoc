@@ -4,8 +4,9 @@
 
 > **A homepage of a school attended by the person.**
 
-Range :[http://xmlns.com/foaf/0.1/Document](Document.md)
-Domain :[http://xmlns.com/foaf/0.1/Person](Person.md)
+- Range :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
 ## Serialized
 

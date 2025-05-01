@@ -4,8 +4,9 @@
 
 > **An agent that  made this thing.**
 
-Range :[http://xmlns.com/foaf/0.1/Agent](Agent.md)
-Domain :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+- Range :[http://xmlns.com/foaf/0.1/Agent](../class/Agent.md)
+
+- Domain :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
 
 ## Serialized
 

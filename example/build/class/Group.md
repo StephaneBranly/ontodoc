@@ -8,24 +8,7 @@
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-| foaf:member | "member" | "Indicates a member of a Group" |[foaf:Agent](Agent.md) |
-
-## Schema
-
-```mermaid
----
-config:
-  look: neo
-  theme: neo
----
-flowchart LR
-    Group -- foaf:member --> 0[foaf:Agent]
-    class 0 literal;
-    class Group baseclass;
-classDef literal fill:#fcba03,stroke:#333,stroke-width:4px,color:black;
-classDef baseclass fill:#030ffc,stroke:#333,stroke-width:4px;
-```
-
+|[foaf:member](../property/member.md) | "member" | "Indicates a member of a Group" |[foaf:Agent](../class/Agent.md) |
 
 
 ## Serialized

@@ -4,8 +4,9 @@
 
 > **An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage).**
 
-Range :[http://xmlns.com/foaf/0.1/Image](Image.md)
-Domain :[http://xmlns.com/foaf/0.1/Person](Person.md)
+- Range :[http://xmlns.com/foaf/0.1/Image](../class/Image.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
 ## Serialized
 

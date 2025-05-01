@@ -4,8 +4,9 @@
 
 > **A topic of some page or document.**
 
-Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
-Domain :[http://xmlns.com/foaf/0.1/Document](Document.md)
+- Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+
+- Domain :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
 
 ## Serialized
 

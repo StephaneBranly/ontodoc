@@ -4,8 +4,9 @@
 
 > **A checksum for the DNA of some thing. Joke.**
 
-Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
-Domain :
+- Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
+
+
 
 ## Serialized
 

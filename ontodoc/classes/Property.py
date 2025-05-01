@@ -21,8 +21,8 @@ class Property:
         self.range = get_object(g, property_node, RDFS['range'])
         self.domain = get_object(g, property_node, RDFS['domain'])
 
-        self.range_link = compute_link(g, self.range, onto.onto_prefix) if self.range else None
-        self.domain_link = compute_link(g, self.domain, onto.onto_prefix) if self.domain else None
+        self.range_link = compute_link(g, self.property_node, self.range, onto.onto_prefix) if self.range else None
+        self.domain_link = compute_link(g, self.property_node, self.domain, onto.onto_prefix) if self.domain else None
 
     def __str__(self):
         return self.template.render(property=self.__dict__, onto=self.onto.__dict__)

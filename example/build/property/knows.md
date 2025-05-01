@@ -4,8 +4,9 @@
 
 > **A person known by this person (indicating some level of reciprocated interaction between the parties).**
 
-Range :[http://xmlns.com/foaf/0.1/Person](Person.md)
-Domain :[http://xmlns.com/foaf/0.1/Person](Person.md)
+- Range :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
 ## Serialized
 

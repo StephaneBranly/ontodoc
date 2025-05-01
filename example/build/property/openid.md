@@ -4,8 +4,9 @@
 
 > **An OpenID for an Agent.**
 
-Range :[http://xmlns.com/foaf/0.1/Document](Document.md)
-Domain :[http://xmlns.com/foaf/0.1/Agent](Agent.md)
+- Range :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/Agent](../class/Agent.md)
 
 ## Serialized
 

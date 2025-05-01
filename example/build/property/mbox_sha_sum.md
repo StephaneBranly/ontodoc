@@ -4,8 +4,9 @@
 
 > **The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox.**
 
-Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
-Domain :[http://xmlns.com/foaf/0.1/Agent](Agent.md)
+- Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
+
+- Domain :[http://xmlns.com/foaf/0.1/Agent](../class/Agent.md)
 
 ## Serialized
 

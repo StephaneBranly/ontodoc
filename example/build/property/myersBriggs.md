@@ -4,8 +4,9 @@
 
 > **A Myers Briggs (MBTI) personality classification.**
 
-Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
-Domain :[http://xmlns.com/foaf/0.1/Person](Person.md)
+- Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
+
+- Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
 ## Serialized
 

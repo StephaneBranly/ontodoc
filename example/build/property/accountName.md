@@ -4,8 +4,9 @@
 
 > **Indicates the name (identifier) associated with this online account.**
 
-Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
-Domain :[http://xmlns.com/foaf/0.1/OnlineAccount](OnlineAccount.md)
+- Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
+
+- Domain :[http://xmlns.com/foaf/0.1/OnlineAccount](../class/OnlineAccount.md)
 
 ## Serialized
 

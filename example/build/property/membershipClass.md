@@ -4,8 +4,9 @@
 
 > **Indicates the class of individuals that are a member of a Group**
 
-Range :
-Domain :
+
+
+
 
 ## Serialized
 

@@ -4,8 +4,9 @@
 
 > **A link to the publications of this person.**
 
-Range :[http://xmlns.com/foaf/0.1/Document](Document.md)
-Domain :[http://xmlns.com/foaf/0.1/Person](Person.md)
+- Range :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
+
+- Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
 ## Serialized
 

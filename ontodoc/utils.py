@@ -2,7 +2,7 @@
 from itertools import chain
 import re
 
-from rdflib import Graph, Node
+from rdflib import OWL, RDF, RDFS, Graph, Node
 
 from ontodoc.ontology_properties import ONTOLOGY_PROP
 
@@ -35,8 +35,15 @@ def get_suffix(graph: Graph, n: Node):
 def generate_clean_id_from_term(graph: Graph, n: Node):
     return re.sub(r'[^a-zA-Z\-_0-0]+', '_', n.n3(namespace_manager=graph.namespace_manager).split(':')[-1])
 
-def compute_link(graph: Graph, n: Node, onto_prefix: str = ''):
-    return n.n3(graph.namespace_manager).split(onto_prefix+':')[1]+'.md' if n and n.n3(graph.namespace_manager).startswith(onto_prefix+':') else n.n3()
+def compute_link(graph: Graph, current_node: Node, n: Node, onto_prefix: str = ''):
+    if n and n.n3(graph.namespace_manager).startswith(onto_prefix+':'):
+        relative_path = './' if get_object(graph, current_node, RDF.type) == OWL.Ontology else '../'
+        type = get_object(graph, n, RDF.type)
+        page_name = n.n3(graph.namespace_manager).split(onto_prefix+':')[1]+'.md'
+        if type and type == RDFS.Class:
+            return relative_path + 'class/' + page_name
+        return relative_path + 'property/' + page_name
+    return n.n3()
 
 def serialize_subset(graph: Graph, n: Node):
     gs = Graph()

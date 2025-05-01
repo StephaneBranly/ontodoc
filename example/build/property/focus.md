@@ -4,8 +4,9 @@
 
 > **The underlying or 'focal' entity associated with some SKOS-described concept.**
 
-Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
-Domain :[http://www.w3.org/2004/02/skos/core#Concept](<http://www.w3.org/2004/02/skos/core#Concept>)
+- Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+
+- Domain :[http://www.w3.org/2004/02/skos/core#Concept](<http://www.w3.org/2004/02/skos/core#Concept>)
 
 ## Serialized
 

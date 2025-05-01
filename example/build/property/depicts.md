@@ -4,8 +4,9 @@
 
 > **A thing depicted in this representation.**
 
-Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
-Domain :[http://xmlns.com/foaf/0.1/Image](Image.md)
+- Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+
+- Domain :[http://xmlns.com/foaf/0.1/Image](../class/Image.md)
 
 ## Serialized
 

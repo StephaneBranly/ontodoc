@@ -4,16 +4,19 @@
 
 > **{{property.comment}}**
 
-Range : {%- if property.range_link -%}
+{% if property.range -%}
+- Range : {%- if property.range_link -%}
 [{{property.range}}]({{property.range_link}})
-{%- elif property.range -%}
+{%- elif property.range%}
 <kbd>{{property.range}}</kbd>
-{%- endif %}
-Domain : {%- if property.domain_link -%}
+{%- endif %}{%- endif %}
+
+{% if property.domain -%}
+- Domain : {%- if property.domain_link -%}
 [{{property.domain}}]({{property.domain_link}})
 {%- elif property.domain -%}
 <kbd>{{property.domain}}</kbd>
-{%- endif %}
+{%- endif %}{%- endif %}
 
 ## Serialized
 

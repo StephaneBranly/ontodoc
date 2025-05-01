@@ -8,27 +8,8 @@
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-| foaf:depicts | "depicts" | "A thing depicted in this representation." |[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>) | |
-| foaf:thumbnail | "thumbnail" | "A derived thumbnail image." |[foaf:Image](Image.md) |
-
-## Schema
-
-```mermaid
----
-config:
-  look: neo
-  theme: neo
----
-flowchart LR
-    Image -- foaf:depicts --> 0[owl:Thing]
-    class 0 literal;
-    Image -- foaf:thumbnail --> 1[foaf:Image]
-    class 1 literal;
-    class Image baseclass;
-classDef literal fill:#fcba03,stroke:#333,stroke-width:4px,color:black;
-classDef baseclass fill:#030ffc,stroke:#333,stroke-width:4px;
-```
-
+|[foaf:depicts](../property/depicts.md) | "depicts" | "A thing depicted in this representation." |[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>) | |
+|[foaf:thumbnail](../property/thumbnail.md) | "thumbnail" | "A derived thumbnail image." |[foaf:Image](../class/Image.md) |
 
 
 ## Serialized
