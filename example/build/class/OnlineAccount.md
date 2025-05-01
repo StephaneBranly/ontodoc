@@ -15,9 +15,9 @@ config:
 classDiagram
     class Online Account
     Thing <|-- Online Account
-    Online Account <|-- OnlineEcommerceAccount
     Online Account <|-- OnlineGamingAccount
     Online Account <|-- OnlineChatAccount
+    Online Account <|-- OnlineEcommerceAccount
 ```
 
 

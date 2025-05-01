@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> OnlineAccount : account
+    Agent --> OnlineAccount : account
 ```
 
 

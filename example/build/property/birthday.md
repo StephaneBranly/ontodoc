@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : birthday
+    Agent --> Literal : birthday
 ```
 
 

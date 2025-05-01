@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : Yahoo chat ID
+    Agent --> Literal : Yahoo chat ID
 ```
 
 

@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Person -> Thing : current project
+    Person --> Thing : current project
 ```
 
 

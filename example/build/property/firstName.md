@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Person -> Literal : firstName
+    Person --> Literal : firstName
 ```
 
 

@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Person -> Literal : plan
+    Person --> Literal : plan
 ```
 
 

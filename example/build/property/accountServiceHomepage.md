@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    OnlineAccount -> Document : account service homepage
+    OnlineAccount --> Document : account service homepage
 ```
 
 

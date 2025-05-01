@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Concept -> Thing : focus
+    Concept --> Thing : focus
 ```
 
 

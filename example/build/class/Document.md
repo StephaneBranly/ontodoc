@@ -14,8 +14,8 @@ config:
 ---
 classDiagram
     class Document
-    Document <|-- PersonalProfileDocument
     Document <|-- Image
+    Document <|-- PersonalProfileDocument
 ```
 
 

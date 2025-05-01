@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Person -> Document : workplace homepage
+    Person --> Document : workplace homepage
 ```
 
 

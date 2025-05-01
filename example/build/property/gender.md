@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : gender
+    Agent --> Literal : gender
 ```
 
 

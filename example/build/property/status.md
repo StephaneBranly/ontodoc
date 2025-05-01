@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : status
+    Agent --> Literal : status
 ```
 
 

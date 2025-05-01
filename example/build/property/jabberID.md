@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : jabber ID
+    Agent --> Literal : jabber ID
 ```
 
 

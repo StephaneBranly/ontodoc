@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Thing -> Thing : funded by
+    Thing --> Thing : funded by
 ```
 
 

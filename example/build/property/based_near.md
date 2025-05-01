@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    SpatialThing -> SpatialThing : based near
+    SpatialThing --> SpatialThing : based near
 ```
 
 

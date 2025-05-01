@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : Skype ID
+    Agent --> Literal : Skype ID
 ```
 
 

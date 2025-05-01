@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Thing -> Agent : maker
+    Thing --> Agent : maker
 ```
 
 

@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Document : interest
+    Agent --> Document : interest
 ```
 
 

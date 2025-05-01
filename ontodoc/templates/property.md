@@ -27,7 +27,7 @@ config:
   theme: neo
 ---
 classDiagram
-    {{property.domain_label}} -> {{property.range_label}} : {{property.label}}
+    {{property.domain_label}} --> {{property.range_label}} : {{property.label}}
 ```
 {% endif %}
 

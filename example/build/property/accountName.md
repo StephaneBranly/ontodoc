@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    OnlineAccount -> Literal : account name
+    OnlineAccount --> Literal : account name
 ```
 
 

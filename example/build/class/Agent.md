@@ -14,9 +14,9 @@ config:
 ---
 classDiagram
     class Agent
+    Agent <|-- Person
     Agent <|-- Organization
     Agent <|-- Group
-    Agent <|-- Person
 ```
 
 

@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Thing : personal mailbox
+    Agent --> Thing : personal mailbox
 ```
 
 

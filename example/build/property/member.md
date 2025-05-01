@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Group -> Agent : member
+    Group --> Agent : member
 ```
 
 

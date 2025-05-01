@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : ICQ chat ID
+    Agent --> Literal : ICQ chat ID
 ```
 
 

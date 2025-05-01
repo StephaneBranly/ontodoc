@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Image -> Image : thumbnail
+    Image --> Image : thumbnail
 ```
 
 

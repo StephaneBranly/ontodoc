@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : MSN chat ID
+    Agent --> Literal : MSN chat ID
 ```
 
 

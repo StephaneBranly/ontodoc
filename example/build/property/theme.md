@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Thing -> Thing : theme
+    Thing --> Thing : theme
 ```
 
 

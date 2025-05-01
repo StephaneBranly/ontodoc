@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Thing -> Document : homepage
+    Thing --> Document : homepage
 ```
 
 

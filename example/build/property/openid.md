@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Document : openid
+    Agent --> Document : openid
 ```
 
 

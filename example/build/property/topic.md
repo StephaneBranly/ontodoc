@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Document -> Thing : topic
+    Document --> Thing : topic
 ```
 
 

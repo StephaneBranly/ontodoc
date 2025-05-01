@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Person -> Literal : geekcode
+    Person --> Literal : geekcode
 ```
 
 

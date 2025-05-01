@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Person -> Document : publications
+    Person --> Document : publications
 ```
 
 

@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : sha1sum of a personal mailbox URI name
+    Agent --> Literal : sha1sum of a personal mailbox URI name
 ```
 
 

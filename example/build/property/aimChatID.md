@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Literal : AIM chat ID
+    Agent --> Literal : AIM chat ID
 ```
 
 

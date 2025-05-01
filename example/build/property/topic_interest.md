@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent -> Thing : topic_interest
+    Agent --> Thing : topic_interest
 ```
 
 

@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Thing -> Image : depiction
+    Thing --> Image : depiction
 ```
 
 

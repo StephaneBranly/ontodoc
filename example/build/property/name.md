@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Thing -> Literal : name
+    Thing --> Literal : name
 ```
 
 

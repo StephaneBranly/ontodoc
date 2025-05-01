@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Person -> Literal : myersBriggs
+    Person --> Literal : myersBriggs
 ```
 
 
