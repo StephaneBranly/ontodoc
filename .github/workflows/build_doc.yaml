@@ -1,7 +1,9 @@
 name: Build doc
+# on:
+#   release:
+#     types: [created]
 on:
-  release:
-    types: [created]
+  workflow_dispatch:
 
 jobs:
   build_doc:
@@ -25,5 +27,11 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: Install packages
         run: poetry install
-      - name: View poetry --help
-        run: poetry run python ontodoc --help
+      - name: Generate documentation
+        run: poetry run python ontodoc -i example/foaf.ttl -o example/build/ -m markdown
+      - name: Push to current branch
+        run: |
+          git config user.name ontodoc_bot
+          git add -A
+          git commit -am "[BOT] Update documentation example"
+          git push origin ${{ github.ref_name }}
