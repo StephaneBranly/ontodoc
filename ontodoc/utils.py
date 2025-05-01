@@ -38,6 +38,26 @@ def get_object(g: Graph, subject: Node, predicate_list: ONTOLOGY_PROP, return_al
 
     return None
 
+def get_subject(g: Graph, object: Node, predicate_list: ONTOLOGY_PROP, return_all=False):
+    while type(predicate_list) == type and ONTOLOGY_PROP == predicate_list.__base__:
+        return_all = predicate_list.array
+        predicate_list = predicate_list.predicates
+
+    if type(predicate_list) == list:
+        pass
+    else:
+        predicate_list = [predicate_list]
+
+    
+    subjects = list(set(chain(
+        [o for p in predicate_list for o in g.subjects(object, p)]
+    )))
+
+    if len(subjects):
+        return subjects if return_all else subjects[0]
+
+    return None
+
 def get_prefix(graph: Graph, n: Node):
     return n.n3(graph.namespace_manager).split(':')[0]
 
@@ -52,7 +72,7 @@ def compute_link(graph: Graph, current_node: Node, n: Node, onto_prefix: str = '
         relative_path = './' if get_object(graph, current_node, RDF.type) == OWL.Ontology else '../'
         type = get_object(graph, n, RDF.type)
         page_name = n.n3(graph.namespace_manager).split(onto_prefix+':')[1]+'.md'
-        if type and type == RDFS.Class:
+        if type and type in [RDFS.Class, OWL.Class]:
             return relative_path + 'class/' + page_name
         return relative_path + 'property/' + page_name
     return n.n3()

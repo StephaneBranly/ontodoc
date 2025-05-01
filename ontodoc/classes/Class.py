@@ -1,7 +1,7 @@
 from __future__ import annotations
 from itertools import chain
 from jinja2 import Template
-from rdflib import Node
+from rdflib import RDFS, Node
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -9,7 +9,7 @@ if TYPE_CHECKING:
 from ontodoc.ontology_properties import CLASS
 
 
-from ontodoc.utils import compute_link, generate_clean_id_from_term, get_object, get_suffix, serialize_subset
+from ontodoc.utils import compute_link, generate_clean_id_from_term, get_object, get_subject, get_suffix, serialize_subset
     
 class Class:
     def __init__(self, onto: Ontology, class_node: Node, template: Template):
@@ -24,6 +24,12 @@ class Class:
         
         if not self.label:
             self.label = self.id
+
+        self.subclasses = get_subject(g, RDFS.subClassOf, class_node, return_all=True)
+        if self.subclasses:
+            self.subclasses = [generate_clean_id_from_term(g, t) for t in self.subclasses]
+        if self.subclassof:
+            self.subclassof = [generate_clean_id_from_term(g, t) for t in self.subclassof]
 
         self.serialized = serialize_subset(g, class_node)
 

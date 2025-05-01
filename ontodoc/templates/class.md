@@ -4,7 +4,32 @@
 
 > **{{classe.comment if classe.comment}}**
 
+## Schema
+
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    class {{classe.label}}
+    
+    {%- if classe.subclassof %}
+    {%- for subclassof in classe.subclassof %}
+    {{subclassof}} <|-- {{classe.label}}
+    {%- endfor -%}
+    {% endif %}
+    
+    {%- if classe.subclasses %}
+    {%- for subclass in classe.subclasses %}
+    {{classe.label}} <|-- {{subclass}}
+    {%- endfor -%}
+    {% endif %}
+```
+
 {% if classe.triples|length %}
+## Properties
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | {%- for triple in classe.triples | sort(attribute='predicate') %} |

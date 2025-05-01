@@ -14,7 +14,7 @@ from ontodoc.generate_page import generate_page
 from ontodoc.utils import concat_templates_environment
 
 
-parser = argparse.ArgumentParser(prog='OntoDoc', epilog='Python module to easily generate ontology documentation in markdown or html')
+parser = argparse.ArgumentParser(prog='OntoDoc', epilog='Python module to easily generate ontology documentation in markdown')
 
 parser.add_argument(
     "-v", "--version", action="version", version="{version}".format(version=__version__)

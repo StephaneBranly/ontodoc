@@ -18,6 +18,19 @@
 <kbd>{{property.domain}}</kbd>
 {%- endif %}{%- endif %}
 
+## Schema
+{% if property.domain and property.range %}
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    {{property.domain_label}} -> {{property.range_label}} : {{property.label}}
+```
+{% endif %}
+
 ## Serialized
 
 ```ttl
