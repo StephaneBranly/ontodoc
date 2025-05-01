@@ -2,9 +2,21 @@
 from itertools import chain
 import re
 
+from jinja2 import Environment
 from rdflib import OWL, RDF, RDFS, Graph, Node
 
 from ontodoc.ontology_properties import ONTOLOGY_PROP
+
+def concat_templates_environment(default_env: Environment, custom_env: Environment = None):
+    if custom_env == None:
+        return {
+            t: default_env.get_template(t) for t in default_env.list_templates()
+        }
+    custom_env_templates = custom_env.list_templates()
+    return {
+       t: default_env.get_template(t) if t not in custom_env_templates else custom_env.get_template(t) for t in default_env.list_templates()
+    }
+
 
 def get_object(g: Graph, subject: Node, predicate_list: ONTOLOGY_PROP, return_all=False):
     while type(predicate_list) == type and ONTOLOGY_PROP == predicate_list.__base__:

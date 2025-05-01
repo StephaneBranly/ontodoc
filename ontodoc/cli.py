@@ -1,28 +1,18 @@
 import argparse
 from itertools import chain
 from jinja2 import Environment, FileSystemLoader, Template
-import rdflib.namespace
-from ontodoc import __version__
 import pathlib
 from rdflib import Graph
 import rdflib
 import json
 
-from ontodoc.classes.Class import Class
+from ontodoc import __version__
+from ontodoc.classes.JSONOntoDocEncoder import JSONOntoDocEncoder
 from ontodoc.classes.Footer import Footer
 from ontodoc.classes.Ontology import Ontology
-from ontodoc.classes.Property import Property
 from ontodoc.generate_page import generate_page
+from ontodoc.utils import concat_templates_environment
 
-def concat_templates_environment(default_env: Environment, custom_env: Environment = None):
-    if custom_env == None:
-        return {
-            t: default_env.get_template(t) for t in default_env.list_templates()
-        }
-    custom_env_templates = custom_env.list_templates()
-    return {
-       t: default_env.get_template(t) if t not in custom_env_templates else custom_env.get_template(t) for t in default_env.list_templates()
-    }
 
 parser = argparse.ArgumentParser(prog='OntoDoc', epilog='Python module to easily generate ontology documentation in markdown or html')
 
@@ -48,11 +38,8 @@ parser.add_argument(
     "-s", "--schema", help="Display schemas", action=argparse.BooleanOptionalAction, default=True
 )
 parser.add_argument(
-    "-m", "--model", help='Model type for the documentation. markdown, gh_wiki', default='markdown'
+    "-m", "--model", help='Model type for the documentation. markdown, gh_wiki or json', default='markdown'
 )
-
-# add languages settings
-# add footer and navigation settings
 
 def main():
     args = parser.parse_args()
@@ -62,14 +49,17 @@ def main():
     custom_env = Environment(loader=FileSystemLoader(args.templates)) if args.templates else None
     templates = concat_templates_environment(default_env, custom_env)
 
+    # Load graph
     g = Graph(bind_namespaces='none')
     g.parse(args.input)
 
+    # Retrieve ontology node
     ontos = [s for s in g.subjects(predicate=rdflib.RDF["type"], object=rdflib.OWL['Ontology'])]
     if not len(ontos):
         raise Exception('Ontology not found')
     onto = ontos[0]
 
+    # Generate footer
     if args.footer:
         footer = Footer(onto, templates['footer.md']).__str__()
         if args.model == 'gh_wiki':
@@ -78,28 +68,17 @@ def main():
     else:
         footer = None
 
+    # Init ontology reader
     ontology = Ontology(g, onto, templates)
 
-    import json
-
-    class OntoDocEncoder(json.JSONEncoder):
-        def default(self, obj):
-            if isinstance(obj, Graph):
-                return None
-            if isinstance(obj, Template):
-                return None
-            if isinstance(obj, Class):
-                return obj.__dict__
-            if isinstance(obj, Property):
-                return obj.__dict__
-            if isinstance(obj, Ontology):
-                return None
-            return super(OntoDocEncoder, self).default(obj)
-
+    # Generate pages
     if args.model == 'json':
-        generate_page(json.dumps(ontology.__dict__, indent=2, cls=OntoDocEncoder), f'{args.output}/ontology.json', add_signature=False)
+        generate_page(json.dumps(ontology.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{args.output}/ontology.json', add_signature=False)
         for c in ontology.classes:
-            generate_page(json.dumps(c.__dict__, indent=2, cls=OntoDocEncoder), f'{args.output}/class/{c.id}.json', add_signature=False)
+            generate_page(json.dumps(c.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{args.output}/class/{c.id}.json', add_signature=False)
+        for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
+            generate_page(json.dumps(p.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{args.output}property/{p.id}.json', add_signature=False)
+
     elif args.model in ['markdown', 'gh_wiki']:
         if args.concatenate:
             page = ontology.__str__()
@@ -114,6 +93,7 @@ def main():
             for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
                 generate_page(p.__str__(), f'{args.output}property/{p.id}.md', onto, footer)
 
+    # Copy ontology file
     with open(f'{args.output}ontology.ttl', mode='w', encoding='utf-8') as f:
         f.write(g.serialize(format='ttl'))
 

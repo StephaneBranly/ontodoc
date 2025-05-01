@@ -1,15 +1,21 @@
+from __future__ import annotations
 from itertools import chain
-from pathlib import Path
 from jinja2 import Template
-from rdflib import Graph, Node
+from rdflib import Node
 
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from ontodoc.classes.Ontology import Ontology
 from ontodoc.ontology_properties import CLASS
+
+
 from ontodoc.utils import compute_link, generate_clean_id_from_term, get_object, get_suffix, serialize_subset
     
 class Class:
-    def __init__(self, g: Graph, onto, class_node: Node, template: Template):
+    def __init__(self, onto: Ontology, class_node: Node, template: Template):
         self.template = template
         self.onto = onto
+        g = onto.graph
         self.class_node = class_node
         self.id = generate_clean_id_from_term(g, class_node)
 

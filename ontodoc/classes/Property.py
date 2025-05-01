@@ -1,13 +1,18 @@
+from __future__ import annotations
 from jinja2 import Template
-from rdflib import RDFS, Graph, Node
+from rdflib import RDFS, Node
 
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from ontodoc.classes.Ontology import Ontology
 from ontodoc.ontology_properties import COMMENT, LABEL
 from ontodoc.utils import compute_link, generate_clean_id_from_term, get_object, serialize_subset
     
 class Property:
-    def __init__(self, g: Graph, onto, property_node: Node, template: Template):
+    def __init__(self, onto: Ontology, property_node: Node, template: Template):
         self.template = template
         self.onto = onto
+        g = onto.graph
         self.property_node = property_node
         self.id = generate_clean_id_from_term(g, property_node)
 
