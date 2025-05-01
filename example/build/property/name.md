@@ -8,6 +8,19 @@
 
 - Domain :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
 
+## Schema
+
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    Thing -> Literal : name
+```
+
+
 ## Serialized
 
 ```ttl
@@ -32,6 +45,6 @@ foaf:name a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

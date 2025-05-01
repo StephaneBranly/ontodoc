@@ -4,6 +4,19 @@
 
 > **An online chat account.**
 
+## Schema
+
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    class Online Chat Account
+    OnlineAccount <|-- Online Chat Account
+```
+
 
 
 ## Serialized
@@ -27,6 +40,6 @@ foaf:OnlineChatAccount a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

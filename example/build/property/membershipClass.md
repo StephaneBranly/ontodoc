@@ -8,6 +8,9 @@
 
 
 
+## Schema
+
+
 ## Serialized
 
 ```ttl
@@ -29,6 +32,6 @@ foaf:membershipClass a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

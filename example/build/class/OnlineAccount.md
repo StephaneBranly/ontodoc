@@ -4,7 +4,24 @@
 
 > **An online account.**
 
+## Schema
 
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    class Online Account
+    Thing <|-- Online Account
+    Online Account <|-- OnlineEcommerceAccount
+    Online Account <|-- OnlineGamingAccount
+    Online Account <|-- OnlineChatAccount
+```
+
+
+## Properties
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
@@ -33,6 +50,6 @@ foaf:OnlineAccount a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

@@ -8,6 +8,19 @@
 
 - Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
+## Schema
+
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    Person -> Literal : geekcode
+```
+
+
 ## Serialized
 
 ```ttl
@@ -31,6 +44,6 @@ foaf:geekcode a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

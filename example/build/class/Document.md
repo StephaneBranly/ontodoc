@@ -4,7 +4,22 @@
 
 > **A document.**
 
+## Schema
 
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    class Document
+    Document <|-- PersonalProfileDocument
+    Document <|-- Image
+```
+
+
+## Properties
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
@@ -37,6 +52,6 @@ foaf:Document a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

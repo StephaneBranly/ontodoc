@@ -8,6 +8,9 @@
 
 - Domain :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
 
+## Schema
+
+
 ## Serialized
 
 ```ttl
@@ -30,6 +33,6 @@ foaf:sha1 a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

@@ -4,6 +4,19 @@
 
 > **A personal profile RDF document.**
 
+## Schema
+
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    class PersonalProfileDocument
+    Document <|-- PersonalProfileDocument
+```
+
 
 
 ## Serialized
@@ -26,6 +39,6 @@ foaf:PersonalProfileDocument a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

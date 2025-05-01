@@ -56,12 +56,8 @@ _http://xmlns.com/foaf/0.1/_
 
 [Ontology available here](./ontology.ttl)
 
-## Download ontology
-
-[Ontology available here](./ontology.ttl)
-
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

@@ -8,6 +8,19 @@
 
 - Domain :[http://xmlns.com/foaf/0.1/Agent](../class/Agent.md)
 
+## Schema
+
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    Agent -> Literal : age
+```
+
+
 ## Serialized
 
 ```ttl
@@ -32,6 +45,6 @@ foaf:age a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

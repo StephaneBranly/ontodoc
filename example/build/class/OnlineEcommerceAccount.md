@@ -4,6 +4,19 @@
 
 > **An online e-commerce account.**
 
+## Schema
+
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    class Online E-commerce Account
+    OnlineAccount <|-- Online E-commerce Account
+```
+
 
 
 ## Serialized
@@ -27,6 +40,6 @@ foaf:OnlineEcommerceAccount a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

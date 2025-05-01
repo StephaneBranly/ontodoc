@@ -8,6 +8,19 @@
 
 - Domain :[http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing](<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>)
 
+## Schema
+
+```mermaid
+---
+config:
+  look: neo
+  theme: neo
+---
+classDiagram
+    SpatialThing -> SpatialThing : based near
+```
+
+
 ## Serialized
 
 ```ttl
@@ -31,6 +44,6 @@ foaf:based_near a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-01
+Documentation generated on 2025-05-02
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*
