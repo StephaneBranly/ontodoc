@@ -60,6 +60,6 @@ foaf:Document a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-04-25
+Documentation generated on 2025-05-01
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*

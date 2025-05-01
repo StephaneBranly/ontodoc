@@ -139,8 +139,12 @@ The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and
 
 - <kbd>skos:</kbd> http://www.w3.org/2004/02/skos/core#,
 
+## Download ontology
+
+[Ontology available here](./ontology.ttl)
+
 ---
 
-Documentation generated on 2025-04-25
+Documentation generated on 2025-05-01
 
 Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*
