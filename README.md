@@ -1,8 +1,10 @@
 <p align="center">
-<img src='https://github.com/StephaneBranly/ontodoc/blob/main/src/logo.png' height='200' alt='ontodoc logo' />
+<img src='https://raw.githubusercontent.com/StephaneBranly/ontodoc/bb6b704b03c3e470189ebedd3ec0c102dbe4177f/src/logo.png' height='200' alt='ontodoc logo' />
 </p>
 
 # ontodoc
+
+![PyPIVersion](https://img.shields.io/pypi/v/ontodoc) ![PyPI - Downloads](https://img.shields.io/pypi/dm/ontodoc) ![GitHub License](https://img.shields.io/github/license/StephaneBranly/ontodoc)
 
 A python module to generate markdown documentation for ontologies.
 
@@ -27,19 +29,19 @@ By default, the file named `ontology.ttl` will be used to generate your document
 You can easily change settings as you need.
 Available arguments :
 
-| Argument name                         | Default        | Description                                           |
-| ------------------------------------- | -------------- | ----------------------------------------------------- |
-| `-i, --input INPUT`                   | `ontology.ttl` | _Input ontology file_                                 |
-| `-o, --output OUTPUT`                 | `build/`       | _Output directory for the generated documentation_    |
-| `-t, --templates TEMPLATES`           | `templates/`   | _Custom templates folder_                             |
-| `-f, --footer, --no-footer`           | `true`         | _Add footer for each page_                            |
-| `-c, --concatenate, --no-concatenate` | `false`        | _Concatenate documentation into an unique file_       |
-| `-s, --schema, --no-schema`           | `true`         | _Display schemas_                                     |
-| `-m, --model MODEL`                   | `markdown`     | _Model type for the documentation. markdown, gh_wiki_ |
+| Argument name                         | Default        | Description                                           | Implemented |
+| ------------------------------------- | -------------- | ----------------------------------------------------- | ----------- |
+| `-i, --input INPUT`                   | `ontology.ttl` | _Input ontology file_                                 | ✅          |
+| `-o, --output OUTPUT`                 | `build/`       | _Output directory for the generated documentation_    | ✅          |
+| `-t, --templates TEMPLATES`           | `templates/`   | _Custom templates folder_                             | ✅          |
+| `-f, --footer, --no-footer`           | `true`         | _Add footer for each page_                            | ✅          |
+| `-c, --concatenate, --no-concatenate` | `false`        | _Concatenate documentation into an unique file_       | ❌          |
+| `-s, --schema, --no-schema`           | `true`         | _Display schemas_                                     | ❌          |
+| `-m, --model MODEL`                   | `markdown`     | _Model type for the documentation. markdown, gh_wiki_ | ❌          |
 
 ### Automatically generate your documentation
 
-You can explore `github actions` to automatically generate and publish your documentation.
+You can explore `github actions` to automatically generate and publish your documentation. If you need some inspiration to do it, check [our ontodoc github action](https://github.com/StephaneBranly/ontodoc/blob/main/.github/workflows/build_doc.yaml).
 
 ## Example 👀
 
@@ -48,21 +50,22 @@ Look at the [example for _foaf_](https://github.com/StephaneBranly/ontodoc/blob/
 ## How does it work ? 🔧
 
 ```mermaid
+%% THIS IS A SCHEMA, IF YOU CANNOT SEE IT, PLEASE TRY TO CONSULT THIS PAGE ON GITHUB AND ON A DESKTOP WEB NAVIGATOR
 flowchart LR
  subgraph s1["Ontodoc"]
-        n5["Markdown human readable documentation"]
-        n8["Markdown templates"]
-        n4["Structured ontology description"]
-        n9["Command Line Interface"]
+        mdhrd["Markdown human readable documentation"]
+        mt["Markdown templates"]
+        sod["Structured ontology description"]
+        cli["Command Line Interface"]
   end
-    n4 --> n5
-    n8 --> n5
-    n7(("Ontology")) --> n9
-    n9 --> n4
-    n9 -.-> n8
+    sod --> mdhrd
+    mt --> mdhrd
+    on(("Ontology")) --> cli
+    cli --> sod
+    cli -.-> mt
 
-    n4@{ shape: braces}
-    n9@{ shape: text}
+    sod@{ shape: braces}
+    cli@{ shape: text}
 ```
 
 ## Contributing </>

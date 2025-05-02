@@ -81,3 +81,29 @@ class ONTOLOGY(ONTOLOGY_PROP):
         COMMENT,
         LABEL
     ]
+
+class EQUIVALENTCLASS(ONTOLOGY_PROP):
+    array = True
+    predicates = [
+        OWL.equivalentClass
+    ]
+
+class SUBCLASSOF(ONTOLOGY_PROP):
+    array = True
+    predicates = [
+        RDFS.subClassOf,
+    ]
+
+class CLASS(ONTOLOGY_PROP):
+    predicates  = [
+        RDFS.isDefinedBy,
+        SKOS.scopeNote,
+        SKOS.example,
+        DCTERMS.source,
+        DCTERMS.provenance,
+        SKOS.note,
+        SUBCLASSOF,
+        EQUIVALENTCLASS,
+        COMMENT,
+        LABEL
+    ]

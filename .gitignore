@@ -175,3 +175,6 @@ cython_debug/
 
 # Remove example files for the moment
 *.ttl
+
+!foaf.ttl
+!/example/build**
