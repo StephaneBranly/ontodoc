@@ -1,6 +1,6 @@
 from __future__ import annotations
 from jinja2 import Template
-from rdflib import RDFS, Node
+from rdflib import RDFS, Literal, Node
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -20,7 +20,7 @@ class Property:
         
         self.label = get_object(g, property_node, LABEL)
         if not self.label:
-            self.label = self.id
+            self.label = Literal(self.id)
         self.comment = get_object(g, property_node, COMMENT)
 
         self.range = get_object(g, property_node, RDFS['range'])

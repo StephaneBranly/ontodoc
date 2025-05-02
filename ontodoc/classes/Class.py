@@ -1,7 +1,7 @@
 from __future__ import annotations
 from itertools import chain
 from jinja2 import Template
-from rdflib import RDFS, Node
+from rdflib import RDFS, Literal, Node
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -23,7 +23,7 @@ class Class:
             setattr(self, p.__name__.lower() if type(p) == type else get_suffix(g, p), get_object(g, class_node, p))
         
         if not self.label:
-            self.label = self.id
+            self.label = Literal(self.id)
 
         self.subclasses = get_subject(g, RDFS.subClassOf, class_node, return_all=True)
         if self.subclasses:

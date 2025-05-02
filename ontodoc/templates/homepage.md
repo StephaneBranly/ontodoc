@@ -4,6 +4,12 @@ _{{onto.onto_node}}_
 
 > {{onto.comment}}
 
+{% if onto.creator and onto.creator|length %}
+## Creators
+{% for creator in onto.creator%}
+- {{creator}}{%- endfor %}
+{% endif %}
+
 {% if onto.contributor and onto.contributor|length %}
 ## Contributors
 {% for contributor in onto.contributor%}
@@ -12,6 +18,9 @@ _{{onto.onto_node}}_
 
 ## Summary
 
+{% if onto.versionInfo %}- Version : **{{onto.versionInfo}}**{% endif %}
+{% if onto.created %}- Creation date : **{{onto.created}}**{% endif %}
+{% if onto.modified %}- Modification date : **{{onto.modified}}**{% endif %}
 - **{{onto.classes|length}}** classes
 - **{{onto.objectProperties|length + onto.datatypeProperties|length + onto.annotationProperties|length + onto.functionalProperties|length}}** Properties
   - **{{onto.objectProperties|length}}** object
