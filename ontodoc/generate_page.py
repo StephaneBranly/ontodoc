@@ -13,4 +13,4 @@ def generate_page(content: str, path: Path, onto: Ontology = None, footer: str =
             f.write(footer)
 
         if add_signature:
-            f.write(f'\n\nGenerated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v{__version__}*')
+            f.write(f'\n\nGenerated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v{__version__}*')
