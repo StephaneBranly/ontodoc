@@ -9,7 +9,6 @@ from ontodoc.classes.Property import Property
 
 class JSONOntoDocEncoder(json.JSONEncoder):
     def default(self, obj):
-
         if isinstance(obj, Graph):
             return None
         if isinstance(obj, Template):

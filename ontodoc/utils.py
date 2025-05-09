@@ -1,10 +1,13 @@
+from __future__ import annotations
 
 from itertools import chain
 import re
 
 from jinja2 import Environment
 from rdflib import OWL, RDF, RDFS, Graph, Node
-
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from ontodoc.classes.Ontology import Ontology
 from ontodoc.ontology_properties import ONTOLOGY_PROP
 
 def concat_templates_environment(default_env: Environment, custom_env: Environment = None):
@@ -65,13 +68,15 @@ def get_suffix(graph: Graph, n: Node):
     return n.n3(graph.namespace_manager).split(':')[-1]
 
 def generate_clean_id_from_term(graph: Graph, n: Node):
-    return re.sub(r'[^a-zA-Z\-_0-0]+', '_', n.n3(namespace_manager=graph.namespace_manager).split(':')[-1])
+    return re.sub(r'[^a-zA-Z\-_0-9]+', '_', n.n3(namespace_manager=graph.namespace_manager).split(':')[-1])
 
-def compute_link(graph: Graph, current_node: Node, n: Node, onto_prefix: str = ''):
-    if n and n.n3(graph.namespace_manager).startswith(onto_prefix+':'):
+def compute_link(onto: Ontology, current_node: Node, n: Node):
+    graph = onto.graph
+    prefix = onto.onto_prefix
+    if n and n.n3(graph.namespace_manager).startswith(prefix+':'):
         relative_path = './' if get_object(graph, current_node, RDF.type) == OWL.Ontology else '../'
         type = get_object(graph, n, RDF.type)
-        page_name = n.n3(graph.namespace_manager).split(onto_prefix+':')[1]+'.md'
+        page_name = n.n3(graph.namespace_manager).split(prefix+':')[1]+'.md'
         if type and type in [RDFS.Class, OWL.Class]:
             return relative_path + 'class/' + page_name
         return relative_path + 'property/' + page_name
