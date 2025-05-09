@@ -4,7 +4,7 @@
 
 # ontodoc
 
-![PyPIVersion](https://img.shields.io/pypi/v/ontodoc) ![PyPI - Downloads](https://img.shields.io/pypi/dm/ontodoc) ![GitHub License](https://img.shields.io/github/license/StephaneBranly/ontodoc)
+[![PyPIVersion](https://img.shields.io/pypi/v/ontodoc)](https://github.com/StephaneBranly/ontodoc/releases) [![PyPI - Downloads](https://img.shields.io/pypi/dm/ontodoc)](https://pypistats.org/packages/ontodoc) [![GitHub License](https://img.shields.io/github/license/StephaneBranly/ontodoc)](https://github.com/StephaneBranly/ontodoc/blob/v0.0.1/LICENCE.txt)
 
 A python module to generate markdown documentation for ontologies.
 
