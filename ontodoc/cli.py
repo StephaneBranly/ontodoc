@@ -70,6 +70,7 @@ def main():
 
     # Init ontology reader
     ontology = Ontology(g, onto, templates)
+    path = pathlib.Path(args.output)
 
     # Generate pages
     if args.model == 'json':
@@ -87,11 +88,11 @@ def main():
             generate_page(page, f'{args.output}/ontology.md', onto, footer)
 
         else:
-            generate_page(ontology.__str__(), f'{args.output}/homepage.md', onto, footer)
+            generate_page(path=path, node=ontology, footer=footer)
             for c in ontology.classes:
-                generate_page(c.__str__(), f'{args.output}class/{c.id}.md', onto, footer)
+                generate_page(path=path, node=c, footer=footer)
             for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
-                generate_page(p.__str__(), f'{args.output}property/{p.id}.md', onto, footer)
+                generate_page(path=path, node=p, footer=footer)
 
     # Copy ontology file
     with open(f'{args.output}ontology.ttl', mode='w', encoding='utf-8') as f:

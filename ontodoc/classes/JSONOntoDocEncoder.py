@@ -1,4 +1,5 @@
 import json
+from pathlib import PosixPath
 from jinja2 import Template
 from rdflib import Graph
 
@@ -19,4 +20,6 @@ class JSONOntoDocEncoder(json.JSONEncoder):
             return obj.__dict__
         if isinstance(obj, Ontology):
             return None
+        if isinstance(obj, PosixPath):
+            return str(obj)
         return super(JSONOntoDocEncoder, self).default(obj)

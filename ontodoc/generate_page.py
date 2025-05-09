@@ -1,11 +1,17 @@
 from pathlib import Path
 
 from ontodoc import __version__
+from ontodoc.classes.Generic import Generic
 from ontodoc.classes.Ontology import Ontology
 
-def generate_page(content: str, path: Path, onto: Ontology = None, footer: str = None, add_signature: bool = True):
+def generate_page(content: str = None, path: Path = None, node: Generic = None, footer: str = None, add_signature: bool = True):
     if type(path) != Path: path = Path(path)
+    if node != None:
+        path = path / node.pagename
+        path = path.with_suffix('.md')
     path.parent.mkdir(parents=True, exist_ok=True)
+    if content == None:
+        content = node.__str__()
     with open(path, mode='w', encoding='utf-8') as f:
         f.write(content)
 
