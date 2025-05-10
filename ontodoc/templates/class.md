@@ -1,8 +1,9 @@
-# [{{onto.label}}](../homepage.md) > {{classe.id}}
+# [{{onto.label}}](../homepage.md) > {{class.id}}
 
-## {{classe.label if classe.label}}
+## {{class.label if class.label}}
 
-> **{{classe.comment if classe.comment}}**
+> **{{class.comment if class.comment}}**
+{%- if metadata.schema %}
 
 ## Schema
 
@@ -13,42 +14,68 @@ config:
   theme: neo
 ---
 classDiagram
-    class {{classe.label}}
+    class {{class.id}}
     
-    {%- if classe.subclassof %}
-    {%- for subclassof in classe.subclassof %}
-    {{subclassof}} <|-- {{classe.label}}
+    {%- if class.subclassof %}
+    {%- for subclassof in class.subclassof %}
+    {{subclassof.id}} <|-- {{class.id}}
     {%- endfor -%}
     {% endif %}
     
-    {%- if classe.subclasses %}
-    {%- for subclass in classe.subclasses %}
-    {{classe.label}} <|-- {{subclass}}
+    {%- if class.subclasses %}
+    {%- for subclass in class.subclasses %}
+    {{class.id}} <|-- {{subclass.id}}
     {%- endfor -%}
     {% endif %}
 ```
+{%- endif %}
 
-{% if classe.triples|length %}
 ## Properties
+{% if class.triples|length %}
+### Class properties
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
-| {%- for triple in classe.triples | sort(attribute='predicate') %} |
-| {%- if triple.predicate_link -%}
-[{{triple.predicate}}]({{triple.predicate_link}})
+| {%- for triple in class.triples | sort(attribute='n3') %} |
+| {%- if triple.pagename -%}
+<kbd>[{{triple.n3}}](../{{triple.pagename}})</kbd>
 {%- else -%}
-<kbd>{{triple.range}}</kbd>
+<kbd>{{triple.n3}}</kbd>
 {%- endif %} | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
 
 {%- if triple.range_link -%}
-[{{triple.range}}]({{triple.range_link}})
+<kbd>[{{triple.range_n3}}]({{triple.range_link}})</kbd>
 {%- else -%}
-<kbd>{{triple.range}}</kbd>
+<kbd>{{triple.range_n3}}</kbd>
 {%- endif %} |
 {%- endfor%}
 {% endif %}
 
+{%- if class.subclassof %}
+{%- for subclassof in class.subclassof %}
+  {% if subclassof.triples|length %}
+### Inherited from <kbd>[**{{subclassof.label}}**](../{{subclassof.pagename}}.md)</kbd>
+| Predicate | Label | Comment | Type |
+| -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
+| {%- for triple in subclassof.triples | sort(attribute='n3') %} |
+| {%- if triple.pagename -%}
+<kbd>[{{triple.n3}}](../{{triple.pagename}})</kbd>
+{%- else -%}
+<kbd>{{triple.n3}}</kbd>
+{%- endif %} | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
+
+{%- if triple.range_link -%}
+<kbd>[{{triple.range_n3}}]({{triple.range_link}})</kbd>
+{%- else -%}
+<kbd>{{triple.range_n3}}</kbd>
+{%- endif %} |
+{%- endfor%}
+{% endif %}
+{%- endfor -%}
+{% endif %}
+
+
 ## Serialized
 
 ```ttl
-{{classe.serialized}}
+{{class.serialized}}
 ```
