@@ -24,7 +24,3 @@ class Property(Generic):
 
         self.range_n3 = self.range.n3(g.namespace_manager) if self.range else None
         self.domain_n3 = self.domain.n3(g.namespace_manager) if self.domain else None
-
-
-    def __str__(self):
-        return self.template.render(property=self.__dict__, onto=self.onto.__dict__)

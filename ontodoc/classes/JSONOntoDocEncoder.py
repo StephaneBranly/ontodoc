@@ -15,6 +15,7 @@ class JSONOntoDocEncoder(json.JSONEncoder):
         if isinstance(obj, Template):
             return None
         if isinstance(obj, Class):
+            return {}
             return obj.__dict__
         if isinstance(obj, Property):
             return obj.__dict__

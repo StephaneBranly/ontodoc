@@ -33,4 +33,4 @@ class Generic:
         pass
 
     def __str__(self):
-        return self.template.render(**{self.__class__.__name__.lower(): self.__dict__, 'onto': self.onto.__dict__})
+        return self.template.render(**{self.__class__.__name__.lower(): self.__dict__, 'onto': self.onto.__dict__, 'metadata': self.onto.metadata})

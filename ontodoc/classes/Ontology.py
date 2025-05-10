@@ -12,7 +12,8 @@ from ontodoc.utils import get_object, get_prefix, get_suffix
 
 
 class Ontology(Generic):
-    def __init__(self, graph: Graph, onto_node: rdflib.Node, templates: dict[str, Template]):
+    def __init__(self, graph: Graph, onto_node: rdflib.Node, templates: dict[str, Template], metadata: dict[str, str]):
+        self.metadata = metadata
         self.graph = graph
 
         self.templates = templates
@@ -31,7 +32,7 @@ class Ontology(Generic):
         self.classes = [Class(self, s, self.templates['class.md']) for s in self.graph.subjects(predicate=rdflib.RDF.type, object=rdflib.OWL.Class) if type(s) == rdflib.URIRef and get_prefix(self.graph, s) == self.onto_prefix]
 
         self.update_internal_links()
-        
+
     def update_internal_links(self):
         for c in self.classes:
             c.update_internal_links()
@@ -45,6 +46,3 @@ class Ontology(Generic):
             p.update_internal_links()
         return super().update_internal_links()
     
-    def __str__(self):
-        homepage = Homepage(self.graph, self, self.templates['homepage.md'])
-        return homepage.__str__()

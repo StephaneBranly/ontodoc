@@ -2,7 +2,6 @@ from pathlib import Path
 
 from ontodoc import __version__
 from ontodoc.classes.Generic import Generic
-from ontodoc.classes.Ontology import Ontology
 
 def generate_page(content: str = None, path: Path = None, node: Generic = None, footer: str = None, add_signature: bool = True):
     if type(path) != Path: path = Path(path)
