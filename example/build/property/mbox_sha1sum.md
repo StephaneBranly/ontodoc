@@ -1,8 +1,8 @@
-# [Friend of a Friend (FOAF) vocabulary](../homepage.md) > icqChatID
+# [Friend of a Friend (FOAF) vocabulary](../homepage.md) > mbox_sha1sum
 
-## ICQ chat ID
+## sha1sum of a personal mailbox URI name
 
-> **An ICQ chat ID**
+> **The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox.**
 
 - Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
 
@@ -17,7 +17,7 @@ config:
   theme: neo
 ---
 classDiagram
-    Agent --> Literal : ICQ chat ID
+    Agent --> Literal : sha1sum of a personal mailbox URI name
 ```
 
 ## Serialized
@@ -29,15 +29,14 @@ classDiagram
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-foaf:icqChatID a rdf:Property,
+foaf:mbox_sha1sum a rdf:Property,
         owl:DatatypeProperty,
         owl:InverseFunctionalProperty ;
-    rdfs:label "ICQ chat ID" ;
-    rdfs:comment "An ICQ chat ID" ;
+    rdfs:label "sha1sum of a personal mailbox URI name" ;
+    rdfs:comment "The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox." ;
     rdfs:domain foaf:Agent ;
     rdfs:isDefinedBy foaf: ;
     rdfs:range rdfs:Literal ;
-    rdfs:subPropertyOf foaf:nick ;
     ns1:term_status "testing" .
 
 

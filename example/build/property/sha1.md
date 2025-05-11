@@ -1,12 +1,12 @@
-# [Friend of a Friend (FOAF) vocabulary](../homepage.md) > givenname
+# [Friend of a Friend (FOAF) vocabulary](../homepage.md) > sha1
 
-## Given name
+## sha1sum (hex)
 
-> **The given name of some person.**
-
-
+> **A sha1sum hash, in hex.**
 
 
+
+- Domain :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
 
 ## Serialized
 
@@ -17,12 +17,13 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-foaf:givenname a rdf:Property,
+foaf:sha1 a rdf:Property,
         owl:DatatypeProperty ;
-    rdfs:label "Given name" ;
-    rdfs:comment "The given name of some person." ;
+    rdfs:label "sha1sum (hex)" ;
+    rdfs:comment "A sha1sum hash, in hex." ;
+    rdfs:domain foaf:Document ;
     rdfs:isDefinedBy foaf: ;
-    ns1:term_status "archaic" .
+    ns1:term_status "unstable" .
 
 
 ```

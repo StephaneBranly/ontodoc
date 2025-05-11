@@ -4,9 +4,10 @@ _http://xmlns.com/foaf/0.1/_
 
 > The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.
 
-
-
 ## Summary
+
+
+
 
 - **13** classes
 - **65** Properties
@@ -27,7 +28,7 @@ _http://xmlns.com/foaf/0.1/_
 
 ### Datatype Properties
 
-[account name](property/accountName.md),[age](property/age.md),[AIM chat ID](property/aimChatID.md),[birthday](property/birthday.md),[DNA checksum](property/dnaChecksum.md),[family_name](property/family_name.md),[familyName](property/familyName.md),[firstName](property/firstName.md),[geekcode](property/geekcode.md),[gender](property/gender.md),[Given name](property/givenName.md),[Given name](property/givenname.md),[ICQ chat ID](property/icqChatID.md),[jabber ID](property/jabberID.md),[lastName](property/lastName.md),[MSN chat ID](property/msnChatID.md),[myersBriggs](property/myersBriggs.md),[name](property/name.md),[nickname](property/nick.md),[plan](property/plan.md),[sha1sum (hex)](property/sha_.md),[sha1sum of a personal mailbox URI name](property/mbox_sha_sum.md),[Skype ID](property/skypeID.md),[status](property/status.md),[Surname](property/surname.md),[title](property/title.md),[Yahoo chat ID](property/yahooChatID.md),
+[account name](property/accountName.md),[age](property/age.md),[AIM chat ID](property/aimChatID.md),[birthday](property/birthday.md),[DNA checksum](property/dnaChecksum.md),[family_name](property/family_name.md),[familyName](property/familyName.md),[firstName](property/firstName.md),[geekcode](property/geekcode.md),[gender](property/gender.md),[Given name](property/givenName.md),[Given name](property/givenname.md),[ICQ chat ID](property/icqChatID.md),[jabber ID](property/jabberID.md),[lastName](property/lastName.md),[MSN chat ID](property/msnChatID.md),[myersBriggs](property/myersBriggs.md),[name](property/name.md),[nickname](property/nick.md),[plan](property/plan.md),[sha1sum (hex)](property/sha1.md),[sha1sum of a personal mailbox URI name](property/mbox_sha1sum.md),[Skype ID](property/skypeID.md),[status](property/status.md),[Surname](property/surname.md),[title](property/title.md),[Yahoo chat ID](property/yahooChatID.md),
 
 ### Annotation Properties
 
@@ -38,7 +39,6 @@ _http://xmlns.com/foaf/0.1/_
 [age](property/age.md),[birthday](property/birthday.md),[gender](property/gender.md),[primary topic](property/primaryTopic.md),
 
 ## Namepaces
-
 
 - <kbd>dc:</kbd> http://purl.org/dc/terms/,
 - <kbd>dc11:</kbd> http://purl.org/dc/elements/1.1/,
@@ -58,6 +58,6 @@ _http://xmlns.com/foaf/0.1/_
 
 ---
 
-Documentation generated on 2025-05-02
+Documentation generated on 2025-05-11
 
-Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.2*

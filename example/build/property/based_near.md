@@ -20,7 +20,6 @@ classDiagram
     SpatialThing --> SpatialThing : based near
 ```
 
-
 ## Serialized
 
 ```ttl
@@ -44,6 +43,6 @@ foaf:based_near a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-02
+Documentation generated on 2025-05-11
 
-Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.2*

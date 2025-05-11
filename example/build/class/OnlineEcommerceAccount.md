@@ -13,9 +13,19 @@ config:
   theme: neo
 ---
 classDiagram
-    class Online E-commerce Account
-    OnlineAccount <|-- Online E-commerce Account
+    class OnlineEcommerceAccount
+    OnlineAccount <|-- OnlineEcommerceAccount
 ```
+
+## Properties
+
+  
+### Inherited from <kbd>[**Online Account**](../class/OnlineAccount.md)</kbd>
+| Predicate | Label | Comment | Type |
+| -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
+| |
+|<kbd>[foaf:accountName](../property/accountName)</kbd> | account name | Indicates the name (identifier) associated with this online account. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:accountServiceHomepage](../property/accountServiceHomepage)</kbd> | account service homepage | Indicates a homepage of the service provide for this online account. |<kbd>[foaf:Document](../class/Document.md)</kbd> |
 
 
 
@@ -40,6 +50,6 @@ foaf:OnlineEcommerceAccount a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-02
+Documentation generated on 2025-05-11
 
-Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.2*

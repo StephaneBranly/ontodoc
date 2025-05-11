@@ -18,15 +18,17 @@ classDiagram
     Document <|-- PersonalProfileDocument
 ```
 
-
 ## Properties
+
+### Class properties
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-|[foaf:primaryTopic](../property/primaryTopic.md) | "primary topic" | "The primary topic of some page or document." |[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>) | |
-|[foaf:primaryTopic](../property/primaryTopic.md) | "primary topic" | "The primary topic of some page or document." |[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>) | |
-|[foaf:sha1](../property/sha1.md) | "sha1sum (hex)" | "A sha1sum hash, in hex." |<kbd>None</kbd> | |
-|[foaf:topic](../property/topic.md) | "topic" | "A topic of some page or document." |[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>) |
+|<kbd>[foaf:primaryTopic](../property/primaryTopic)</kbd> | primary topic | The primary topic of some page or document. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> | |
+|<kbd>[foaf:primaryTopic](../property/primaryTopic)</kbd> | primary topic | The primary topic of some page or document. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> | |
+|<kbd>[foaf:sha1](../property/sha1)</kbd> | sha1sum (hex) | A sha1sum hash, in hex. |<kbd>None</kbd> | |
+|<kbd>[foaf:topic](../property/topic)</kbd> | topic | A topic of some page or document. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> |
+
 
 
 ## Serialized
@@ -52,6 +54,6 @@ foaf:Document a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-02
+Documentation generated on 2025-05-11
 
-Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.2*

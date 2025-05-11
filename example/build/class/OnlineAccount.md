@@ -13,20 +13,21 @@ config:
   theme: neo
 ---
 classDiagram
-    class Online Account
-    Thing <|-- Online Account
-    Online Account <|-- OnlineGamingAccount
-    Online Account <|-- OnlineChatAccount
-    Online Account <|-- OnlineEcommerceAccount
+    class OnlineAccount
+    OnlineAccount <|-- OnlineGamingAccount
+    OnlineAccount <|-- OnlineEcommerceAccount
+    OnlineAccount <|-- OnlineChatAccount
 ```
 
-
 ## Properties
+
+### Class properties
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-|[foaf:accountName](../property/accountName.md) | "account name" | "Indicates the name (identifier) associated with this online account." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:accountServiceHomepage](../property/accountServiceHomepage.md) | "account service homepage" | "Indicates a homepage of the service provide for this online account." |[foaf:Document](../class/Document.md) |
+|<kbd>[foaf:accountName](../property/accountName)</kbd> | account name | Indicates the name (identifier) associated with this online account. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:accountServiceHomepage](../property/accountServiceHomepage)</kbd> | account service homepage | Indicates a homepage of the service provide for this online account. |<kbd>[foaf:Document](../class/Document.md)</kbd> |
+
 
 
 ## Serialized
@@ -50,6 +51,6 @@ foaf:OnlineAccount a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-02
+Documentation generated on 2025-05-11
 
-Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.2*

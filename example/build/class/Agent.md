@@ -19,34 +19,36 @@ classDiagram
     Agent <|-- Group
 ```
 
-
 ## Properties
+
+### Class properties
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-|[foaf:account](../property/account.md) | "account" | "Indicates an account held by this agent." |[foaf:OnlineAccount](../class/OnlineAccount.md) | |
-|[foaf:age](../property/age.md) | "age" | "The age in years of some agent." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:age](../property/age.md) | "age" | "The age in years of some agent." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:aimChatID](../property/aimChatID.md) | "AIM chat ID" | "An AIM chat ID" |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:birthday](../property/birthday.md) | "birthday" | "The birthday of this Agent, represented in mm-dd string form, eg. '12-31'." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:birthday](../property/birthday.md) | "birthday" | "The birthday of this Agent, represented in mm-dd string form, eg. '12-31'." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:gender](../property/gender.md) | "gender" | "The gender of this Agent (typically but not necessarily 'male' or 'female')." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:gender](../property/gender.md) | "gender" | "The gender of this Agent (typically but not necessarily 'male' or 'female')." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:holdsAccount](../property/holdsAccount.md) | "account" | "Indicates an account held by this agent." |[foaf:OnlineAccount](../class/OnlineAccount.md) | |
-|[foaf:icqChatID](../property/icqChatID.md) | "ICQ chat ID" | "An ICQ chat ID" |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:interest](../property/interest.md) | "interest" | "A page about a topic of interest to this person." |[foaf:Document](../class/Document.md) | |
-|[foaf:jabberID](../property/jabberID.md) | "jabber ID" | "A jabber ID for something." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:made](../property/made.md) | "made" | "Something that was made by this agent." |[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>) | |
-|[foaf:mbox](../property/mbox.md) | "personal mailbox" | "A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox." |[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>) | |
-|[foaf:mbox_sha1sum](../property/mbox_sha1sum.md) | "sha1sum of a personal mailbox URI name" | "The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:msnChatID](../property/msnChatID.md) | "MSN chat ID" | "An MSN chat ID" |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:openid](../property/openid.md) | "openid" | "An OpenID for an Agent." |[foaf:Document](../class/Document.md) | |
-|[foaf:skypeID](../property/skypeID.md) | "Skype ID" | "A Skype ID" |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:status](../property/status.md) | "status" | "A string expressing what the user is happy for the general public (normally) to know about their current activity." |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) | |
-|[foaf:tipjar](../property/tipjar.md) | "tipjar" | "A tipjar document for this agent, describing means for payment and reward." |[foaf:Document](../class/Document.md) | |
-|[foaf:topic_interest](../property/topic_interest.md) | "topic_interest" | "A thing of interest to this person." |[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>) | |
-|[foaf:weblog](../property/weblog.md) | "weblog" | "A weblog of some thing (whether person, group, company etc.)." |[foaf:Document](../class/Document.md) | |
-|[foaf:yahooChatID](../property/yahooChatID.md) | "Yahoo chat ID" | "A Yahoo chat ID" |[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>) |
+|<kbd>[foaf:account](../property/account)</kbd> | account | Indicates an account held by this agent. |<kbd>[foaf:OnlineAccount](../class/OnlineAccount.md)</kbd> | |
+|<kbd>[foaf:age](../property/age)</kbd> | age | The age in years of some agent. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:age](../property/age)</kbd> | age | The age in years of some agent. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:aimChatID](../property/aimChatID)</kbd> | AIM chat ID | An AIM chat ID |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:birthday](../property/birthday)</kbd> | birthday | The birthday of this Agent, represented in mm-dd string form, eg. '12-31'. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:birthday](../property/birthday)</kbd> | birthday | The birthday of this Agent, represented in mm-dd string form, eg. '12-31'. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:gender](../property/gender)</kbd> | gender | The gender of this Agent (typically but not necessarily 'male' or 'female'). |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:gender](../property/gender)</kbd> | gender | The gender of this Agent (typically but not necessarily 'male' or 'female'). |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:holdsAccount](../property/holdsAccount)</kbd> | account | Indicates an account held by this agent. |<kbd>[foaf:OnlineAccount](../class/OnlineAccount.md)</kbd> | |
+|<kbd>[foaf:icqChatID](../property/icqChatID)</kbd> | ICQ chat ID | An ICQ chat ID |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:interest](../property/interest)</kbd> | interest | A page about a topic of interest to this person. |<kbd>[foaf:Document](../class/Document.md)</kbd> | |
+|<kbd>[foaf:jabberID](../property/jabberID)</kbd> | jabber ID | A jabber ID for something. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:made](../property/made)</kbd> | made | Something that was made by this agent. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> | |
+|<kbd>[foaf:mbox](../property/mbox)</kbd> | personal mailbox | A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> | |
+|<kbd>[foaf:mbox_sha1sum](../property/mbox_sha1sum)</kbd> | sha1sum of a personal mailbox URI name | The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:msnChatID](../property/msnChatID)</kbd> | MSN chat ID | An MSN chat ID |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:openid](../property/openid)</kbd> | openid | An OpenID for an Agent. |<kbd>[foaf:Document](../class/Document.md)</kbd> | |
+|<kbd>[foaf:skypeID](../property/skypeID)</kbd> | Skype ID | A Skype ID |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:status](../property/status)</kbd> | status | A string expressing what the user is happy for the general public (normally) to know about their current activity. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:tipjar](../property/tipjar)</kbd> | tipjar | A tipjar document for this agent, describing means for payment and reward. |<kbd>[foaf:Document](../class/Document.md)</kbd> | |
+|<kbd>[foaf:topic_interest](../property/topic_interest)</kbd> | topic_interest | A thing of interest to this person. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> | |
+|<kbd>[foaf:weblog](../property/weblog)</kbd> | weblog | A weblog of some thing (whether person, group, company etc.). |<kbd>[foaf:Document](../class/Document.md)</kbd> | |
+|<kbd>[foaf:yahooChatID](../property/yahooChatID)</kbd> | Yahoo chat ID | A Yahoo chat ID |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> |
+
 
 
 ## Serialized
@@ -70,6 +72,6 @@ foaf:Agent a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-02
+Documentation generated on 2025-05-11
 
-Generated with [📑 ontodoc](https://github.com/StephaneBranly/ontodoc), *v0.0.1*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.2*
