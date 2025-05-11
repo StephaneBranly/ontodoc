@@ -106,7 +106,8 @@ class CLASS(ONTOLOGY_PROP):
         SUBCLASSOF,
         EQUIVALENTCLASS,
         COMMENT,
-        LABEL
+        LABEL,
+        RESTRICTION
     ]
 
 class PROPERTY(ONTOLOGY_PROP):
@@ -114,5 +115,6 @@ class PROPERTY(ONTOLOGY_PROP):
         LABEL,
         COMMENT,
         RDFS.domain,
-        RDFS.range
+        RDFS.range,
+        RESTRICTION
     ]

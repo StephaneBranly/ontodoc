@@ -47,6 +47,8 @@ You can explore `github actions` to automatically generate and publish your docu
 
 Look at the [example for _foaf_](https://github.com/StephaneBranly/ontodoc/blob/main/example/build/homepage.md) to see what type of documentation you can easily build in 2 lines!
 
+If you want to change the markdown templates, take a look at the structure of the [default ones](https://github.com/StephaneBranly/ontodoc/tree/main/ontodoc/templates).
+
 ## How does it work ? 🔧
 
 ```mermaid
@@ -62,11 +64,13 @@ flowchart LR
     mt --> mdhrd
     on(("Ontology")) --> cli
     cli --> sod
-    cli -.-> mt
+    cli -.-> |*Custom templates*|mt
 
     sod@{ shape: braces}
     cli@{ shape: text}
 ```
+
+Recognized properties available [here](https://github.com/StephaneBranly/ontodoc/blob/main/ontodoc/ontology_properties.py).
 
 ## Contributing </>
 
