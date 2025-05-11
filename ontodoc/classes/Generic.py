@@ -20,7 +20,7 @@ class Generic:
         self.id = generate_clean_id_from_term(g, node)
         self.node = node
         self.n3 = node.n3(g.namespace_manager)
-        self.pagename = path / self.id
+        self.pagename = (path / self.id).with_suffix('.md')
         self.serialized = serialize_subset(g, node)
         
         for p in default_properties.predicates:
