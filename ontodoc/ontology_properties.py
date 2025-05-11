@@ -2,6 +2,7 @@ from rdflib import DC, OWL, RDF, RDFS, SKOS, SDO, DCTERMS, VANN
 
 class ONTOLOGY_PROP:
     array = False
+    predicates = []
 
 class LABEL(ONTOLOGY_PROP):
     predicates = [
@@ -105,5 +106,15 @@ class CLASS(ONTOLOGY_PROP):
         SUBCLASSOF,
         EQUIVALENTCLASS,
         COMMENT,
-        LABEL
+        LABEL,
+        RESTRICTION
+    ]
+
+class PROPERTY(ONTOLOGY_PROP):
+    predicates = [
+        LABEL,
+        COMMENT,
+        RDFS.domain,
+        RDFS.range,
+        RESTRICTION
     ]

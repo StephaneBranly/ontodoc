@@ -1,12 +1,8 @@
 name: Build doc
-# on:
-#   release:
-#     types: [created]
 on:
   workflow_dispatch:
   release:
     types: [created]
-
 
 jobs:
   build_doc:

@@ -17,9 +17,11 @@
 {%- elif property.domain -%}
 <kbd>{{property.domain}}</kbd>
 {%- endif %}{%- endif %}
+{%- if metadata.schema %}
+{%- if property.domain and property.range %}
 
 ## Schema
-{% if property.domain and property.range %}
+
 ```mermaid
 ---
 config:
@@ -29,7 +31,8 @@ config:
 classDiagram
     {{property.domain_label}} --> {{property.range_label}} : {{property.label}}
 ```
-{% endif %}
+{%- endif %}
+{%- endif %}
 
 ## Serialized
 

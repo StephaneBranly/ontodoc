@@ -4,7 +4,7 @@
 
 # ontodoc
 
-![PyPIVersion](https://img.shields.io/pypi/v/ontodoc) ![PyPI - Downloads](https://img.shields.io/pypi/dm/ontodoc) ![GitHub License](https://img.shields.io/github/license/StephaneBranly/ontodoc)
+[![PyPIVersion](https://img.shields.io/pypi/v/ontodoc)](https://github.com/StephaneBranly/ontodoc/releases) [![PyPI - Downloads](https://img.shields.io/pypi/dm/ontodoc)](https://pypistats.org/packages/ontodoc) [![GitHub License](https://img.shields.io/github/license/StephaneBranly/ontodoc)](https://github.com/StephaneBranly/ontodoc/blob/v0.0.1/LICENCE.txt)
 
 A python module to generate markdown documentation for ontologies.
 
@@ -36,7 +36,7 @@ Available arguments :
 | `-t, --templates TEMPLATES`           | `templates/`   | _Custom templates folder_                             | ✅          |
 | `-f, --footer, --no-footer`           | `true`         | _Add footer for each page_                            | ✅          |
 | `-c, --concatenate, --no-concatenate` | `false`        | _Concatenate documentation into an unique file_       | ❌          |
-| `-s, --schema, --no-schema`           | `true`         | _Display schemas_                                     | ❌          |
+| `-s, --schema, --no-schema`           | `true`         | _Display schemas_                                     | ✅          |
 | `-m, --model MODEL`                   | `markdown`     | _Model type for the documentation. markdown, gh_wiki_ | ❌          |
 
 ### Automatically generate your documentation
@@ -46,6 +46,8 @@ You can explore `github actions` to automatically generate and publish your docu
 ## Example 👀
 
 Look at the [example for _foaf_](https://github.com/StephaneBranly/ontodoc/blob/main/example/build/homepage.md) to see what type of documentation you can easily build in 2 lines!
+
+If you want to change the markdown templates, take a look at the structure of the [default ones](https://github.com/StephaneBranly/ontodoc/tree/main/ontodoc/templates).
 
 ## How does it work ? 🔧
 
@@ -62,11 +64,13 @@ flowchart LR
     mt --> mdhrd
     on(("Ontology")) --> cli
     cli --> sod
-    cli -.-> mt
+    cli -.-> |*Custom templates*|mt
 
     sod@{ shape: braces}
     cli@{ shape: text}
 ```
+
+Recognized properties available [here](https://github.com/StephaneBranly/ontodoc/blob/main/ontodoc/ontology_properties.py).
 
 ## Contributing </>
 

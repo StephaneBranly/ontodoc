@@ -1,4 +1,5 @@
 import argparse
+import datetime
 from itertools import chain
 from jinja2 import Environment, FileSystemLoader, Template
 import pathlib
@@ -63,13 +64,19 @@ def main():
     if args.footer:
         footer = Footer(onto, templates['footer.md']).__str__()
         if args.model == 'gh_wiki':
-            generate_page(footer, f'{args.output}/_Footer.md', onto)
+            generate_page(content=footer, path=f'{args.output}/_Footer.md')
             footer = None
     else:
         footer = None
 
+    metadata = {
+        **args.__dict__,
+        'version': __version__,
+        'editionDate': datetime.date.today().strftime('%Y-%m-%d'),
+    }
     # Init ontology reader
-    ontology = Ontology(g, onto, templates)
+    ontology = Ontology(g, onto, templates, metadata)
+    path = pathlib.Path(args.output)
 
     # Generate pages
     if args.model == 'json':
@@ -84,14 +91,14 @@ def main():
             page = ontology.__str__()
             for c in ontology.classes:
                 page += '\n\n' + c.__str__()
-            generate_page(page, f'{args.output}/ontology.md', onto, footer)
+            generate_page(content=page, path=f'{args.output}/ontology.md', footer=footer)
 
         else:
-            generate_page(ontology.__str__(), f'{args.output}/homepage.md', onto, footer)
+            generate_page(path=path, node=ontology, footer=footer)
             for c in ontology.classes:
-                generate_page(c.__str__(), f'{args.output}class/{c.id}.md', onto, footer)
+                generate_page(path=path, node=c, footer=footer)
             for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
-                generate_page(p.__str__(), f'{args.output}property/{p.id}.md', onto, footer)
+                generate_page(path=path, node=p, footer=footer)
 
     # Copy ontology file
     with open(f'{args.output}ontology.ttl', mode='w', encoding='utf-8') as f:
