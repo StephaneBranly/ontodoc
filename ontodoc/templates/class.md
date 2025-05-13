@@ -3,7 +3,7 @@
 ## {{class.label if class.label}}
 
 > **{{class.comment if class.comment}}**
-{%- if metadata.schema %}
+{%- if metadata.with_schema %}
 
 ## Schema
 

@@ -17,7 +17,7 @@
 {%- elif property.domain -%}
 <kbd>{{property.domain}}</kbd>
 {%- endif %}{%- endif %}
-{%- if metadata.schema %}
+{%- if metadata.with_schema %}
 {%- if property.domain and property.range %}
 
 ## Schema

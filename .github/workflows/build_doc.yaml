@@ -33,4 +33,4 @@ jobs:
           git config user.name ontodoc_bot
           git add -A
           git commit -am "[BOT] Update documentation example"
-          git push origin ${{ github.ref_name }}
+          git push origin main
