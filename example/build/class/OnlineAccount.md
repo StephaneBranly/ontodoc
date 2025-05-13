@@ -25,8 +25,8 @@ classDiagram
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-|<kbd>[foaf:accountName](../property/accountName)</kbd> | account name | Indicates the name (identifier) associated with this online account. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
-|<kbd>[foaf:accountServiceHomepage](../property/accountServiceHomepage)</kbd> | account service homepage | Indicates a homepage of the service provide for this online account. |<kbd>[foaf:Document](../class/Document.md)</kbd> |
+|<kbd>[foaf:accountName](../property/accountName.md)</kbd> | account name | Indicates the name (identifier) associated with this online account. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:accountServiceHomepage](../property/accountServiceHomepage.md)</kbd> | account service homepage | Indicates a homepage of the service provide for this online account. |<kbd>[foaf:Document](../class/Document.md)</kbd> |
 
 
 
@@ -51,6 +51,6 @@ foaf:OnlineAccount a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-11
+Documentation generated on 2025-05-13
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.2*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*

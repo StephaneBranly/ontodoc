@@ -24,10 +24,10 @@ classDiagram
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-|<kbd>[foaf:primaryTopic](../property/primaryTopic)</kbd> | primary topic | The primary topic of some page or document. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> | |
-|<kbd>[foaf:primaryTopic](../property/primaryTopic)</kbd> | primary topic | The primary topic of some page or document. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> | |
-|<kbd>[foaf:sha1](../property/sha1)</kbd> | sha1sum (hex) | A sha1sum hash, in hex. |<kbd>None</kbd> | |
-|<kbd>[foaf:topic](../property/topic)</kbd> | topic | A topic of some page or document. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> |
+|<kbd>[foaf:primaryTopic](../property/primaryTopic.md)</kbd> | primary topic | The primary topic of some page or document. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> | |
+|<kbd>[foaf:primaryTopic](../property/primaryTopic.md)</kbd> | primary topic | The primary topic of some page or document. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> | |
+|<kbd>[foaf:sha1](../property/sha1.md)</kbd> | sha1sum (hex) | A sha1sum hash, in hex. |<kbd>None</kbd> | |
+|<kbd>[foaf:topic](../property/topic.md)</kbd> | topic | A topic of some page or document. |<kbd>[owl:Thing](<http://www.w3.org/2002/07/owl#Thing>)</kbd> |
 
 
 
@@ -54,6 +54,6 @@ foaf:Document a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-11
+Documentation generated on 2025-05-13
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.2*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*

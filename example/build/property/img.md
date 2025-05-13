@@ -44,6 +44,6 @@ foaf:img a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-11
+Documentation generated on 2025-05-13
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.2*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
