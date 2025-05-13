@@ -1,19 +1,7 @@
 import argparse
-import datetime
-from itertools import chain
-from jinja2 import Environment, FileSystemLoader, Template
-import pathlib
-from rdflib import Graph
-import rdflib
-import json
 
 from ontodoc import __version__
-from ontodoc.classes.JSONOntoDocEncoder import JSONOntoDocEncoder
-from ontodoc.classes.Footer import Footer
-from ontodoc.classes.Ontology import Ontology
-from ontodoc.generate_page import generate_page
-from ontodoc.utils import concat_templates_environment
-
+from ontodoc.classes.Documentation import Documentation
 
 parser = argparse.ArgumentParser(prog='OntoDoc', epilog='Python module to easily generate ontology documentation in markdown')
 
@@ -44,65 +32,16 @@ parser.add_argument(
 
 def main():
     args = parser.parse_args()
-
-    # Load markdown templates
-    default_env = Environment(loader=FileSystemLoader(pathlib.Path(__file__).parent.resolve().__str__()+'/templates'))
-    custom_env = Environment(loader=FileSystemLoader(args.templates)) if args.templates else None
-    templates = concat_templates_environment(default_env, custom_env)
-
-    # Load graph
-    g = Graph(bind_namespaces='none')
-    g.parse(args.input)
-
-    # Retrieve ontology node
-    ontos = [s for s in g.subjects(predicate=rdflib.RDF["type"], object=rdflib.OWL['Ontology'])]
-    if not len(ontos):
-        raise Exception('Ontology not found')
-    onto = ontos[0]
-
-    # Generate footer
-    if args.footer:
-        footer = Footer(onto, templates['footer.md']).__str__()
-        if args.model == 'gh_wiki':
-            generate_page(content=footer, path=f'{args.output}/_Footer.md')
-            footer = None
-    else:
-        footer = None
-
-    metadata = {
-        **args.__dict__,
-        'version': __version__,
-        'editionDate': datetime.date.today().strftime('%Y-%m-%d'),
-    }
-    # Init ontology reader
-    ontology = Ontology(g, onto, templates, metadata)
-    path = pathlib.Path(args.output)
-
-    # Generate pages
-    if args.model == 'json':
-        generate_page(json.dumps(ontology.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{args.output}/ontology.json', add_signature=False)
-        for c in ontology.classes:
-            generate_page(json.dumps(c.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{args.output}/class/{c.id}.json', add_signature=False)
-        for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
-            generate_page(json.dumps(p.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{args.output}property/{p.id}.json', add_signature=False)
-
-    elif args.model in ['markdown', 'gh_wiki']:
-        if args.concatenate:
-            page = ontology.__str__()
-            for c in ontology.classes:
-                page += '\n\n' + c.__str__()
-            generate_page(content=page, path=f'{args.output}/ontology.md', footer=footer)
-
-        else:
-            generate_page(path=path, node=ontology, footer=footer)
-            for c in ontology.classes:
-                generate_page(path=path, node=c, footer=footer)
-            for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
-                generate_page(path=path, node=p, footer=footer)
-
-    # Copy ontology file
-    with open(f'{args.output}ontology.ttl', mode='w', encoding='utf-8') as f:
-        f.write(g.serialize(format='ttl'))
+    documentation = Documentation(
+        input_graph=args.input,
+        output_folder=args.output,
+        templates=args.templates,
+        footer=args.footer,
+        model=args.model,
+        concatenate=args.concatenate,
+        with_schema=args.schema
+    )
+    documentation.generate()
 
 if __name__ == '__main__':
     main()

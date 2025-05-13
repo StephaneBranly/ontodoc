@@ -39,6 +39,15 @@ Available arguments :
 | `-s, --schema, --no-schema`           | `true`         | _Display schemas_                                     | ✅          |
 | `-m, --model MODEL`                   | `markdown`     | _Model type for the documentation. markdown, gh_wiki_ | ❌          |
 
+### Python generation
+
+You can also generate your documentation and access parameters from python as follow :
+
+```python
+import ontodoc
+ontodoc.Documentation(input_graph='example/foaf.ttl').generate()
+```
+
 ### Automatically generate your documentation
 
 You can explore `github actions` to automatically generate and publish your documentation. If you need some inspiration to do it, check [our ontodoc github action](https://github.com/StephaneBranly/ontodoc/blob/main/.github/workflows/build_doc.yaml).
