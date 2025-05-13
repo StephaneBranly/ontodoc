@@ -31,6 +31,7 @@ jobs:
       - name: Push to current branch
         run: |
           git config user.name ontodoc_bot
+          git checkout main
           git add -A
           git commit -am "[BOT] Update documentation example"
-          git push origin main
+          git push
