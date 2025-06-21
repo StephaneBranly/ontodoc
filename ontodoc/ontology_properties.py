@@ -107,7 +107,8 @@ class CLASS(ONTOLOGY_PROP):
         EQUIVALENTCLASS,
         COMMENT,
         LABEL,
-        RESTRICTION
+        RESTRICTION,
+        OWL.deprecated
     ]
 
 class PROPERTY(ONTOLOGY_PROP):
@@ -116,5 +117,6 @@ class PROPERTY(ONTOLOGY_PROP):
         COMMENT,
         RDFS.domain,
         RDFS.range,
-        RESTRICTION
+        RESTRICTION,
+        OWL.deprecated
     ]

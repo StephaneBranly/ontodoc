@@ -2,7 +2,12 @@
 
 ## {{class.label if class.label}}
 
-> **{{class.comment if class.comment}}**
+{% if class.comment -%}> **{{class.comment}}**{% endif %}
+{% if class.deprecated %}
+> [!CAUTION]
+> Deprecated class
+{%- endif %}
+
 {%- if metadata.with_schema %}
 
 ## Schema
