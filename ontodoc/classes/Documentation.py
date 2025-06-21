@@ -62,6 +62,8 @@ class Documentation:
         ontology = Ontology(self.graph, self.onto, self.templates, metadata)
         path = pathlib.Path(self.output)
 
+
+
         # Generate pages
         if self.model == 'json':
             generate_page(json.dumps(ontology.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{self.output}/ontology.json', add_signature=False)
@@ -72,16 +74,14 @@ class Documentation:
         elif self.model in ['markdown', 'gh_wiki']:
             if self.concatenate:
                 page = ontology.__str__()
-                for c in ontology.classes:
-                    page += '\n\n' + c.__str__()
+                for n in ontology.nodes:
+                    page += '\n\n' + n.__str__()
                 generate_page(content=page, path=f'{self.output}/ontology.md', footer=footer)
 
             else:
                 generate_page(path=path, node=ontology, footer=footer)
-                for c in ontology.classes:
-                    generate_page(path=path, node=c, footer=footer)
-                for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
-                    generate_page(path=path, node=p, footer=footer)
+                for n in ontology.nodes:
+                    generate_page(path=path, node=n, footer=footer)
         else:
             raise Exception('Model not supported')
         # Copy ontology file
