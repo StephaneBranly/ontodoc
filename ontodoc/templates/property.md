@@ -1,8 +1,12 @@
 # [{{onto.label}}](../homepage.md) > {{property.id}}
-
+<a name="{{property.id}}"></a>
 ## {{property.label}}
 
-> **{{property.comment}}**
+{% if property.comment -%}> **{{property.comment}}**{% endif %}
+{% if property.deprecated %}
+> [!CAUTION]
+> Deprecated property
+{%- endif %}
 
 {% if property.range -%}
 - Range : {%- if property.range_link -%}

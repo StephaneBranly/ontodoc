@@ -33,16 +33,16 @@ class Ontology(Generic):
 
         self.update_internal_links()
 
+    @property
+    def properties(self):
+        return self.objectProperties + self.datatypeProperties + self.annotationProperties + self.functionalProperties
+
+    @property
+    def nodes(self):
+        return self.classes + self.properties
+
     def update_internal_links(self):
-        for c in self.classes:
-            c.update_internal_links()
-        for p in self.objectProperties:
-            p.update_internal_links()
-        for p in self.datatypeProperties:
-            p.update_internal_links()
-        for p in self.annotationProperties:
-            p.update_internal_links()
-        for p in self.functionalProperties:
-            p.update_internal_links()
+        for n in self.nodes:
+            n.update_internal_links()
         return super().update_internal_links()
     
