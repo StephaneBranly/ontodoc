@@ -1,5 +1,5 @@
 # [{{onto.label}}](../homepage.md) > {{class.id}}
-
+<a name="{{class.id}}"></a>
 ## {{class.label if class.label}}
 
 {% if class.comment -%}> **{{class.comment}}**{% endif %}
