@@ -35,7 +35,7 @@ Available arguments :
 | `-o, --output OUTPUT`                 | `build/`       | _Output directory for the generated documentation_    | ✅          |
 | `-t, --templates TEMPLATES`           | `templates/`   | _Custom templates folder_                             | ✅          |
 | `-f, --footer, --no-footer`           | `true`         | _Add footer for each page_                            | ✅          |
-| `-c, --concatenate, --no-concatenate` | `false`        | _Concatenate documentation into an unique file_       | ❌          |
+| `-c, --concatenate, --no-concatenate` | `false`        | _Concatenate documentation into an unique file_       | ✅          |
 | `-s, --schema, --no-schema`           | `true`         | _Display schemas_                                     | ✅          |
 | `-m, --model MODEL`                   | `markdown`     | _Model type for the documentation. markdown, gh_wiki_ | ❌          |
 

@@ -1,6 +1,6 @@
 [project]
 name = "ontodoc"
-version = "0.0.3"
+version = "0.0.4"
 description = "Generate easily your markdown documentation for any ontology"
 authors = [
     {name = "StephaneBranly",email = "stephanebranly.pro@gmail.com"}
@@ -17,7 +17,7 @@ Tracker = 'https://github.com/StephaneBranly/ontodoc/issues'
 [tool.poetry]
 packages = [{include = "ontodoc", from = "./"}]
 name = "ontodoc"
-version = "0.0.3"
+version = "0.0.4"
 description = "Generate easily your markdown documentation for any ontology"
 authors = ["StephaneBranly <stephanebranly.pro@gmail.com>"]
 readme = "README.md"

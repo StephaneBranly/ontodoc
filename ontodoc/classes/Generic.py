@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 
 class Generic:
-    def __init__(self, onto: Ontology, node: Node, template: Template, default_properties: ONTOLOGY_PROP=[], path: Path = Path('./')):
+    def __init__(self, onto: Ontology, node: Node, template: Template, default_properties: ONTOLOGY_PROP=[], path: Path = Path('./'), pagename: Path = None):
         g = onto.graph
 
         self.template = template
@@ -20,7 +20,10 @@ class Generic:
         self.id = generate_clean_id_from_term(g, node)
         self.node = node
         self.n3 = node.n3(g.namespace_manager)
-        self.pagename = (path / self.id).with_suffix('.md') if not onto.metadata.get('concatenate', False) else onto.pagename
+        if pagename:
+            self.pagename = pagename
+        else:
+            self.pagename = (path / self.id).with_suffix('.md') if not onto.metadata.get('concatenate', False) else onto.pagename
         self.to_root_path = '../' * (len(self.pagename.parts) - 1)
         
         if onto.metadata.get('concatenate', False) and onto.onto_node != node:
