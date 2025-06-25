@@ -1,8 +1,9 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > Project
-
+<a name="Project"></a>
 ## Project
 
 > **A project (a collective endeavour of some kind).**
+
 
 ## Schema
 
@@ -42,6 +43,6 @@ foaf:Project a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

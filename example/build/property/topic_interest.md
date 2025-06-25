@@ -1,10 +1,11 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > topic_interest
-
+<a name="topic_interest"></a>
 ## topic_interest
 
 > **A thing of interest to this person.**
 
-- Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+
+- Range :[http://www.w3.org/2002/07/owl#Thing](../<http://www.w3.org/2002/07/owl#Thing>)
 
 - Domain :[http://xmlns.com/foaf/0.1/Agent](../class/Agent.md)
 
@@ -43,6 +44,6 @@ foaf:topic_interest a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

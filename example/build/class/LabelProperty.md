@@ -1,8 +1,9 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > LabelProperty
-
+<a name="LabelProperty"></a>
 ## Label Property
 
 > **A foaf:LabelProperty is any RDF property with texual values that serve as labels.**
+
 
 ## Schema
 
@@ -40,6 +41,6 @@ foaf:LabelProperty a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

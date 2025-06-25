@@ -1,12 +1,13 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > focus
-
+<a name="focus"></a>
 ## focus
 
 > **The underlying or 'focal' entity associated with some SKOS-described concept.**
 
-- Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
 
-- Domain :[http://www.w3.org/2004/02/skos/core#Concept](<http://www.w3.org/2004/02/skos/core#Concept>)
+- Range :[http://www.w3.org/2002/07/owl#Thing](../<http://www.w3.org/2002/07/owl#Thing>)
+
+- Domain :[http://www.w3.org/2004/02/skos/core#Concept](../<http://www.w3.org/2004/02/skos/core#Concept>)
 
 ## Schema
 
@@ -44,6 +45,6 @@ foaf:focus a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

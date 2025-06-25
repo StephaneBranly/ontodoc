@@ -1,8 +1,9 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > title
-
+<a name="title"></a>
 ## title
 
 > **Title (Mr, Mrs, Ms, Dr. etc)**
+
 
 
 
@@ -29,6 +30,6 @@ foaf:title a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

@@ -1,8 +1,9 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > OnlineChatAccount
-
+<a name="OnlineChatAccount"></a>
 ## Online Chat Account
 
 > **An online chat account.**
+
 
 ## Schema
 
@@ -24,7 +25,7 @@ classDiagram
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | |
-|<kbd>[foaf:accountName](../property/accountName.md)</kbd> | account name | Indicates the name (identifier) associated with this online account. |<kbd>[rdfs:Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
+|<kbd>[foaf:accountName](../property/accountName.md)</kbd> | account name | Indicates the name (identifier) associated with this online account. |<kbd>[rdfs:Literal](../<http://www.w3.org/2000/01/rdf-schema#Literal>)</kbd> | |
 |<kbd>[foaf:accountServiceHomepage](../property/accountServiceHomepage.md)</kbd> | account service homepage | Indicates a homepage of the service provide for this online account. |<kbd>[foaf:Document](../class/Document.md)</kbd> |
 
 
@@ -50,6 +51,6 @@ foaf:OnlineChatAccount a rdfs:Class,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

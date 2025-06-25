@@ -1,10 +1,11 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > topic
-
+<a name="topic"></a>
 ## topic
 
 > **A topic of some page or document.**
 
-- Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+
+- Range :[http://www.w3.org/2002/07/owl#Thing](../<http://www.w3.org/2002/07/owl#Thing>)
 
 - Domain :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
 
@@ -44,6 +45,6 @@ foaf:topic a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

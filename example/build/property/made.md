@@ -1,10 +1,11 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > made
-
+<a name="made"></a>
 ## made
 
 > **Something that was made by this agent.**
 
-- Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+
+- Range :[http://www.w3.org/2002/07/owl#Thing](../<http://www.w3.org/2002/07/owl#Thing>)
 
 - Domain :[http://xmlns.com/foaf/0.1/Agent](../class/Agent.md)
 
@@ -44,6 +45,6 @@ foaf:made a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

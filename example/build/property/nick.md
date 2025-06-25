@@ -1,8 +1,9 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > nick
-
+<a name="nick"></a>
 ## nickname
 
 > **A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).**
+
 
 
 
@@ -29,6 +30,6 @@ foaf:nick a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

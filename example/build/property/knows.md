@@ -1,8 +1,9 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > knows
-
+<a name="knows"></a>
 ## knows
 
 > **A person known by this person (indicating some level of reciprocated interaction between the parties).**
+
 
 - Range :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
@@ -43,6 +44,6 @@ foaf:knows a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

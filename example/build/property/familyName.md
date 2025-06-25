@@ -1,10 +1,11 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > familyName
-
+<a name="familyName"></a>
 ## familyName
 
 > **The family name of some person.**
 
-- Range :[http://www.w3.org/2000/01/rdf-schema#Literal](<http://www.w3.org/2000/01/rdf-schema#Literal>)
+
+- Range :[http://www.w3.org/2000/01/rdf-schema#Literal](../<http://www.w3.org/2000/01/rdf-schema#Literal>)
 
 - Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
@@ -43,6 +44,6 @@ foaf:familyName a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

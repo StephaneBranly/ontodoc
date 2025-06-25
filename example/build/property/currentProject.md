@@ -1,10 +1,11 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > currentProject
-
+<a name="currentProject"></a>
 ## current project
 
 > **A current project this person works on.**
 
-- Range :[http://www.w3.org/2002/07/owl#Thing](<http://www.w3.org/2002/07/owl#Thing>)
+
+- Range :[http://www.w3.org/2002/07/owl#Thing](../<http://www.w3.org/2002/07/owl#Thing>)
 
 - Domain :[http://xmlns.com/foaf/0.1/Person](../class/Person.md)
 
@@ -43,6 +44,6 @@ foaf:currentProject a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

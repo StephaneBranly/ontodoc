@@ -1,8 +1,9 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > workInfoHomepage
-
+<a name="workInfoHomepage"></a>
 ## work info homepage
 
 > **A work info homepage of some person; a page about their work for some organization.**
+
 
 - Range :[http://xmlns.com/foaf/0.1/Document](../class/Document.md)
 
@@ -43,6 +44,6 @@ foaf:workInfoHomepage a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*

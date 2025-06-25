@@ -1,8 +1,9 @@
 # [Friend of a Friend (FOAF) vocabulary](../homepage.md) > member
-
+<a name="member"></a>
 ## member
 
 > **Indicates a member of a Group**
+
 
 - Range :[http://xmlns.com/foaf/0.1/Agent](../class/Agent.md)
 
@@ -43,6 +44,6 @@ foaf:member a rdf:Property,
 
 ---
 
-Documentation generated on 2025-05-13
+Documentation generated on 2025-06-25
 
-Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.3*
+Generated with <kbd>[📑 ontodoc](https://github.com/StephaneBranly/ontodoc)</kbd>, *v0.0.4*
