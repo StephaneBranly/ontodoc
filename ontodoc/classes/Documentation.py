@@ -76,7 +76,7 @@ class Documentation:
                 page = ontology.__str__()
                 for n in ontology.nodes:
                     page += '\n\n' + n.__str__()
-                generate_page(content=page, path=f'{self.output}/ontology.md', footer=footer)
+                generate_page(path=path, content=page, node=ontology, footer=footer)
 
             else:
                 generate_page(path=path, node=ontology, footer=footer)

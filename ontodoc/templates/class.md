@@ -1,4 +1,4 @@
-# [{{onto.label}}](../homepage.md) > {{class.id}}
+# [{{onto.label}}]({{class.to_root_path}}{{onto.pagename}}) > {{class.id}}
 <a name="{{class.id}}"></a>
 ## {{class.label if class.label}}
 
@@ -42,13 +42,13 @@ classDiagram
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | {%- for triple in class.triples | sort(attribute='n3') %} |
 | {%- if triple.pagename -%}
-<kbd>[{{triple.n3}}](../{{triple.pagename}})</kbd>
+<kbd>[{{triple.n3}}]({{class.to_root_path}}{{triple.pagename}})</kbd>
 {%- else -%}
 <kbd>{{triple.n3}}</kbd>
 {%- endif %} | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
 
 {%- if triple.range_link -%}
-<kbd>[{{triple.range_n3}}]({{triple.range_link}})</kbd>
+<kbd>[{{triple.range_n3}}]({{class.to_root_path}}{{triple.range_link}})</kbd>
 {%- else -%}
 <kbd>{{triple.range_n3}}</kbd>
 {%- endif %} |
@@ -63,13 +63,13 @@ classDiagram
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | {%- for triple in subclassof.triples | sort(attribute='n3') %} |
 | {%- if triple.pagename -%}
-<kbd>[{{triple.n3}}](../{{triple.pagename}})</kbd>
+<kbd>[{{triple.n3}}]({{class.to_root_path}}{{triple.pagename}})</kbd>
 {%- else -%}
 <kbd>{{triple.n3}}</kbd>
 {%- endif %} | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
 
 {%- if triple.range_link -%}
-<kbd>[{{triple.range_n3}}]({{triple.range_link}})</kbd>
+<kbd>[{{triple.range_n3}}]({{class.to_root_path}}{{triple.range_link}})</kbd>
 {%- else -%}
 <kbd>{{triple.range_n3}}</kbd>
 {%- endif %} |

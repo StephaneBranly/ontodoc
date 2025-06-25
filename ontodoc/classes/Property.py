@@ -12,7 +12,7 @@ from ontodoc.utils import compute_link, generate_clean_id_from_term
     
 class Property(Generic):
     def __init__(self, onto: Ontology, property_node: Node, template: Template):
-        super().__init__(onto, property_node, template, PROPERTY, Path('property') if not onto.metadata.get('concatenate', False) else Path(''))
+        super().__init__(onto, property_node, template, PROPERTY, Path('property') if not onto.metadata.get('concatenate', False) else onto.pagename)
 
         g = onto.graph
 

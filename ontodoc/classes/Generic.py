@@ -20,7 +20,12 @@ class Generic:
         self.id = generate_clean_id_from_term(g, node)
         self.node = node
         self.n3 = node.n3(g.namespace_manager)
-        self.pagename = (path / self.id).with_suffix('.md') if not onto.metadata.get('concatenate', False) else path / f'#{self.id}'
+        self.pagename = (path / self.id).with_suffix('.md') if not onto.metadata.get('concatenate', False) else onto.pagename
+        self.to_root_path = '../' * (len(self.pagename.parts) - 1)
+        
+        if onto.metadata.get('concatenate', False) and onto.onto_node != node:
+            self.pagename = f"{self.pagename.as_posix()}#{self.id}"
+
         self.serialized = serialize_subset(g, node)
         
         for p in default_properties.predicates:

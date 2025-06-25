@@ -5,10 +5,9 @@ import rdflib
 
 from ontodoc.classes.Class import Class
 from ontodoc.classes.Generic import Generic
-from ontodoc.classes.Homepage import Homepage
 from ontodoc.classes.Property import Property
 from ontodoc.ontology_properties import ONTOLOGY
-from ontodoc.utils import get_object, get_prefix, get_suffix
+from ontodoc.utils import get_prefix
 
 
 class Ontology(Generic):
@@ -18,9 +17,8 @@ class Ontology(Generic):
 
         self.templates = templates
         self.onto_node = onto_node
+        self.pagename = Path('./homepage').with_suffix('.md')
         super().__init__(self, onto_node, self.templates['homepage.md'], ONTOLOGY)
-        self.pagename = Path('homepage.md')
-
         self.namespaces = [{'prefix': i[0], 'uri': i[1]} for i in graph.namespace_manager.namespaces()]
         self.onto_prefix = [prefix for prefix, uriref in graph.namespace_manager.namespaces() if uriref.n3(graph.namespace_manager) == onto_node.n3(graph.namespace_manager)]
         self.onto_prefix = self.onto_prefix[0] if len(self.onto_prefix) > 0 else None

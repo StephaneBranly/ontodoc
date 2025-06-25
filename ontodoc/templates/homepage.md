@@ -34,7 +34,7 @@ _{{onto.onto_node}}_
 ## Classes
 
 {% for class in onto.classes | sort(attribute='label') -%}
-[{{class.label}}]({{class.pagename}}),
+[{{class.label}}]({{onto.to_root_path}}{{class.pagename}}),
 {%- endfor -%}
 {%- endif%}
 
@@ -44,7 +44,7 @@ _{{onto.onto_node}}_
 ### Object Properties
 
 {% for property in onto.objectProperties | sort(attribute='label') -%}
-[{{property.label}}]({{property.pagename}}),
+[{{property.label}}]({{onto.to_root_path}}{{property.pagename}}),
 {%- endfor -%}
 {%- endif%}
 
@@ -52,7 +52,7 @@ _{{onto.onto_node}}_
 ### Datatype Properties
 
 {% for property in onto.datatypeProperties | sort(attribute='label') -%}
-[{{property.label}}]({{property.pagename}}),
+[{{property.label}}]({{onto.to_root_path}}{{property.pagename}}),
 {%- endfor -%}
 {%- endif%}
 
@@ -60,7 +60,7 @@ _{{onto.onto_node}}_
 ### Annotation Properties
 
 {% for property in onto.annotationProperties | sort(attribute='label') -%}
-[{{property.label}}]({{property.pagename}}),
+[{{property.label}}]({{onto.to_root_path}}{{property.pagename}}),
 {%- endfor -%}
 {%- endif%}
 
@@ -68,7 +68,7 @@ _{{onto.onto_node}}_
 ### Functional Properties
 
 {% for property in onto.functionalProperties | sort(attribute='label') -%}
-[{{property.label}}]({{property.pagename}}),
+[{{property.label}}]({{onto.to_root_path}}{{property.pagename}}),
 {%- endfor -%}
 {%- endif %}
 
