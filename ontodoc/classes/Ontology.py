@@ -5,10 +5,9 @@ import rdflib
 
 from ontodoc.classes.Class import Class
 from ontodoc.classes.Generic import Generic
-from ontodoc.classes.Homepage import Homepage
 from ontodoc.classes.Property import Property
 from ontodoc.ontology_properties import ONTOLOGY
-from ontodoc.utils import get_object, get_prefix, get_suffix
+from ontodoc.utils import get_prefix
 
 
 class Ontology(Generic):
@@ -18,9 +17,7 @@ class Ontology(Generic):
 
         self.templates = templates
         self.onto_node = onto_node
-        super().__init__(self, onto_node, self.templates['homepage.md'], ONTOLOGY)
-        self.pagename = Path('homepage.md')
-
+        super().__init__(self, onto_node, self.templates['homepage.md'], ONTOLOGY, pagename=Path('./homepage').with_suffix('.md'))
         self.namespaces = [{'prefix': i[0], 'uri': i[1]} for i in graph.namespace_manager.namespaces()]
         self.onto_prefix = [prefix for prefix, uriref in graph.namespace_manager.namespaces() if uriref.n3(graph.namespace_manager) == onto_node.n3(graph.namespace_manager)]
         self.onto_prefix = self.onto_prefix[0] if len(self.onto_prefix) > 0 else None
@@ -33,16 +30,16 @@ class Ontology(Generic):
 
         self.update_internal_links()
 
+    @property
+    def properties(self):
+        return self.objectProperties + self.datatypeProperties + self.annotationProperties + self.functionalProperties
+
+    @property
+    def nodes(self):
+        return self.classes + self.properties
+
     def update_internal_links(self):
-        for c in self.classes:
-            c.update_internal_links()
-        for p in self.objectProperties:
-            p.update_internal_links()
-        for p in self.datatypeProperties:
-            p.update_internal_links()
-        for p in self.annotationProperties:
-            p.update_internal_links()
-        for p in self.functionalProperties:
-            p.update_internal_links()
+        for n in self.nodes:
+            n.update_internal_links()
         return super().update_internal_links()
     

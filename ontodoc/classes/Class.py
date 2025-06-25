@@ -15,7 +15,7 @@ from ontodoc.utils import get_subject
     
 class Class(Generic):
     def __init__(self, onto: Ontology, class_node: Node, template: Template):
-        super().__init__(onto, class_node, template, CLASS, Path('class'))
+        super().__init__(onto, class_node, template, CLASS, Path('./class/') if not onto.metadata.get('concatenate', False) else Path('') / onto.pagename)
 
         g = onto.graph
 

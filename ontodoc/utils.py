@@ -74,12 +74,13 @@ def compute_link(onto: Ontology, current_node: Node, n: Node):
     graph = onto.graph
     prefix = onto.onto_prefix
     if n and n.n3(graph.namespace_manager).startswith(prefix+':'):
-        relative_path = './' if get_object(graph, current_node, RDF.type) == OWL.Ontology else '../'
+        if onto.metadata.get('concatenate', False):
+            return '#' + n.n3(graph.namespace_manager).replace(prefix+':', '')
         type = get_object(graph, n, RDF.type)
         page_name = n.n3(graph.namespace_manager).split(prefix+':')[1]+'.md'
         if type and type in [RDFS.Class, OWL.Class]:
-            return relative_path + 'class/' + page_name
-        return relative_path + 'property/' + page_name
+            return 'class/' + page_name
+        return 'property/' + page_name
     return n.n3()
 
 def serialize_subset(graph: Graph, n: Node):
