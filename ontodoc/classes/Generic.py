@@ -24,7 +24,7 @@ class Generic:
             self.pagename = pagename
         else:
             self.pagename = (path / self.id).with_suffix('.md') if not onto.metadata.get('concatenate', False) else onto.pagename
-        self.to_root_path = '../' * (len(self.pagename.parts) - 1)
+        self.to_root_path = './' + '../' * (len(self.pagename.parts) - 1)
         
         if onto.metadata.get('concatenate', False) and onto.onto_node != node:
             self.pagename = f"{self.pagename.as_posix()}#{self.id}"
