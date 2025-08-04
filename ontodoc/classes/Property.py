@@ -16,8 +16,8 @@ class Property(Generic):
 
         g = onto.graph
 
-        self.range_link = compute_link(onto, property_node, self.range) if self.range else None
-        self.domain_link = compute_link(onto, property_node, self.domain) if self.domain else None
+        self.range_link = compute_link(onto, self, self.range) if self.range else None
+        self.domain_link = compute_link(onto, self, self.domain) if self.domain else None
 
         self.range_label = generate_clean_id_from_term(g, self.range) if self.range else None
         self.domain_label = generate_clean_id_from_term(g, self.domain) if self.domain else None

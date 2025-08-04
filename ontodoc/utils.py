@@ -8,6 +8,7 @@ from rdflib import OWL, RDF, RDFS, Graph, Node
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from ontodoc.classes.Ontology import Ontology
+    from ontodoc.classes.Generic import Generic
 from ontodoc.ontology_properties import ONTOLOGY_PROP
 
 def concat_templates_environment(default_env: Environment, custom_env: Environment = None):
@@ -70,7 +71,7 @@ def get_suffix(graph: Graph, n: Node):
 def generate_clean_id_from_term(graph: Graph, n: Node):
     return re.sub(r'[^a-zA-Z\-_0-9]+', '_', n.n3(namespace_manager=graph.namespace_manager).split(':')[-1])
 
-def compute_link(onto: Ontology, current_node: Node, n: Node):
+def compute_link(onto: Ontology, current_node: Generic, n: Node):
     graph = onto.graph
     prefix = onto.onto_prefix
     if n and n.n3(graph.namespace_manager).startswith(prefix+':'):
@@ -79,8 +80,8 @@ def compute_link(onto: Ontology, current_node: Node, n: Node):
         type = get_object(graph, n, RDF.type)
         page_name = n.n3(graph.namespace_manager).split(prefix+':')[1]+'.md'
         if type and type in [RDFS.Class, OWL.Class]:
-            return 'class/' + page_name
-        return 'property/' + page_name
+            return current_node.to_root_path + 'class/' + page_name
+        return current_node.to_root_path + 'property/' + page_name
     return n.n3()
 
 def serialize_subset(graph: Graph, n: Node):

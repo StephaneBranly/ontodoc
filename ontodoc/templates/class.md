@@ -48,7 +48,7 @@ classDiagram
 {%- endif %} | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
 
 {%- if triple.range_link -%}
-<kbd>[{{triple.range_n3}}]({{class.to_root_path}}{{triple.range_link}})</kbd>
+<kbd>[{{triple.range_n3}}]({{triple.range_link}})</kbd>
 {%- else -%}
 <kbd>{{triple.range_n3}}</kbd>
 {%- endif %} |
@@ -69,7 +69,7 @@ classDiagram
 {%- endif %} | {{triple.label if triple.label}} | {{triple.comment if triple.comment}} |
 
 {%- if triple.range_link -%}
-<kbd>[{{triple.range_n3}}]({{class.to_root_path}}{{triple.range_link}})</kbd>
+<kbd>[{{triple.range_n3}}]({{triple.range_link}})</kbd>
 {%- else -%}
 <kbd>{{triple.range_n3}}</kbd>
 {%- endif %} |
