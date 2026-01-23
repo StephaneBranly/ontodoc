@@ -58,7 +58,7 @@ classDiagram
 {%- if class.subclassof %}
 {%- for subclassof in class.subclassof %}
   {% if subclassof.triples|length %}
-### Inherited from <kbd>[**{{subclassof.label}}**](../{{subclassof.pagename}}.md)</kbd>
+### Inherited from <kbd>[**{{subclassof.label}}**](../{{subclassof.pagename}})</kbd>
 | Predicate | Label | Comment | Type |
 | -------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | {%- for triple in subclassof.triples | sort(attribute='n3') %} |
