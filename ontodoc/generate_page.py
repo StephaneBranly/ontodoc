@@ -11,7 +11,7 @@ def generate_page(content: str = None, path: Path = None, node: Generic = None, 
     path.parent.mkdir(parents=True, exist_ok=True)
     if content == None:
         content = node.__str__()
-    with open(path, mode='w', encoding='utf-8') as f:
+    with open(path.as_posix(), mode='w', encoding='utf-8') as f:
         f.write(content)
 
         if footer:

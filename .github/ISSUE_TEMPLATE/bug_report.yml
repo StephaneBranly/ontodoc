@@ -39,6 +39,6 @@ body:
   - type: input
     attributes:
       label: "ontodoc version:"
-      placeholder: e.g., 0.0.4
+      placeholder: e.g., 0.0.5
     validations:
       required: true

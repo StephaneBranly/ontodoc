@@ -58,11 +58,10 @@ class Documentation:
             'version': self.version,
             'editionDate': datetime.date.today().strftime('%Y-%m-%d'),
         }
+
         # Init ontology reader
         ontology = Ontology(self.graph, self.onto, self.templates, metadata)
         path = pathlib.Path(self.output)
-
-
 
         # Generate pages
         if self.model == 'json':
@@ -70,7 +69,7 @@ class Documentation:
             for c in ontology.classes:
                 generate_page(json.dumps(c.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{self.output}/class/{c.id}.json', add_signature=False)
             for p in chain(ontology.objectProperties, ontology.annotationProperties, ontology.datatypeProperties, ontology.functionalProperties):
-                generate_page(json.dumps(p.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{self.output}property/{p.id}.json', add_signature=False)
+                generate_page(json.dumps(p.__dict__, indent=2, cls=JSONOntoDocEncoder), f'{self.output}/property/{p.id}.json', add_signature=False)
         elif self.model in ['markdown', 'gh_wiki']:
             if self.concatenate:
                 page = ontology.__str__()
@@ -84,6 +83,7 @@ class Documentation:
                     generate_page(path=path, node=n, footer=footer)
         else:
             raise Exception('Model not supported')
+    
         # Copy ontology file
         with open(f'{self.output}/ontology.ttl', mode='w', encoding='utf-8') as f:
             f.write(self.graph.serialize(format='ttl'))
